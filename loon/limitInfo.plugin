@@ -1,14 +1,14 @@
 #!name=Soul
 #!desc=去广告
 
-[Rule]
-DOMAIN,dsp-x.jd.com,reject
-DOMAIN,im-x.jd.com,reject
-DOMAIN,ssp.soulapp.cn,reject
-DOMAIN,janapi.jd.com,reject
-DOMAIN,xlog.jd.com,reject
-DOMAIN,audid-api.taobao.com,reject
-DOMAIN,ad-r.soulapp.cn,reject
+#[Rule]
+#DOMAIN,dsp-x.jd.com,reject
+#DOMAIN,im-x.jd.com,reject
+#DOMAIN,ssp.soulapp.cn,reject
+#DOMAIN,janapi.jd.com,reject
+#DOMAIN,xlog.jd.com,reject
+#DOMAIN,audid-api.taobao.com,reject
+#DOMAIN,ad-r.soulapp.cn,reject
 
 [MITM]
 hostname = %APPEND%ssp.soulapp.cn,api-chat.soulapp.cn
