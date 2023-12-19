@@ -1,18 +1,10 @@
 #!name=Soul
 #!desc=去广告
 
-#[Rule]
-#DOMAIN,dsp-x.jd.com,reject
-#DOMAIN,im-x.jd.com,reject
-#DOMAIN,ssp.soulapp.cn,reject
-#DOMAIN,janapi.jd.com,reject
-#DOMAIN,xlog.jd.com,reject
-#DOMAIN,audid-api.taobao.com,reject
-#DOMAIN,ad-r.soulapp.cn,reject
 
 [MITM]
-hostname = %APPEND%ssp.soulapp.cn,api-chat.soulapp.cn
+hostname = api-chat.soulapp.cn
 
 [Script]
-limitGift = type=http-response,script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/limitGift.js,pattern=^https:\/\/api-chat\.soulapp\.cn\/v2\/chat\/limit\/gift,max-size=131072,requires-body=1,enable=true
-limitInfo = type=http-response,script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/limitInfo.js,pattern=^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo,max-size=131072,requires-body=1,enable=true
+http-response ^https:\/\/api-chat\.soulapp\.cn\/v2\/chat\/limit\/gift script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/limitGift.js,requires-body=true,timeout=10, tag=limitGift
+http-response ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/limitInfo.js,max-size=131072,requires-body=true,timeout=10, tag=limitInfo
