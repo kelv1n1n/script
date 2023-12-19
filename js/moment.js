@@ -9,9 +9,9 @@ console.log(res)
 
 let reqUrl = $request.url;
 
-var updateUrl = updateUrlParameter(reqUrl, 'body', null)
+//var updateUrl = updateUrlParameter(reqUrl, 'body', null)
 
-updateUrl = updateUrlParameter(updateUrl, 'm_img_urls', null)
+var updateUrl = updateUrlParameter(reqUrl, 'm_img_urls', null)
 
 console.log(updateUrl);
 
