@@ -25,7 +25,7 @@ delete obj.data.msg;
 delete obj.data.remainFreeCount;
 delete obj.data.type;
 obj.data.limit = false;
-
+console.log(obj)
 const bodys = JSON.stringify(obj);
 console.log(bodys)
 
