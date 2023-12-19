@@ -15,7 +15,7 @@ updateUrl = updateUrlParameter(updateUrl, 'm_img_urls', null)
 
 console.log(updateUrl);
 
-$done({url});
+$done({updateUrl});
 
 
 function updateUrlParameter(originalUrl, paramName, newValue) {
