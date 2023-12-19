@@ -1,0 +1,5 @@
+#!name=Soul
+[MITM]
+hostname = ad-audit-provider.soulapp.cn
+[Script]
+http-response ^https:\/\/ad-audit-provider\.soulapp\.cn\/api\/audit script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/ad.js,max-size=131072,requires-body=true,timeout=10, tag=ad
