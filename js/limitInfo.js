@@ -41,4 +41,4 @@ var str = "https://api-chat.soulapp.cn/chat/limitInfo?bi=%5B%2218c7f9754c7%22%2C
 var result = reg.test(str);
 console.log(result);*/
 
-$done({bodys});
+$done({body});
