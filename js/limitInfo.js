@@ -24,6 +24,7 @@ delete obj.data.freeEquityStatus;
 delete obj.data.msg;
 delete obj.data.remainFreeCount;
 delete obj.data.type;
+obj.data.limit = 0;
 
 const bodys = JSON.stringify(obj);
 console.log(bodys)
