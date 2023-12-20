@@ -11,8 +11,8 @@ let reqUrl = $request.url;
 
 //var updateUrl = updateUrlParameter(reqUrl, 'body', null)
 
-var updateUrl = updateUrlParameter(reqUrl, 'm_img_urls', null)
-
+var updateUrl = updateUrlParameter(reqUrl, 'm_img_urls', '')
+updateUrl = updateUrlParameter(updateUrl, 'body', '')
 console.log(updateUrl);
 
 $done({updateUrl});
