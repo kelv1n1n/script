@@ -7,15 +7,15 @@
 //var res = reg.test(url);
 //console.log(res)
 
-let reqUrl = $request.url;
+let url = $request.url;
 
 //var updateUrl = updateUrlParameter(reqUrl, 'body', null)
 
-var updateUrl = updateUrlParameter(reqUrl, 'm_img_urls', '')
-updateUrl = updateUrlParameter(updateUrl, 'body', '')
-console.log(updateUrl);
+url = updateUrlParameter(url, 'm_img_urls', '')
+url = updateUrlParameter(url, 'body', '')
+console.log(url);
 
-$done({updateUrl});
+$done({url});
 
 
 function updateUrlParameter(originalUrl, paramName, newValue) {
