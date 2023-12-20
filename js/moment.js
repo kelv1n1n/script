@@ -9,11 +9,11 @@
 
 let url = $request.url;
 
-//var updateUrl = updateUrlParameter(reqUrl, 'body', null)
+console.log('原始请求：' + url);
 
 url = updateUrlParameter(url, 'm_img_urls', '')
 url = updateUrlParameter(url, 'body', '')
-console.log(url);
+console.log('更换后请求：' + url);
 
 $done({url});
 
