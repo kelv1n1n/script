@@ -11,8 +11,9 @@ let url = $request.url;
 
 console.log('原始请求：' + url);
 
-url = updateUrlParameter(url, 'm_img_urls', '')
-url = updateUrlParameter(url, 'body', '')
+url = updateUrlParameter(url, 'm_img_urls', '');
+url = updateUrlParameter(url, 'body', '');
+url = updateUrlParameter(url, 'm_video_urls', '');
 console.log('更换后请求：' + url);
 
 $done({url});
