@@ -7,5 +7,5 @@
 [MITM]
 hostname = img.meituan.net
 
-[Rule]
-reject-dict,^https:\/\/img\.meituan\.net\/dpmobile
+[URL Rewrite]
+^https:\/\/img\.meituan\.net\/dpmobile,reject-dict
