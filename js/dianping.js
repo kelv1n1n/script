@@ -10,5 +10,5 @@ for (var i = obj.body.bund.length - 1; i >= 0; i--) {
   }
 }
 
-
+body = JSON.stringify(obj);
 $done({body});
