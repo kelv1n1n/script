@@ -1,0 +1,12 @@
+#!name=Hupe
+#!desc=Hupu app removes ad.
+#!system=ios
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1054.png
+
+[MITM]
+
+hostname = goblin.hupu.com
+
+[Rule]
+
+URL-REGEX,^https://goblin\.hupu\.com/[^/]+/[^/]+/interfaceAd/,REJECT
