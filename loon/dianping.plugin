@@ -7,9 +7,5 @@
 [MITM]
 hostname = img.meituan.net,dd.meituan.com
 
-[URL Rewrite]
-#^https:\/\/img\.meituan\.net\/dpmobile\/91e6692c355388904045371f6280fb3611614\.png\.webp - reject-dict
-
-
 [Script]
-http-response ^https:\/\/dd\.meituan\.com\/config\/picassovc\/checkList script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/dianping.js, requires-body=true, timeout=60, tag=Didichuxing
+http-response ^https:\/\/dd\.meituan\.com\/config\/picassovc\/checkList script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/dianping.js, requires-body=true, timeout=60, tag=free
