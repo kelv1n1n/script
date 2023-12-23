@@ -1,0 +1,13 @@
+#!name=美团
+#!desc=去除美团广告
+#!url=https://raw.githubusercontent.com/bai1zi/shadowrocket-surge-loon-qx/main/meituan.sgmodule
+#!system=ios
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1020.png
+
+[MITM]
+
+hostname = flowplus.meituan.net
+
+[Rule]
+
+URL-REGEX,^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4),REJECT
