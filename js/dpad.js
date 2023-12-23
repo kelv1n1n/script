@@ -1,7 +1,7 @@
 
 let url = $request.url;
 let body = $request.body;
-
+console.log($request);
 console.log('原始请求：' + body);
 body = bodyupdateUrlParameter(body);
 console.log('更换后请求：' + body);
