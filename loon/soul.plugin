@@ -1,0 +1,18 @@
+#!name=SoulAPP
+#!desc=去开屏和瞬间广告，解锁送礼物开启私聊
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1088.png
+
+[MITM]
+
+hostname = api-chat.soulapp.cn, ad-r.soulapp.cn, ssp.soulapp.cn, soul-ad.soulapp.cn, media-service-source.soulapp.cn, 47.99.42.29, 47.97.215.55, 120.27.235.201
+
+[Rule]
+
+#DOMAIN,xlog.jd.com,reject
+DOMAIN,ssp.soulapp.cn,REJECT
+
+[Script]
+
+http-response ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/limitInfo.js, requires-body=true, tag=limitInfo
+
+http-response ^https:\/\/ssp\.soulapp\.cn\/api\/q script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, tag=soulAds
