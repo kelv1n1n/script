@@ -16,5 +16,5 @@ function updateUrlParameter(body) {
          jsonArray.splice(i, 1);
       }
     }
-  return JSON.toJSONString(jsonArray);
+  return JSON.stringify(jsonArray);
 }
