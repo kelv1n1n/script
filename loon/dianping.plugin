@@ -9,6 +9,8 @@ hostname = img.meituan.net, dd.meituan.com, lx0.meituan.com
 
 [URL Rewrite]
 ^https:\/\/img\.meituan\.net\/dpmobile\/b5143db69d155cdccf035152cf9f5ef128895\.png\.webp reject-dict
+^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png reject-dict
+^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) reject-200
 
 [Script]
 http-response ^https:\/\/dd\.meituan\.com\/config\/picassovc\/checkList\?bundleNames=picassovc_dpiftttjobs_jsresourcespreloadtask script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/dianping.js, requires-body=true, timeout=60, tag=free
