@@ -5,7 +5,7 @@
 #!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1020.png
 
 [MITM]
-hostname = img.meituan.net, dd.meituan.com
+hostname = img.meituan.net, dd.meituan.com, lx0.meituan.com
 
 [URL Rewrite]
 ^https:\/\/img\.meituan\.net\/dpmobile\/b5143db69d155cdccf035152cf9f5ef128895\.png\.webp reject-dict
