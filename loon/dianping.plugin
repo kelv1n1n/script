@@ -1,3 +1,11 @@
-^https:\/\/img\.meituan\.net\/dpmobile\/91e6692c355388904045371f6280fb3611614\.png\.webp url reject-dict
+#!name=大众点评
+#!desc=简洁
+#!url=https://raw.githubusercontent.com/bai1zi/shadowrocket-surge-loon-qx/main/meituan.sgmodule
+#!system=ios
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1020.png
 
+[MITM]
 hostname = img.meituan.net
+
+[Rule]
+reject-dict,^https:\/\/img\.meituan\.net\/dpmobile
