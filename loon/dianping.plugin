@@ -15,6 +15,6 @@ hostname = img.meituan.net, dd.meituan.com, ddplus.meituan.net
 [Script]
 http-response ^https:\/\/dd\.meituan\.com\/config\/picassovc\/checkList\?bundleNames=picassovc_socialmessage_messagecenter script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/dianping.js, requires-body=true, timeout=60, tag=free
 
-http-response ^https:\/\/ddplus\.meituan\.net\/v1 script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/dianping.js, requires-body=true, timeout=60, tag=dd
+http-response ^https:\/\/ddplus\.meituan\.net\/v1\/mss_e63d09aec75b41879dcb3069234793ac\/ddblue script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/dianping.js, requires-body=true, timeout=60, tag=dd
 
 #!http-request ^https:\/\/lx0\.meituan\.com\/ script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/dpad.js,requires-body=false,timeout=10, tag=dpad
