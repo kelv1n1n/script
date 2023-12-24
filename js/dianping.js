@@ -4,6 +4,7 @@ let body = $response.body;
 let obj = JSON.parse(body);
 
 if (url.indexOf(path) != -1) {
+    console.log('进来了');
     obj = [];
 } else {
 
@@ -15,6 +16,7 @@ obj.body.bundles= [];
 //  }
 //}
 }
+console.log(obj);
 body = JSON.stringify(obj);
 console.log(body);
 $done({body});
