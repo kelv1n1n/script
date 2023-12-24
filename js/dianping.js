@@ -3,7 +3,7 @@ let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
 
-if (url.indexOf(path) {
+if (url.indexOf(path) != -1) {
     obj = [];
 } else {
 
