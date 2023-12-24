@@ -8,7 +8,7 @@
 hostname = img.meituan.net, dd.meituan.com, ddplus.meituan.net
 
 [URL Rewrite]
-^https:\/\/img\.meituan\.net\/dpmobile\/b5143db69d155cdccf035152cf9f5ef128895\.png\.webp reject-dict
+#^https:\/\/img\.meituan\.net\/dpmobile\/b5143db69d155cdccf035152cf9f5ef128895\.png\.webp reject-dict
 ^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png reject-dict
 ^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) reject-200
 
