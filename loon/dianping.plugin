@@ -12,7 +12,7 @@ hostname = img.meituan.net, dd.meituan.com, ddplus.meituan.net
 ^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png reject-dict
 ^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) reject-200
 
-^https:\/\/ddplus\.meituan\.net\/v1\/mss_e63d09aec75b41879dcb3069234793ac\/ddblue\/\d+_[a-fA-F0-9]+\.zip$ reject-200
+^https:\/\/ddplus\.meituan\.net\/v1\/mss_e63d09aec75b41879dcb3069234793ac\/ddblue\/\d+_[a-fA-F0-9]+\.zip$ reject-dict
 
 
 [Script]
