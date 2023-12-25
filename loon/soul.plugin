@@ -4,7 +4,7 @@
 
 [MITM]
 
-hostname = api-chat.soulapp.cn, ad-r.soulapp.cn, ssp.soulapp.cn, soul-ad.soulapp.cn, media-service-source.soulapp.cn, 47.99.42.29, 47.97.215.55, 120.27.235.201
+hostname = api-chat.soulapp.cn, ad-r.soulapp.cn, ssp.soulapp.cn, soul-ad.soulapp.cn, 47.99.42.29, 47.97.215.55, 120.27.235.201
 
 [Rule]
 
