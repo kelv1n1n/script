@@ -2,7 +2,7 @@
 #!desc=去除美团广告
 #!url=https://raw.githubusercontent.com/bai1zi/shadowrocket-surge-loon-qx/main/meituan.sgmodule
 #!system=ios
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1020.png
+#!icon=https://github.com/Toperlock/Quantumult/blob/main/icon/meituan.png
 
 [MITM]
 
