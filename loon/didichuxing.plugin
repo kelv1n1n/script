@@ -11,11 +11,11 @@ hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, da
 
 ^https:\/\/hd\.xiaojukeji\.com\/d - reject-dict
 
-^https?://res\.xiaojukeji\.com\/resapi\/activity\/mget reject-dict
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
-^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg reject
-^https?://res\.xiaojukeji\.com\/resapi\/activity\/mget reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
+#^https?://res\.xiaojukeji\.com\/resapi\/activity\/mget reject-dict
+#^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
+#^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg reject
+#^https?://res\.xiaojukeji\.com\/resapi\/activity\/mget reject
+#^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
 
 [Script]
 
