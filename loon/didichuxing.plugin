@@ -15,7 +15,8 @@ hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, da
 
 ^https:\/\/conf\.diditaxi\.com\.cn\/api\/dynamicmodule\/update reject-dict
 ^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf reject-dict
-#^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast reject-dict
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast reject-dict
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/slow reject-dict
 
 [Script]
 
@@ -27,8 +28,8 @@ http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me 
 #http-response ^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js,requires-body=true, tag=Didichuxing
 #!http-response ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js,requires-body=true, tag=Didichuxing
 #首页去底部广告
-http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/Didichuxing.js,requires-body=true, tag=Didichuxing
-http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/slow script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/Didichuxing.js,requires-body=true, tag=Didichuxing
+#http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/Didichuxing.js,requires-body=true, tag=Didichuxing
+#http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/slow script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/Didichuxing.js,requires-body=true, tag=Didichuxing
 
 #http-response ^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js,requires-body=true, tag=Didichuxing
 #!http-response ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js,requires-body=true, tag=Didichuxing
