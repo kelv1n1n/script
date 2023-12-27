@@ -8,7 +8,7 @@ const { bottom_nav_list } = obj.data?.disorder_cards || {};
 if (url.includes("/homepage/v1/core") && bottom_nav_list) {
   obj.data.disorder_cards.bottom_nav_list.data = (bottom_nav_list.data || []).filter(item => ["v6x_home", "user_center"].includes(item.id));
   fixPos(obj.data.disorder_cards.bottom_nav_list.data);
-  console.log("底部栏：" + obj.data.disorder_cards.bottom_nav_list.data);
+  console.log("底部栏：" + JSON.stringify(obj.data.disorder_cards.bottom_nav_list.data));
 }
 
 // if (url.includes("/homepage/v1/core")) {
