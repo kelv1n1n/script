@@ -21,10 +21,10 @@ if (url.includes("/usercenter/me")) {
   const excludedTitles = ['天天领福利', '金融服务', '更多服务', '企业服务'];
 
   if (obj && obj.data && obj.data.cards) {
-    console.log("cards1:" + obj.data.cards);
-    const filteredCards = obj.data.cards.filter(card => !excludedTitles.includes(card.title));
-    obj.data.cards = filteredCards;
-    console.log("cards2:" + obj.data.cards);
+    console.log("cards1: " + JSON.stringify(obj.data.cards));
+    //const filteredCards = obj.data.cards.filter(card => !excludedTitles.includes(card.title));
+    //obj.data.cards = filteredCards;
+    //console.log("cards2: " + JSON.stringify(obj.data.cards));
     // if (obj?.data?.cards) {
     //   obj.data.cards.forEach(card => {
     //     if (card.tag === "wallet") {
