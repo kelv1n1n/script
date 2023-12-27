@@ -11,6 +11,8 @@ hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, da
 
 ^https:\/\/hd\.xiaojukeji\.com\/d - reject-dict
 
+^https:\/\/conf\.diditaxi\.com\.cn\/api\/usercenter reject-dict
+
 [Script]
 
 http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/didiuser.js,requires-body=true,tag=Didichuxing
