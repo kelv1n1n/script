@@ -16,7 +16,7 @@ if (url.includes("/usercenter/me")) {
 
   if (obj && obj.data && obj.data.cards) {
     console.log("cards1: " + JSON.stringify(obj.data.cards));
-    const filteredCards = obj.data.cards.filter(card => !excludedTitles.includes(card.card_type));
+    const filteredCards = obj.data.cards.filter(card => excludedTitles.includes(card.card_type));
     obj.data.cards = filteredCards;
     console.log("cards2: " + JSON.stringify(obj.data.cards));
     // if (obj?.data?.cards) {
