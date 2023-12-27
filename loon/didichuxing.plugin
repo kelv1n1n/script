@@ -15,7 +15,7 @@ hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, da
 #^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf reject-dict
 #首页汽车服务栏目
 ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast reject-dict
-#^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/slow reject-dict
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/slow reject-dict
 
 [Script]
 #个人主页简化，无效果
