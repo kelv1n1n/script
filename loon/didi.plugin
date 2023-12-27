@@ -1,0 +1,16 @@
+#!name=滴滴出行
+#!desc=去广告
+#!author=奈斯
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1013.png
+
+[MITM]
+
+hostname = res.xiaojukeji.com, img-ys011.didistatic.com, common.diditaxi.com.cn
+
+[URL Rewrite]
+
+^https?://res\.xiaojukeji\.com\/resapi\/activity\/mget reject-dict
+^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
+^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg reject
+^https?://res\.xiaojukeji\.com\/resapi\/activity\/mget reject
+^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
