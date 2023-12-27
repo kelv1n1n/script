@@ -5,11 +5,17 @@
 
 [MITM]
 
-hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn
+hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn,img-ys011.didistatic.com
 
 [URL Rewrite]
 
 ^https:\/\/hd\.xiaojukeji\.com\/d - reject-dict
+
+^https?://res\.xiaojukeji\.com\/resapi\/activity\/mget reject-dict
+^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
+^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg reject
+^https?://res\.xiaojukeji\.com\/resapi\/activity\/mget reject
+^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
 
 [Script]
 
