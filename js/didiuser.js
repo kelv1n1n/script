@@ -11,7 +11,8 @@ let obj = JSON.parse($response.body);
 // }
 
 if (url.includes("/usercenter/me")) {
-  const excludedTitles = ['天天领福利', '金融服务', '更多服务', '企业服务'];
+  //const excludedTitles = ['天天领福利', '金融服务', '更多服务', '企业服务'];
+  const excludedTitles = [1];
 
   if (obj && obj.data && obj.data.cards) {
     console.log("cards1: " + JSON.stringify(obj.data.cards));
