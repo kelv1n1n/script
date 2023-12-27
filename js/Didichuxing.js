@@ -43,7 +43,8 @@ if (url.includes("/usercenter/me")) {
   }
 }
 
-if (url.includes("/resapi/activity/mget") || url.includes("/dynamic/conf") || url.includes("/homepage/v1/other/fast") || url.includes("/agent/v3/feeds") || url.includes("/resapi/activity/xpget") || url.includes("/gateway")) {
+if (url.includes("/resapi/activity/mget") || url.includes("/dynamic/conf") || url.includes("/homepage/v1/other/fast") || url.includes("/agent/v3/feeds") || url.includes("/resapi/activity/xpget") || url.includes("/gateway")|| url.includes("/dynamicmodule/update")) {
+  console.log("url" + url);
   delete obj.data;
 }
 
