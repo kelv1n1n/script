@@ -4,14 +4,6 @@ if (!$response.body) $done({});
 
 let obj = JSON.parse($response.body);
 
-const { bottom_nav_list } = obj.data?.disorder_cards || {};
-if (url.includes("/homepage/v1/core") && bottom_nav_list) {
-  //"user_center"
-  obj.data.disorder_cards.bottom_nav_list.data = (bottom_nav_list.data || []).filter(item => ["v6x_home", "user_center"].includes(item.id));
-  fixPos(obj.data.disorder_cards.bottom_nav_list.data);
-  console.log("底部栏：" + JSON.stringify(obj.data.disorder_cards.bottom_nav_list.data));
-}
-
 // if (url.includes("/homepage/v1/core")) {
 //   delete obj.data?.common_params;
 //   delete obj.data?.omega_params;
@@ -45,15 +37,5 @@ if (url.includes("/usercenter/me")) {
   }
 }
 
-if (url.includes("/resapi/activity/mget") || url.includes("/dynamic/conf") || url.includes("/homepage/v1/other/fast") || url.includes("/agent/v3/feeds") || url.includes("/resapi/activity/xpget") || url.includes("/gateway")|| url.includes("/dynamicmodule/update")) {
-  console.log("url" + url);
-  delete obj.data;
-}
 
 $done({ body: JSON.stringify(obj) });
-
-function fixPos(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].pos = i + 1;
-  }
-}
