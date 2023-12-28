@@ -1,9 +1,7 @@
 #!name=滴滴出行
-#!desc=Didichuxing
-#!author=怎么肥事
+#!desc=简化
+#!author=源濑氏
 #!update=2023-12-22 21:40
-#! ps=需要分流禁用掉 gwp.xiaojukeji.com
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1084.png
 
 [MITM]
 
@@ -15,22 +13,21 @@ hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, da
 
 [Script]
 
-#http-response ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+http-response ^https:\/\/conf\.diditaxi\.com\.cn\/one\/page script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/didi.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/daijia\.kuaidadi\.com\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/freight\.xiaojukeji\.com\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/daijia\.kuaidadi\.com:443\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
-http-response ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
+
+
+
+
+
+
+
+
