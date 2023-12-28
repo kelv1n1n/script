@@ -13,7 +13,7 @@ hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, da
 
 [Script]
 
-http-response ^https:\/\/conf\.diditaxi\.com\.cn\/one\/page script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/didi.js, requires-body=true, timeout=60, tag=Didichuxing
+http-response ^https:\/\/conf\.diditaxi\.com\.cn\/one\/page script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/Didichuxing.js, requires-body=true, timeout=60, tag=Didichuxing
 
 
 
