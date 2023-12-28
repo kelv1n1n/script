@@ -4,12 +4,21 @@ if (!$response.body) $done({});
 
 let obj = JSON.parse($response.body);
 
-const { bottom_nav_list } = obj.data?.disorder_cards || {};
-if (url.includes("/homepage/v1/core") && bottom_nav_list) {
-  //"user_center"
-  obj.data.disorder_cards.bottom_nav_list.data = (bottom_nav_list.data || []).filter(item => ["v6x_home", "user_center"].includes(item.id));
-  fixPos(obj.data.disorder_cards.bottom_nav_list.data);
-  console.log("底部栏：" + JSON.stringify(obj.data.disorder_cards.bottom_nav_list.data));
+if (url.includes("/one/page")) {
+  obj.data.bottom_nav_list
+  //fixPos(obj.data.disorder_cards.bottom_nav_list.data);
+  // 假设 obj.data.bottom_nav_list 是包含 JSON 数组的变量
+
+// 遍历数组
+for (let i = obj.data.bottom_nav_list.length - 1; i >= 0; i--) {
+    // 检查是否存在 'id' 为 'v6x_home' 或 'welfare' 的元素
+    if (obj.data.bottom_nav_list[i].id === 'v6x_home' || obj.data.bottom_nav_list[i].id === 'welfare') {
+        // 删除满足条件的元素
+        obj.data.bottom_nav_list.splice(i, 1);
+    }
+}
+
+  console.log("底部栏：" + JSON.stringify(obj.data.bottom_nav_list));
 }
 
 // if (url.includes("/homepage/v1/core")) {
