@@ -4,11 +4,9 @@
 
 [MITM]
 
-hostname = api-chat.soulapp.cn, ad-r.soulapp.cn, ssp.soulapp.cn, soul-ad.soulapp.cn, 47.99.42.29, 47.97.215.55, 120.27.235.201
+hostname = api-chat.soulapp.cn, ssp.soulapp.cn, 47.99.42.29, 47.97.215.55, 120.27.235.201
 
 [Rule]
-
-#DOMAIN,xlog.jd.com,reject
 DOMAIN,ssp.soulapp.cn,REJECT
 
 [Script]
