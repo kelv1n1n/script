@@ -1,7 +1,8 @@
-#!name = soul解锁私聊
+#!name = soul解锁私聊, 星球页简化
 #!author = ctrl
 
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo url script-response-body https://raw.githubusercontent.com/ctrl98/script/main/js/limitInfo.js
+^https:\/\/api-user\.soulapp\.cn\/v6\/planet\/config url script-response-body https://raw.githubusercontent.com/ctrl98/script/main/js/limitInfo.js
 
 [MITM]
-hostname = api-chat.soulapp.cn
+hostname = api-chat.soulapp.cn,api-user.soulapp.cn
