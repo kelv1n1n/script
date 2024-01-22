@@ -23,5 +23,6 @@ if (url.indexOf(path) != -1) {
     obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 2 || card.sortId === 3);
 
 }
+console.log(obj)
 body = JSON.stringify(obj);
 $done({body});
