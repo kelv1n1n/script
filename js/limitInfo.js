@@ -1,5 +1,7 @@
 
 const path = "/chat/limitInfo";
+const game = "/planet/config";
+const flag = "/planet/recListV2";
 let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
@@ -16,12 +18,14 @@ if (url.indexOf(path) != -1) {
     obj.data.limit = false;
     //body = JSON.stringify(obj);
     console.log(body)
-} else {
+} else if (url.indexOf(game) != -1){
     obj.data.showRedMind=false;
     obj.data.gameInfo=false;
     obj.data.showLuckyBag=false;
     //obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 2 || card.sortId === 3);
     obj.data.coreCards = [];
+} else if (url.indexOf(flag) != -1) {
+    obj.data.topicList = [];
 }
 console.log(obj)
 body = JSON.stringify(obj);
