@@ -26,8 +26,8 @@ if (url.indexOf(path) != -1) {
     obj.data.coreCards = [];
 } else if (url.indexOf(flag) != -1) {
     //obj.data.topicList = [];
-    obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.sortId === "闲聊唠嗑"|| card.sortId === "心动速配");
+    obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
 }
-console.log(obj)
+
 body = JSON.stringify(obj);
 $done({body});
