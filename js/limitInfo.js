@@ -20,7 +20,7 @@ if (url.indexOf(path) != -1) {
     obj.data.showRedMind=false;
     obj.data.gameInfo=false;
     obj.data.showLuckyBag=false;
-    obj.data.coreCards.filter(card => card.sortId === 2 || card.sortId === 3);
+    obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 2 || card.sortId === 3);
 
 }
 body = JSON.stringify(obj);
