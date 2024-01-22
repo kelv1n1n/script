@@ -19,6 +19,7 @@ if (url.indexOf(path) != -1) {
 } else {
     obj.data.showRedMind=false;
     obj.data.gameInfo=false;
+    obj.data.showLuckyBag=false;
 }
 body = JSON.stringify(obj);
 $done({body});
