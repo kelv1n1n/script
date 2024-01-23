@@ -30,7 +30,7 @@ if (url.indexOf(path) != -1) {
     //obj.data.topicList = [];
     obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
 } else if (url.indexOf(tab) != -1) {
-        obj.data = obj.data.filter(card => card.pageId === "PostSquare_Recommend" || card.pageId === "PostSquare_RecommendTag");
+        obj.data = obj.data.filter(card => card.pageId === "PostSquare_Recommend");
 }
 
 body = JSON.stringify(obj);
