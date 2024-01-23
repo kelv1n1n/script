@@ -2,6 +2,8 @@
 const path = "/chat/limitInfo";
 const game = "/planet/config";
 const flag = "/planet/recListV2";
+const tab = "/post/recSquare";
+
 let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
@@ -27,6 +29,8 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(flag) != -1) {
     //obj.data.topicList = [];
     obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
+} else if (url.indexOf(tab) != -1) {
+        obj.data = obj.data.filter(card => card.pageId != "PostSquare_RecommendSR");
 }
 
 body = JSON.stringify(obj);
