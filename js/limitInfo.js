@@ -5,6 +5,7 @@ const flag = "/planet/recListV2";
 const tab = "/post/recSquare";
 
 let url = $request.url;
+//let req = JSON.parse($request.body);
 let body = $response.body;
 let obj = JSON.parse(body);
 if (url.indexOf(path) != -1) {
