@@ -8,7 +8,10 @@ let obj = JSON.parse(body);
 //    obj = [];
 //} else {
 
-obj.body.bundles= obj.body.bundles.filter
+obj.body.bundles= obj.body.bundles.filter(
+  card => card.bundleName != "picassovc_immersive-video_immersivefullscreen" &&
+  card.bundleName != "picassovc_picasso-attractions-channel_searchlist"
+);
 //for (var i = obj.body.bundles.length - 1; i >= 0; i--) {
 //  if (obj.body.bundles[i].bundleName === "picassovc_pexus-freetry-index_index") {
 //    console.log('删除了');
