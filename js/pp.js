@@ -9,7 +9,7 @@ let obj = JSON.parse(body);
 //  console.log("ip " + body.data);
 //  $done({body});
 //}
-const typeArr = [50, 2, 810];
+const typeArr = [50, 2];
 
 obj.data = obj.data.filter(item => !typeArr.includes(item.position_type);
 body = JSON.stringify(obj);
