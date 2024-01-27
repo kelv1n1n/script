@@ -9,9 +9,9 @@ let obj = JSON.parse(body);
 //} else {
 
 obj.body.bundles= obj.body.bundles.filter(
-  card => card.bundleName != "picassovc_immersive-video_immersivefullscreen" ||
-  card.bundleName != "picassovc_picasso-attractions-channel_searchlist" ||
-  card.bundleName != "picassovc_pexus-search-suggest_index"
+  card => card.bundleName !== "picassovc_immersive-video_immersivefullscreen" ||
+  card.bundleName !== "picassovc_picasso-attractions-channel_searchlist" ||
+  card.bundleName !== "picassovc_pexus-search-suggest_index"
   
 );
 //for (var i = obj.body.bundles.length - 1; i >= 0; i--) {
