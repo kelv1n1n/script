@@ -10,7 +10,7 @@ let obj = JSON.parse(body);
 //  $done({body});
 //}
 
-const typeArr = [50, 2, 90, 770];
+const typeArr = [50, 2, 90, 770, 640];
 obj.data = obj.data.filter(item => !typeArr.includes(item.position_type));
 
 
