@@ -17,8 +17,8 @@ for (var i = obj.body.bundles.length - 1; i >= 0; i--) {
     obj.body.bundles.splice(i, 1);
   }
 }
-}
-
+//}
+//obj.body.bundles = [];
 body = JSON.stringify(obj);
 console.log(body);
 $done({body});
