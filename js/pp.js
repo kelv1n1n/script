@@ -6,6 +6,7 @@ let obj = JSON.parse(body);
 if (url.indexOf("httpdns/resolve") != -1) {
   obj.data = [];
   body = JSON.stringify(obj);
+  console.log("ip " + body.data);
   $done({body});
 }
 
