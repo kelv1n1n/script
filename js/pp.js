@@ -10,10 +10,7 @@ let obj = JSON.parse(body);
 //  $done({body});
 //}
 
-obj.data = obj.data.filter(item => 
-  item.position_type !== 50 || 
-  item.position_type !== 2
-  );
+obj.data = obj.data.filter(item => item.position_type !== 50 || item.position_type !== 2);
 body = JSON.stringify(obj);
 
 $done({body});
