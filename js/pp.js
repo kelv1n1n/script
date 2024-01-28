@@ -37,7 +37,7 @@ if (url.indexOf(recommend) != -1) {
 }
 
 if (url.indexOf(recommendPro) != -1) {
-  obj.data.activities = [];
+  obj.data = {};
   body = JSON.stringify(obj);
   console.log("推荐商品清除啦");
   $done({body});
