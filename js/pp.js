@@ -11,7 +11,7 @@ if (url.indexOf(mine) != -1) {
   $done({body});
 }
 
-const typeArr = [50, 2, 90, 770, 80];
+const typeArr = [50, 2, 90, 770, 80, 320];
 obj.data = obj.data.filter(item => !typeArr.includes(item.position_type));
 
 
