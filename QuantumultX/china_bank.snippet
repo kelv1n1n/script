@@ -1,0 +1,8 @@
+# > 中国银行
+# hostname = mbs.boc.cn, mlife.jf365.boc.cn
+^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg url reject-200
+# > 中国银行 缤纷生活
+^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 url reject-200
+
+[MITM]
+hostname = mbs.boc.cn, mlife.jf365.boc.cn
