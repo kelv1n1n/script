@@ -6,8 +6,6 @@
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(server|basic)Config url response-body "dnsvip"\:".+" response-body "dnsvip":""
 # 禁京东直播小窗
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 url reject
-# 禁京东直播(慎用！店铺页面无活动弹窗、无关注按钮、无法观看直播)
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(live｜getShopHomeExtendInfo|getImmediatePlayV910) url reject
 
 [MITM]
 hostname = api.m.jd.com, dns.jd.com
