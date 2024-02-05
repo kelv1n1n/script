@@ -1,8 +1,8 @@
 let body;
 let obj = JSON.parse($request.body);
 
-console.log(obj);
-console.log("----------");
+//console.log(obj);
+//console.log("----------");
 if (obj.placementNo === "0007") {
   body =
     '{"code":"00","materialsList":[{"billMaterialsId":"255","filePath":"h","creativeType":1}],"advertParam":{"skipTime":1}}';
@@ -15,5 +15,5 @@ if (obj.placementNo === "0007") {
 } else {
   body = '{"code":"00","message":"无广告返回"}';
 }
-console.log(body);
+//console.log(body);
 $done({ body });
