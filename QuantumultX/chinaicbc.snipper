@@ -1,0 +1,7 @@
+# > 工商银行
+# hostname = v.icbc.com.cn
+# 如开启可自行添加主机名
+^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
+
+[MITM]
+hostname = v.icbc.com.cn
