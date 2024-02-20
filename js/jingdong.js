@@ -176,13 +176,13 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
       "photoCeiling", // 顶部通栏动图推广
       // "recommend", // 为你推荐
       "ruleFloat", // 资质与规则
-      "searchIcon", // 右上角消费券
-      "topRotate", // 左上角logo
+      //"searchIcon", // 右上角消费券
+      //"topRotate", // 左上角logo
       "tabBarAtmosphere" // 底部悬浮通栏推广
     ];
     // 首页 图层列表
     obj.floorList = obj.floorList.filter((i) => !delItems?.includes(i?.type));
-    console.log(JSON.stringify(obj.floorList));
+    //console.log(JSON.stringify(obj.floorList));
   }
   // 首页 顶部背景图
   // if (obj?.topBgImgBig) {
