@@ -182,6 +182,7 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
     ];
     // 首页 图层列表
     obj.floorList = obj.floorList.filter((i) => !delItems?.includes(i?.type));
+    console.log(JSON.stringify(obj.floorList));
   }
   // 首页 顶部背景图
   // if (obj?.topBgImgBig) {
