@@ -26,8 +26,8 @@ if (url.indexOf(path) != -1) {
     obj.data.showRedMind=false;
     obj.data.gameInfo=false;
     obj.data.showLuckyBag=false;
-    //obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 2 || card.sortId === 3);
-    obj.data.coreCards = [];
+    obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 2 || card.sortId === 3);
+    //obj.data.coreCards = [];
 } else if (url.indexOf(flag) != -1) {
     obj.data.topicList = [];
     //obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
