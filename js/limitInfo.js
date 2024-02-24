@@ -24,7 +24,7 @@ if (url.indexOf(path) != -1) {
     console.log(body)
 } else if (url.indexOf(game) != -1){
     obj.data.showRedMind = false;
-    obj.data.gameInfo = false;
+    //obj.data.gameInfo = false;
     obj.data.showLuckyBag = false;
     obj.data.chatRoomInfo.showChatRoom = false;
     obj.data.gameInfo.showGameCard = false;
