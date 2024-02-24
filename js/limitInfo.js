@@ -3,6 +3,7 @@ const path = "/chat/limitInfo";
 const game = "/planet/config";
 const flag = "/planet/recListV2";
 const tab = "/post/recSquare";
+const room = "/chatClassifyRoomList";
 
 let url = $request.url;
 //let req = JSON.parse($request.body);
@@ -32,6 +33,8 @@ if (url.indexOf(path) != -1) {
     //obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
 } else if (url.indexOf(tab) != -1) {
         obj.data = obj.data.filter(card => card.pageId === "PostSquare_Recommend");
+} else if (url.indexOf(room) != -1) {
+    obj.data.roomList = [];
 }
 
 body = JSON.stringify(obj);
