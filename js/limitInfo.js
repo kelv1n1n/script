@@ -23,9 +23,10 @@ if (url.indexOf(path) != -1) {
     //body = JSON.stringify(obj);
     console.log(body)
 } else if (url.indexOf(game) != -1){
-    obj.data.showRedMind=false;
-    obj.data.gameInfo=false;
-    obj.data.showLuckyBag=false;
+    obj.data.showRedMind = false;
+    obj.data.gameInfo = false;
+    obj.data.showLuckyBag = false;
+    obj.data.chatRoomInfo.showChatRoom = false;
     obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 2 || card.sortId === 3);
     //obj.data.coreCards = [];
 } else if (url.indexOf(flag) != -1) {
@@ -34,7 +35,7 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(tab) != -1) {
         obj.data = obj.data.filter(card => card.pageId === "PostSquare_Recommend");
 } else if (url.indexOf(room) != -1) {
-    obj.data.roomList = [];
+    //obj.data.roomList = [];
 }
 
 body = JSON.stringify(obj);
