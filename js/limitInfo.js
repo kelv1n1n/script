@@ -27,7 +27,8 @@ if (url.indexOf(path) != -1) {
     obj.data.gameInfo = false;
     obj.data.showLuckyBag = false;
     obj.data.chatRoomInfo.showChatRoom = false;
-    obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 2 || card.sortId === 3);
+    obj.data.gameInfo.showGameCard = false;
+    obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 1 || card.sortId === 2 || card.sortId === 3);
     //obj.data.coreCards = [];
 } else if (url.indexOf(flag) != -1) {
     obj.data.topicList = [];
