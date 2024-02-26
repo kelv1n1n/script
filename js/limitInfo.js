@@ -30,6 +30,7 @@ if (url.indexOf(path) != -1) {
     obj.data.gameInfo.showGameCard = false;
     obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 1 || card.sortId === 3);
     //obj.data.coreCards = [];
+    
     //console.log(JSON.stringify(obj));
 } else if (url.indexOf(flag) != -1) {
     obj.data.topicList = [];
