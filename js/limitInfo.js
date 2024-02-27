@@ -9,6 +9,7 @@ const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "https://chat-live.soulapp.cn/chatroom/chatClassifyRoomList";
 
 let url = $request.url;
+console.log("url: " + url);
 //let req = JSON.parse($request.body);
 let body = $response.body;
 let obj = JSON.parse(body);
