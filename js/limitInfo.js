@@ -6,6 +6,7 @@ const tab = "/post/recSquare";
 const room = "/chatClassifyRoomList";
 const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
+const roomAd = "/chat-live.soulapp.cn/chatroom/chatClassifyRoomList";
 
 let url = $request.url;
 //let req = JSON.parse($request.body);
@@ -45,7 +46,10 @@ if (url.indexOf(path) != -1) {
     obj.data.model.show = false;
 } else if (url.indexOf(chatRoomTab) != -1) {
     obj.data.res = obj.data.res.filter(item => item.id === 0 || item.id === 2 || item.id === 4 || item.id === 5);
+} else if (url.indexOf(roomAd) != -1) {
+    obj.data.positionContentRespList = [];
 }
+
 
 body = JSON.stringify(obj);
 $done({body});
