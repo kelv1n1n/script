@@ -4,6 +4,7 @@ const game = "/planet/config";
 const flag = "/planet/recListV2";
 const tab = "/post/recSquare";
 const room = "/chatClassifyRoomList";
+const cacl = "/calculateSoulList";
 
 let url = $request.url;
 //let req = JSON.parse($request.body);
@@ -36,9 +37,11 @@ if (url.indexOf(path) != -1) {
     obj.data.topicList = [];
     //obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
 } else if (url.indexOf(tab) != -1) {
-        obj.data = obj.data.filter(card => card.pageId === "PostSquare_Recommend");
+    obj.data = obj.data.filter(card => card.pageId === "PostSquare_Recommend");
 } else if (url.indexOf(room) != -1) {
     //obj.data.roomList = [];
+} else if (url.indexOf(cacl) != -1) {
+    obj.data.model.show = false;
 }
 
 body = JSON.stringify(obj);
