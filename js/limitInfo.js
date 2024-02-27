@@ -5,6 +5,7 @@ const flag = "/planet/recListV2";
 const tab = "/post/recSquare";
 const room = "/chatClassifyRoomList";
 const cacl = "/calculateSoulList";
+const chatRoomTab = "/getRoomTagInfo";
 
 let url = $request.url;
 //let req = JSON.parse($request.body);
@@ -42,6 +43,8 @@ if (url.indexOf(path) != -1) {
     //obj.data.roomList = [];
 } else if (url.indexOf(cacl) != -1) {
     obj.data.model.show = false;
+} else if (url.indexOf(chatRoomTab) != -1) {
+    obj.data.res = obj.data.res.filter(item => item.id === 0 || item.id === 2 || item.id === 4 || item.id === 5);
 }
 
 body = JSON.stringify(obj);
