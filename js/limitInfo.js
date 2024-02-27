@@ -6,7 +6,7 @@ const tab = "/post/recSquare";
 const room = "/chatClassifyRoomList";
 const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
-const roomAd = "/chat-live.soulapp.cn/chatroom/chatClassifyRoomList";
+const roomAd = "chat-live.soulapp.cn/chatroom/chatClassifyRoomList";
 
 let url = $request.url;
 //let req = JSON.parse($request.body);
