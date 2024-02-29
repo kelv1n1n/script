@@ -15,7 +15,7 @@ let body = $response.body;
 let obj = JSON.parse(body);
 if (url.indexOf(path) != -1) {
     //let obj = JSON.parse(body);
-    console.log(obj);
+    //console.log(obj);
     delete obj.data.subMsg;
     delete obj.data.extMsg;
     delete obj.data.abValue;
