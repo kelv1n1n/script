@@ -25,7 +25,7 @@ if (url.indexOf(path) != -1) {
     delete obj.data.type;
     obj.data.limit = false;
     //body = JSON.stringify(obj);
-    console.log(body)
+    //console.log(body)
 } else if (url.indexOf(game) != -1){
     obj.data.showRedMind = false;
     //obj.data.gameInfo = false;
@@ -50,9 +50,9 @@ else if (url.indexOf(cacl) != -1) {
 } else if (url.indexOf(chatRoomTab) != -1) {
     obj.data.res = obj.data.res.filter(item => item.id === 0 || item.id === 2 || item.id === 4 || item.id === 5);
 } else if (url.indexOf(roomAd) != -1) {
-    console.log("命中了" + url);
+    //console.log("命中了" + url);
     obj.data.positionContentRespList = [];
-    console.log(JSON.stringify(obj.data.positionContentRespList));
+    //console.log(JSON.stringify(obj.data.positionContentRespList));
 }
 
 
