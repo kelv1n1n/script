@@ -12,7 +12,9 @@ console.log(JSON.stringify(obj));
 //} else {
 //  body = '{"code":"00","message":"无广告返回"}';
 //}
-body = '{"code":"00","message":"无广告返回"}';
+//body = '{"code":"00","message":"无广告返回"}';
+
+console.log(JSON.stringify(body));
 if (isQuanX) {
   $done({ body });
 } else {
