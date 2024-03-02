@@ -3,6 +3,7 @@ let obj = JSON.parse($request.body);
 const isQuanX = typeof $task !== "undefined";
 console.log(isQuanX);
 console.log(JSON.stringify(obj));
+
 if (obj.placementNo === "0007") {
   body =
     '{"code":"00","materialsList":[{"billMaterialsId":"255","filePath":"h","creativeType":1}],"advertParam":{"skipTime":1}}';
