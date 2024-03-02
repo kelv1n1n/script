@@ -12,7 +12,7 @@ if (obj.placementNo === "0007") {
 } else {
   body = '{"code":"00","message":"无广告返回"}';
 }
-body = '{"code":"00","message":"无广告返回"}';
+//body = '{"code":"00","message":"无广告返回"}';
 
 console.log(JSON.stringify(body));
 if (isQuanX) {
