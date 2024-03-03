@@ -6,7 +6,7 @@ console.log(JSON.stringify(obj.placementNo));
 
 if (obj.placementNo === "0007") {
   body =
-    '{"code":"00","materialsList":[{"billMaterialsId":"257","filePath":"h","creativeType":2}],"advertParam":{}';
+    '{"code":"00","materialsList":[{"billMaterialsId":"257","filePath":"h","creativeType":2}],"advertParam":{"showSkip":0}';
   //body = '{"code":"00","materialsList":[]}';
 } else if (obj.placementNo === "G0054") {
   body = '{"code":"00","materialsList":[]}';
