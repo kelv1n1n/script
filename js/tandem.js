@@ -15,6 +15,6 @@ if (url.indexOf(path) != -1) {
     //obj.initializer_settings = {};
     obj.publisher_permissions[0].eoid_enabled = false;
 }
-
+console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
 $done({body});
