@@ -12,6 +12,7 @@ if (url.indexOf(path) != -1) {
     //console.log(body)
 } else if (url.indexOf(config) != -1) {
     obj.ad_unit_settings = [];
+    obj.initializer_settings = {};
 }
 
 body = JSON.stringify(obj);
