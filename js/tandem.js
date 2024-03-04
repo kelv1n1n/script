@@ -11,8 +11,9 @@ if (url.indexOf(path) != -1) {
     //body = JSON.stringify(obj);
     //console.log(body)
 } else if (url.indexOf(config) != -1) {
-    obj.ad_unit_settings = [];
-    obj.initializer_settings = {};
+    //obj.ad_unit_settings = [];
+    //obj.initializer_settings = {};
+    obj.publisher_permissions[0].eoid_enabled = false;
 }
 
 body = JSON.stringify(obj);
