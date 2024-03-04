@@ -10,7 +10,7 @@ if (url.indexOf(path) != -1) {
     //obj.ad_networks = [];
     //body = JSON.stringify(obj);
     //console.log(body)
-    obj.status = 0;
+    //obj.status = 0;
     //obj.ad_networks[0].ad.enable_omid = false
 } else if (url.indexOf(config) != -1) {
     //obj.ad_unit_settings = [];
