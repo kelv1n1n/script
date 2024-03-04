@@ -16,7 +16,7 @@ if (url.indexOf(path) != -1) {
     //obj.ad_unit_settings = [];
     //obj.initializer_settings = {};
     //obj.publisher_permissions = '[{"eoid_enabled":false}]';
-    obj = {};
+    //obj = {};
 }
 console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
