@@ -13,7 +13,7 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(config) != -1) {
     //obj.ad_unit_settings = [];
     //obj.initializer_settings = {};
-    obj.publisher_permissions[0].eoid_enabled = false;
+    obj.publisher_permissions = '[{"eoid_enabled":false}]';
 }
 console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
