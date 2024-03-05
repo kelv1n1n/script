@@ -11,7 +11,8 @@ if (url.indexOf(home) != -1) {
     obj.data.hotspot = {};
     obj.data.activity_dynamic_modules = [];
 } else if (url.indexOf(tab) != -1) {
-    obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => item.key !== 'tab2');
+    obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => item.key !=== "tab2");
+    console.log(JSON.stringify(obj.data.tab_icon_go));
 }
 console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
