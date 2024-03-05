@@ -22,6 +22,8 @@
 ^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/myPage\/goodsList\/v1 url reject-dict
 # 我的页面菜单
 ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/my\/config_list url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
+# 我的页面背景
+^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/my\/info url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
 
 [MITM]
 hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn
