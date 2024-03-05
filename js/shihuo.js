@@ -15,7 +15,7 @@ if (url.indexOf(home) != -1) {
     obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => item.key !== "tab2");
     //console.log(JSON.stringify(obj.data.tab_icon_go));
 } else if (url.indexOf(my) != -1) {
-    const arrayKey = ["xiaoyuanhuodong", "wenjuandiaoyan", "qianggou", "kanjia", "invitenew", "expert_list"];
+    const arrayKey = ["xiaoyuanhuodong", "wenjuandiaoyan", "qianggou", "kanjia", "invitenew", "expert_list", "part-time recruitment", "chuangzuozhezhongxin"];
     obj.data.list = obj.data.list.filter(obj => obj.key === 'wo_de_shihuo');
     obj.data.list[0].list = obj.data.list[0].list.filter(item => !arrayKey.includes(item.key));
 }
