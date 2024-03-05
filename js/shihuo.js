@@ -15,7 +15,7 @@ if (url.indexOf(home) != -1) {
     obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => item.key !== "tab2");
     //console.log(JSON.stringify(obj.data.tab_icon_go));
 } else if (url.indexOf(my) != -1) {
-    const arrayKey = ["xiaoyuanhuodong", "wenjuandiaoyan", "qianggou", "kanjia"];
+    const arrayKey = ["xiaoyuanhuodong", "wenjuandiaoyan", "qianggou", "kanjia", "invitenew", "expert_list"];
     obj.data.list.forEach(obj => {  
       if (obj.key === "wo_de_shihuo") {  
         obj.list = obj.list.filter(item => !arrayKey.includes(item.key));  
