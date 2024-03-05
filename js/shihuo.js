@@ -1,6 +1,7 @@
 const home = "/home/info/v1";
 const tab = "/sh-appapi/app3/saveAppInfo";
 const my = "/sh-appapi/my/config_list";
+const info = "/sh-appapi/my/info";
 
 let url = $request.url;
 
@@ -19,6 +20,8 @@ if (url.indexOf(home) != -1) {
     const arrayKey = ["xiaoyuanhuodong", "wenjuandiaoyan", "qianggou", "kanjia", "invitenew", "expert_list", "part-time recruitment", "chuangzuozhezhongxin"];
     obj.data.list = obj.data.list.filter(obj => obj.key === 'wo_de_shihuo');
     obj.data.list[0].list = obj.data.list[0].list.filter(item => !arrayKey.includes(item.key));
+} else if (url.indexOf(info) != -1) {
+    obj.data.background = "";
 }
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
