@@ -7,6 +7,7 @@ let body = $response.body;
 let obj = JSON.parse(body);
 if (url.indexOf(home) != -1) {
     obj.data.new_activity = [];
+    obj.data.search_arr = {};
 } else if (url.indexOf(config) != -1) {
 
 }
