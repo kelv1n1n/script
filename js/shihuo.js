@@ -9,6 +9,7 @@ if (url.indexOf(home) != -1) {
     obj.data.new_activity = [];
     obj.data.search_arr = {};
     obj.data.hotspot = {};
+    obj.data.activity_dynamic_modules[0].height = 0
 } else if (url.indexOf(config) != -1) {
 
 }
