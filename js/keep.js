@@ -1,6 +1,7 @@
 
 const config = "/config/v3/basic";
 const ad = "/op-engine-webapp/v1/ad";
+const tool = "/tool/v1/jump/popup";
 
 let url = $request.url;
 
@@ -13,8 +14,8 @@ if (url.indexOf(config) != -1) {
 } else if (url.indexOf(ad) != -1) {
   obj.data.creative = {};
   obj.data.hasAd = 0;
-} else if (url.indexOf(my) != -1) {
-
+} else if (url.indexOf(tool) != -1) {
+  obj.data = {};
 } else if (url.indexOf(info) != -1) {
 
 }
