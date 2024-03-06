@@ -4,13 +4,9 @@
 #!author = kelv1n1n
 
 # 开屏广告
-#^https:\/\/api\.gotokeep\.com\/config\/v3\/basic url script-response-body https://github.com/kelv1n1n/script/raw/main/js/keep.js
-#^https:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v1\/ad url script-response-body https://github.com/kelv1n1n/script/raw/main/js/keep.js
-#^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/tool\/v1\/jump\/popup url script-response-body https://github.com/kelv1n1n/script/raw/main/js/keep.js
-
-# 屏蔽开屏广告请求
-#^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad url reject
-^https?:\/\/static1\.keepcdn\.com\/ark_optimus\/202\d\/*\/*\/.*.(png|jpg) url reject-200
+^https:\/\/api\.gotokeep\.com\/config\/v3\/basic url script-response-body https://github.com/kelv1n1n/script/raw/main/js/keep.js
+^https:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v1\/ad url script-response-body https://github.com/kelv1n1n/script/raw/main/js/keep.js
+^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/tool\/v1\/jump\/popup url script-response-body https://github.com/kelv1n1n/script/raw/main/js/keep.js
 
 
 [MITM]
