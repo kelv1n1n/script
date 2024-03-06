@@ -2,6 +2,7 @@
 const config = "/config/v3/basic";
 const ad = "/op-engine-webapp/v1/ad";
 const tool = "/tool/v1/jump/popup";
+const search_tab = "/hotHashtag/list";
 
 let url = $request.url;
 
@@ -16,6 +17,8 @@ if (url.indexOf(config) != -1) {
   obj.data.hasAd = 0;
 } else if (url.indexOf(tool) != -1) {
   obj.data = {};
+} else if (url.indexOf(search_tab) != -1) {
+  obj.data = [];
 }
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
