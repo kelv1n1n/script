@@ -20,7 +20,9 @@ if (url.indexOf(config) != -1) {
 } else if (url.indexOf(search_tab) != -1) {
   //obj.data = [];
   obj.ok = false;
-  console.log(JSON.stringify(obj.ok));
+  obj.data[0].adResponse = {};
+  obj.data[0].schema = "";
+  console.log(JSON.stringify(obj.data));
 }
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
