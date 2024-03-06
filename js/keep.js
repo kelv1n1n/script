@@ -16,8 +16,6 @@ if (url.indexOf(config) != -1) {
   obj.data.hasAd = 0;
 } else if (url.indexOf(tool) != -1) {
   obj.data = {};
-} else if (url.indexOf(info) != -1) {
-
 }
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
