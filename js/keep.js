@@ -18,7 +18,9 @@ if (url.indexOf(config) != -1) {
 } else if (url.indexOf(tool) != -1) {
   obj.data = {};
 } else if (url.indexOf(search_tab) != -1) {
-  obj.data = [];
+  //obj.data = [];
+  obj.ok = false;
+  console.log(JSON.stringify(obj.ok);
 }
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
