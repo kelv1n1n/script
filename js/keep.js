@@ -11,6 +11,7 @@ if (url.indexOf(config) != -1) {
   obj.data.generalConfigs['splash.ad.load.max.timeout'] = "0";
   obj.data.generalConfigs['screen.ks.ad.enabled'] = "false";
 } else if (url.indexOf(ad) != -1) {
+  obj.data.creative = {};
   obj.data.hasAd = 0;
 } else if (url.indexOf(my) != -1) {
 
