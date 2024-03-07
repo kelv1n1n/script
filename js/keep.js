@@ -16,7 +16,7 @@ if (url.indexOf(config) != -1) {
 } else if (url.indexOf(ad) != -1) {
   //obj.data.creative = {};
   console.log(JSON.stringify(obj.data.creative));
-  obj.data.creative.material.fullScreenDisplay = false;
+  //obj.data.creative.material.fullScreenDisplay = false;
   obj.data.hasAd = 0;
   console.log(JSON.stringify(obj.data.creative.material));
   console.log(JSON.stringify(obj.data.hasAd));
