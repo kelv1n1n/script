@@ -14,10 +14,9 @@ if (url.indexOf(config) != -1) {
   obj.data.generalConfigs['splash.ad.load.max.timeout'] = "0";
   obj.data.generalConfigs['screen.ks.ad.enabled'] = "false";
 } else if (url.indexOf(ad) != -1) {
-  //obj.data.creative = {};
+  obj.data.creative = {};
   console.log(JSON.stringify(obj.data));
-  //obj.data.creative.material.fullScreenDisplay = false;
-  obj.data.hasAd = 0;
+  //obj.data.hasAd = 0;
   //console.log(JSON.stringify(obj.data.creative.material));
   console.log(JSON.stringify(obj.data.hasAd));
 } else if (url.indexOf(tool) != -1) {
