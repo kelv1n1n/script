@@ -23,6 +23,7 @@ if (url.indexOf(home) != -1) {
     obj.data.list[0].list = obj.data.list[0].list.filter(item => !arrayKey.includes(item.key));
 } else if (url.indexOf(info) != -1) {
     obj.data.background = "";
+    obj.data.background_imgs = "";
 }
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
