@@ -16,6 +16,7 @@ if (url.indexOf(home) != -1) {
     obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => item.key !== "tab2");
     //console.log(JSON.stringify(obj.data.tab_icon_go));
 } else if (url.indexOf(my) != -1) {
+    obj.data.activity_dynamic_modules[0].pageData.is_show_ad_flag = 0;
     obj.data.savings_card = {};
     const arrayKey = ["xiaoyuanhuodong", "wenjuandiaoyan", "qianggou", "kanjia", "invitenew", "expert_list", "part-time recruitment", "chuangzuozhezhongxin"];
     obj.data.list = obj.data.list.filter(obj => obj.key === 'wo_de_shihuo');
