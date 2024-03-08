@@ -26,6 +26,8 @@
 ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/my\/info url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
 # 首页商品列表广告
 ^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/home\/feed\/v1 url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
+# 商品详情页
+^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/gdetails\/middleList\/v1 url reject
 
 [MITM]
 hostname = sh-gateway.shihuo.cn, static.shihuocdn.cn
