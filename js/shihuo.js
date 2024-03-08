@@ -2,6 +2,7 @@ const home = "/home/info/v1";
 const tab = "/sh-appapi/app3/saveAppInfo";
 const my = "/sh-appapi/my/config_list";
 const info = "/sh-appapi/my/info";
+const list = "/home/feed/v1";
 
 let url = $request.url;
 
@@ -24,6 +25,8 @@ if (url.indexOf(home) != -1) {
 } else if (url.indexOf(info) != -1) {
     obj.data.background = "";
     obj.data.background_imgs = "";
+} else if (url.indexOf(list) != -1) {
+    obj.data.lists = obj.data.lists.filter(obj => obj.item_type !== 'EXPRESS_AD');
 }
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
