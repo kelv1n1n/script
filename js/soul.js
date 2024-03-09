@@ -8,7 +8,7 @@ const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const match = "/user/isMatch";
 const infos = "/user/ext/info";
-
+const v3 = "/update/user/info;
 
 let url = $request.url;
 console.log("url: " + url);
@@ -70,7 +70,10 @@ if (url.indexOf(path) != -1) {
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(match)) {
     obj.data.isMatch = 1;
-} 
+} else if (url.indexOf(v3)) {
+    obj.code = 10001;
+    obj.success = true;
+}
 
 
 body = JSON.stringify(obj);
