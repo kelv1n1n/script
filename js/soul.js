@@ -8,7 +8,7 @@ const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const match = "/user/isMatch";
 const infos = "/user/ext/info";
-const v3 = "/update/user/info;
+const v3 = "/update/user/info";
 
 let url = $request.url;
 console.log("url: " + url);
