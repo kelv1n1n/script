@@ -7,6 +7,7 @@ const tab = "/post/recSquare";
 const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
+const match = "/user/isMatch";
 
 let url = $request.url;
 console.log("url: " + url);
@@ -53,6 +54,8 @@ else if (url.indexOf(cacl) != -1) {
     //console.log("命中了" + url);
     obj.data.positionContentRespList = [];
     //console.log(JSON.stringify(obj.data.positionContentRespList));
+} else if (url.indexOf(match)) {
+    obj.data.isMatch = 1;
 }
 
 
