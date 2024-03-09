@@ -197,6 +197,7 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
   obj.result.fromLocalCache = "0";
   obj.result.navigationOrder = "index,cart,home";
   obj.result.modeMap.dark.navigationAll = obj.result.modeMap.dark.navigationAll.filter(item => item.functionId !== "find" && item.functionId !== "new");
+  obj.result.modeMap.normal.navigationAll = obj.result.modeMap.normal.navigationAll.filter(item => item.functionId !== "find" && item.functionId !== "new");
   obj.result.modeMap.paramValues = "Index_Cart_Home"
   console.log(JSON.stringify(obj.result));
 }
