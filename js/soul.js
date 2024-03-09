@@ -8,7 +8,7 @@ const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const match = "/user/isMatch";
-const avatar = "/user/ext/info";
+const avatar = "api-user.soulapp.cn/user/ext/info?bi=";
 
 let url = $request.url;
 //console.log("url: " + url);
