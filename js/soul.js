@@ -8,7 +8,7 @@ const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const match = "/user/isMatch";
-const avatar = "api-user.soulapp.cn/user/ext/info?bi=";
+const ext = "/user/ext/info?bi=";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -70,7 +70,7 @@ else if (url.indexOf(cacl) != -1) {
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(match)) {
     obj.data.isMatch = 1;
-} else if (url.indexOf(avatar) != -1) {
+} else if (url.indexOf(ext) != -1) {
     console.log("进来了")
     obj.data.displayOldAvatar = true;
     console.log(JSON.stringify(obj.data.displayOldAvatar));
