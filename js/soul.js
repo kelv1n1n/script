@@ -8,10 +8,10 @@ const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const match = "/user/isMatch";
-const avatar = "/ext/info";
+const avatar = "/user/ext/info";
 
 let url = $request.url;
-console.log("url: " + url);
+//console.log("url: " + url);
 //let req = JSON.parse($request.body);
 let body = $response.body;
 let obj = JSON.parse(body);
@@ -70,7 +70,7 @@ else if (url.indexOf(cacl) != -1) {
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(match)) {
     obj.data.isMatch = 1;
-} else if (url.indexOf(avatar) != -1 ) {
+} else if (url.indexOf(avatar) != -1) {
     console.log("进来了")
     obj.data.displayOldAvatar = true;
     console.log(JSON.stringify(obj.data.displayOldAvatar));
