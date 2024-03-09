@@ -192,6 +192,9 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
   if (obj?.webViewFloorList?.length > 0) {
     obj.webViewFloorList = [];
   }
+} else if (url.includes("functionId=readCustomSurfaceList")) {
+  //底部菜单
+  obj.result.modeMap.dark.navigationAll = obj.result.modeMap.dark.navigationAll.filter(item => item.functionId !== "find" || item.functionId !== "new");
 }
 
 $done({ body: JSON.stringify(obj) });
