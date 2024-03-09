@@ -27,14 +27,14 @@ if (url.indexOf(path) != -1) {
     //body = JSON.stringify(obj);
     //console.log(body)
 } else if (url.indexOf(game) != -1){
-    obj.data.showRedMind = false;
+    //obj.data.showRedMind = false;
     //obj.data.gameInfo = false;
     obj.data.showLuckyBag = false;
     obj.data.chatRoomInfo.showChatRoom = false;
     obj.data.gameInfo.showGameCard = false;
     obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 1 || card.sortId === 3);
     //obj.data.coreCards = [];
-    obj.data.luckyBagEntranceImg = "";
+    //obj.data.luckyBagEntranceImg = "";
     //console.log(JSON.stringify(obj));
 } else if (url.indexOf(flag) != -1) {
     obj.data.topicList = [];
