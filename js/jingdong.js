@@ -194,7 +194,9 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
   }
 } else if (url.includes("functionId=readCustomSurfaceList")) {
   //底部菜单
+  obj.result.navigationOrder = "index,cart,home";
   obj.result.modeMap.dark.navigationAll = obj.result.modeMap.dark.navigationAll.filter(item => item.functionId !== "find" || item.functionId !== "new");
+  console.log(JSON.stringify(obj.result.navigationOrder));
 }
 
 $done({ body: JSON.stringify(obj) });
