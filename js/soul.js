@@ -39,13 +39,13 @@ if (url.indexOf(path) != -1) {
     //console.log(JSON.stringify(obj));
 
     obj.data.coreCards.forEach(card => {
-      if (card.key === 'showRedMind') {
-        card.value = false;
-      } else if (card.key === 'showLuckyBag') {
-        card.value = false;
-      } else if (card.key === 'iconUrl') {
-        card.value = '';
-      }
+        
+        if (card.showLuckyBag === true) {
+          card.showLuckyBag = false;
+        } else if (card.showRedMind === true) {
+          card.showRedMind = false;
+        }
+        card.iconUrl = "";
     });
 
 
