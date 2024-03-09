@@ -1,4 +1,3 @@
-
 const path = "/chat/limitInfo";
 const game = "/planet/config";
 const flag = "/planet/recListV2";
