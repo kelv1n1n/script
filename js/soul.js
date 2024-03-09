@@ -37,6 +37,19 @@ if (url.indexOf(path) != -1) {
     //obj.data.coreCards = [];
     //obj.data.luckyBagEntranceImg = "";
     //console.log(JSON.stringify(obj));
+
+    obj.data.coreCards.forEach(card => {
+      if (card.key === 'showRedMind') {
+        card.value = false;
+      } else if (card.key === 'showLuckyBag') {
+        card.value = false;
+      } else if (card.key === 'iconUrl') {
+        card.value = '';
+      }
+    });
+
+
+
 } else if (url.indexOf(flag) != -1) {
     obj.data.topicList = [];
     //obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
