@@ -27,6 +27,10 @@ if (url.indexOf(path) != -1) {
     obj.data.limit = false;
     //body = JSON.stringify(obj);
     //console.log(body)
+} else if (url.indexOf(infos) !== -1) {
+    console.log("进来了");
+    obj.data.displayOldAvatar = true;
+    console.log(JSON.stringify(obj.data.displayOldAvatar));
 } else if (url.indexOf(game) != -1){
     obj.data.showRedMind = false;
     //obj.data.gameInfo = false;
@@ -65,11 +69,7 @@ if (url.indexOf(path) != -1) {
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(match)) {
     obj.data.isMatch = 1;
-} else if (url.indexOf(infos) !== -1) {
-    console.log("进来了");
-    obj.data.displayOldAvatar = true;
-    console.log(JSON.stringify(obj.data.displayOldAvatar));
-}
+} 
 
 
 body = JSON.stringify(obj);
