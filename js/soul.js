@@ -70,7 +70,8 @@ else if (url.indexOf(cacl) != -1) {
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(match)) {
     obj.data.isMatch = 1;
-} else if (url.indexOf(avatar)) {
+} else if (url.indexOf(avatar) != -1 ) {
+    console.log("进来了")
     obj.data.displayOldAvatar = true;
     console.log(JSON.stringify(obj.data.displayOldAvatar));
 }
