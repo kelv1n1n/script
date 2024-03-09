@@ -40,9 +40,9 @@ if (url.indexOf(path) != -1) {
 
     obj.data.coreCards.forEach(card => {
         
-        if (card.showLuckyBag === true) {
+        if (card.hasOwnProperty('showLuckyBag') && card.showLuckyBag === true) {
           card.showLuckyBag = false;
-        } else if (card.showRedMind === true) {
+        } else if (card.hasOwnProperty('showRedMind') && card.showRedMind === true) {
           card.showRedMind = false;
         }
         card.iconUrl = "";
