@@ -56,11 +56,7 @@ if (url.indexOf(path) != -1) {
     //obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
 } else if (url.indexOf(tab) != -1) {
     obj.data = obj.data.filter(card => card.pageId === "PostSquare_Recommend");
-} 
-//else if (url.indexOf(room) != -1) {
-    //obj.data.roomList = [];
-//} 
-else if (url.indexOf(cacl) != -1) {
+} else if (url.indexOf(cacl) != -1) {
     obj.data.model.show = false;
 } else if (url.indexOf(chatRoomTab) != -1) {
     obj.data.res = obj.data.res.filter(item => item.id === 0 || item.id === 2 || item.id === 4 || item.id === 5);
@@ -70,7 +66,7 @@ else if (url.indexOf(cacl) != -1) {
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(match)) {
     obj.data.isMatch = 1;
-} else if (url.indexOf(ext) != -1) {
+} else if (url.indexOf(ext)) {
     console.log("进来了")
     obj.data.displayOldAvatar = true;
     console.log(JSON.stringify(obj.data.displayOldAvatar));
