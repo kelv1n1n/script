@@ -68,9 +68,9 @@ if (url.indexOf(path) != -1) {
     //console.log("命中了" + url);
     obj.data.positionContentRespList = [];
     //console.log(JSON.stringify(obj.data.positionContentRespList));
-} else if (url.indexOf(match)) {
+} else if (url.indexOf(match) !== -1) {
     obj.data.isMatch = 1;
-} else if (url.indexOf(v3)) {
+} else if (url.indexOf(v3) !== -1) {
     obj.code = 10001;
     obj.success = true;
 }
