@@ -7,7 +7,7 @@ const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const match = "/user/isMatch";
-const infos = "/user/ext/info";
+const infos = "pageId=HomePage_MyInformation";
 
 let url = $request.url;
 console.log("url: " + url);
