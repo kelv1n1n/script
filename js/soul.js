@@ -8,10 +8,10 @@ const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const match = "/user/isMatch";
-const ext = "/user/ext/info?bi=";
+const ext = "/user/ext/info";
 
 let url = $request.url;
-//console.log("url: " + url);
+console.log("url: " + url);
 //let req = JSON.parse($request.body);
 let body = $response.body;
 let obj = JSON.parse(body);
