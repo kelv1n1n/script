@@ -8,6 +8,7 @@ const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const match = "/user/isMatch";
+const avatar = "/ext/info";
 
 let url = $request.url;
 console.log("url: " + url);
@@ -69,6 +70,9 @@ else if (url.indexOf(cacl) != -1) {
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(match)) {
     obj.data.isMatch = 1;
+} else if (url.indexOf(avatar)) {
+    obj.data.displayOldAvatar = true;
+    console.log(JSON.stringify(obj.data.displayOldAvatar));
 }
 
 
