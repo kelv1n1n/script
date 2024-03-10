@@ -11,7 +11,7 @@ const infos = "/user/ext/info";
 const v3 = "/update/user/info";
 
 let url = $request.url;
-console.log("url: " + url);
+//console.log("url: " + url);
 //let req = JSON.parse($request.body);
 let body = $response.body;
 let obj = JSON.parse(body);
@@ -45,12 +45,12 @@ if (url.indexOf(path) != -1) {
     //console.log(JSON.stringify(obj));
 
     obj.data.coreCards.forEach(card => {
-        
-        if (card.hasOwnProperty('showLuckyBag') && card.showLuckyBag === true) {
-          card.showLuckyBag = false;
-        } else if (card.hasOwnProperty('showRedMind') && card.showRedMind === true) {
-          card.showRedMind = false;
-        }
+        //if (card.hasOwnProperty('showLuckyBag') && card.showLuckyBag === true) {
+          //card.showLuckyBag = false;
+        //}
+        card.showLuckyBag = false;
+        card.showRedMind = false;
+        card.style = 1;
     });
 
 
