@@ -51,8 +51,6 @@ if (url.indexOf(path) != -1) {
         } else if (card.hasOwnProperty('showRedMind') && card.showRedMind === true) {
           card.showRedMind = false;
         }
-        card.iconUrl = "";
-        card.iconImgType = 3;
     });
 
 
