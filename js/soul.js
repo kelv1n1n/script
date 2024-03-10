@@ -52,7 +52,7 @@ if (url.indexOf(path) != -1) {
           card.showRedMind = false;
         }
         card.iconUrl = "";
-        card.iconImgType = 1;
+        card.iconImgType = 3;
     });
 
 
