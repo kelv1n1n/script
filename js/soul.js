@@ -36,7 +36,7 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(game) != -1){
     obj.data.showRedMind = false;
     //obj.data.gameInfo = false;
-    obj.data.showLuckyBag = false;
+    //obj.data.showLuckyBag = false;
     obj.data.chatRoomInfo.showChatRoom = false;
     obj.data.gameInfo.showGameCard = false;
     obj.data.coreCards = obj.data.coreCards.filter(card => card.sortId === 1 || card.sortId === 3);
