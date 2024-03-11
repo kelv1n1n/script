@@ -8,6 +8,7 @@ const roomAd = "/chatroom/chatClassifyRoomList";
 const infos = "/user/ext/info";
 const bubble = "/bubbling/queryMyBubbling";
 const match = "/user/isMatch";
+const metric = "/homepage/metrics";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -74,7 +75,10 @@ if (url.indexOf(path) != -1) {
     };
 } else if (url.indexOf(match) != -1) {
     obj.data.isMatch = 1;
+} else if (url.indexOf(metric) != -1) {
+    obj.data.showMetric = false;
 }
+
 body = JSON.stringify(obj);
 //console.log(body);
 $done({body});
