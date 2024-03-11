@@ -7,6 +7,7 @@ const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const infos = "/user/ext/info";
 const bubble = "/bubbling/queryMyBubbling";
+const match = "/user/isMatch";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -67,16 +68,13 @@ if (url.indexOf(path) != -1) {
     obj.data.positionContentRespList = [];
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(bubble) != -1) {
-    console.log("进来了");
-    //let resp = "";
-    //resp = '{"code":10001,"message":"success","data":{"mood":"https://china-img.soulapp.cn/admin/2023-02-20/b57cb774-3ef7-4743-be43-9723e4508c38.png","unreadQuantity":0},"success":true}';
-    //$done({resp});
     obj['data'] = {
         "mood": "https://china-img.soulapp.cn/admin/2023-02-20/b57cb774-3ef7-4743-be43-9723e4508c38.png",
         "unreadQuantity": 0
     };
-
+} else if (url.indexOf(match) != -1) {
+    obj.data.isMatch = 0;
 }
 body = JSON.stringify(obj);
-console.log(body);
+//console.log(body);
 $done({body});
