@@ -2,13 +2,10 @@ const path = "/chat/limitInfo";
 const game = "/planet/config";
 const flag = "/planet/recListV2";
 const tab = "/post/recSquare";
-//const room = "/chatClassifyRoomList";
 const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
-const match = "/user/isMatch";
 const infos = "/user/ext/info";
-const v3 = "/update/user/info";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -68,11 +65,6 @@ if (url.indexOf(path) != -1) {
     //console.log("命中了" + url);
     obj.data.positionContentRespList = [];
     //console.log(JSON.stringify(obj.data.positionContentRespList));
-} else if (url.indexOf(match) !== -1) {
-    obj.data.isMatch = 1;
-} else if (url.indexOf(v3) !== -1) {
-    obj.code = 10001;
-    obj.success = true;
 }
 
 
