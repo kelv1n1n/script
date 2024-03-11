@@ -73,7 +73,7 @@ if (url.indexOf(path) != -1) {
         "unreadQuantity": 0
     };
 } else if (url.indexOf(match) != -1) {
-    obj.data.isMatch = 0;
+    obj.data.isMatch = 1;
 }
 body = JSON.stringify(obj);
 //console.log(body);
