@@ -77,8 +77,9 @@ if (url.indexOf(path) != -1) {
     obj.data.isMatch = 1;
 } else if (url.indexOf(metric) != -1) {
     obj.data.showMetric = false;
+    obj.data.metricSwitchValue = 1;
 }
 
 body = JSON.stringify(obj);
-//console.log(body);
+console.log(body);
 $done({body});
