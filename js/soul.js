@@ -76,7 +76,7 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(match) != -1) {
     obj.data.isMatch = 1;
 } else if (url.indexOf(metric) != -1) {
-    obj.data.showMetric = false;
+    obj.data.showMetric = true;
     obj.data.metricSwitchValue = 1;
 }
 
