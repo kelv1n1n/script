@@ -6,6 +6,7 @@ const cacl = "/calculateSoulList";
 const chatRoomTab = "/getRoomTagInfo";
 const roomAd = "/chatroom/chatClassifyRoomList";
 const infos = "/user/ext/info";
+const bubble = "/bubbling/queryMyBubbling";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -65,6 +66,9 @@ if (url.indexOf(path) != -1) {
     //console.log("命中了" + url);
     obj.data.positionContentRespList = [];
     //console.log(JSON.stringify(obj.data.positionContentRespList));
+} else if (url.indexOf(bubble) != -1) {
+    obj = "{"code":10001,"message":"success","data":{"mood":"https://china-img.soulapp.cn/admin/2023-02-20/b57cb774-3ef7-4743-be43-9723e4508c38.png","unreadQuantity":0},"success":true}";
+
 }
 
 
