@@ -30,9 +30,14 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
   //底部菜单
   obj.result.fromLocalCache = "0";
   obj.result.navigationOrder = "index,cart,home";
-  obj.result.modeMap.dark.navigationAll = obj.result.modeMap.dark.navigationAll.filter(item => item.functionId !== "find" && item.functionId !== "new");
-  obj.result.modeMap.normal.navigationAll = obj.result.modeMap.normal.navigationAll.filter(item => item.functionId === "index");
+  //obj.result.modeMap.normal.navigationAll = obj.result.modeMap.normal.navigationAll.filter(item => item.functionId === "index");
   obj.result.paramValues = "Index_Cart_Home"
+  obj.result.modeMap.normal.navigationAll.forEach((item, index) => {
+    if (item.lableName === '逛' || item.lableName === '新品') {
+      item.displayType = 1;
+    }
+      
+  });
   console.log(JSON.stringify(obj.result));
 }
 
