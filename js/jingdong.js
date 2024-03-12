@@ -1,6 +1,6 @@
 
 const url = $request.url;
-if (!$response.body) $done({});
+//if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
 if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTrackBusiness")) {
