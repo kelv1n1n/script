@@ -1,9 +1,10 @@
 # > 京东 api.m.jd.com
 
+# 开屏 RuCu6 wa佬
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceList url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start) url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
 
+#^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceList url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
 
 [MITM]
 hostname = api.m.jd.com, dns.jd.com
