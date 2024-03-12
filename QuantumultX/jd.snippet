@@ -6,8 +6,9 @@
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start) url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
 
-#^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceList url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceList url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
 
+# 去除搜索框提示词
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=searchBoxWord url reject-dict
 
 [MITM]
