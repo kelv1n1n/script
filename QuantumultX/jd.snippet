@@ -1,15 +1,18 @@
 #!name= 京东
 #!desc= 去广告、简化
-#!author = kelv1n1n
+#!author = RuCu6 wa佬 https://github.com/RuCu6/QuanX/blob/main/Rewrites/MyBlockAds.conf
 
 # 开屏 RuCu6 wa佬
-^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start) url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
+#^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
+#^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start) url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
 
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceList url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
-
+#^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=readCustomSurfaceList url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
 # 去除搜索框提示词
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=searchBoxWord url reject-dict
+#^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=searchBoxWord url reject-dict
+
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 
 [MITM]
 hostname = api.m.jd.com, dns.jd.com
