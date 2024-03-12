@@ -9,6 +9,7 @@ const infos = "/user/ext/info";
 const bubble = "/bubbling/queryMyBubbling";
 const match = "/user/isMatch";
 const metric = "/homepage/metrics";
+const domain = "/winterfell/getIpByDomain";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -78,6 +79,8 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(metric) != -1) {
     obj.data.showMetric = true;
     obj.data.metricSwitchValue = 1;
+} else if (url.indexOf(domain) != -1) {
+    delete obj.data;
 }
 
 body = JSON.stringify(obj);
