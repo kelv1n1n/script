@@ -46,7 +46,7 @@ if (url.indexOf(path) != -1) {
         //}
         card.showLuckyBag = false;
         card.showRedMind = false;
-        card.style = 1;
+        card.style = 0;
     });
     console.log(JSON.stringify(obj));
 
