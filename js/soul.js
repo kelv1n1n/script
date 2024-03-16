@@ -9,8 +9,6 @@ const infos = "/user/ext/info";
 const bubble = "/bubbling/queryMyBubbling";
 const match = "/user/isMatch";
 const metric = "/homepage/metrics";
-const editDetail = "/signature/edit/detail";
-const editLimit = "/update/signature/limit";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -78,15 +76,8 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(metric) != -1) {
     obj.data.showMetric = true;
     obj.data.metricSwitchValue = 1;
-} else if (url.indexOf(editDetail) != -1) {
-    obj.data.remainModifyTimes = 5;
-    obj.data.maxModifyTimes = 5;
-} else if (url.indexOf(editLimit) != -1) {
-    obj.data.hasRealSuperVip = true;
-    obj.data.hasSuperVip = true;
-    obj.data.inLimit = false;
 }
 
 body = JSON.stringify(obj);
-console.log(body);
+//console.log(body);
 $done({body});
