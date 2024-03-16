@@ -9,7 +9,7 @@ const infos = "/user/ext/info";
 const bubble = "/bubbling/queryMyBubbling";
 const match = "/user/isMatch";
 const metric = "/homepage/metrics";
-const domain = "/winterfell/getIpByDomain";
+const chatCard = "/users/chatUserInfo";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -54,8 +54,6 @@ if (url.indexOf(path) != -1) {
         card.style = 1;
     });
 
-
-
 } else if (url.indexOf(flag) != -1) {
     obj.data.topicList = [];
     //obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
@@ -79,8 +77,9 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(metric) != -1) {
     obj.data.showMetric = true;
     obj.data.metricSwitchValue = 1;
-} else if (url.indexOf(domain) != -1) {
-    delete obj.data;
+} else if (url.indexOf(chatCard) != -1) {
+    obj.data[0].followed = true;
+    obj.data[0].follow = true;
 }
 
 body = JSON.stringify(obj);
