@@ -46,10 +46,11 @@ if (url.indexOf(path) != -1) {
         //}
         card.showLuckyBag = false;
         card.showRedMind = false;
-        card.style = 3;
+        card.style = 1;
     });
     //console.log(JSON.stringify(obj));
-
+    obj.data.showLuckyBag = false;
+    delete obj.data.luckyBagEntranceImg;
 } else if (url.indexOf(flag) != -1) {
     obj.data.topicList = [];
     //obj.data.topicList = obj.data.topicList.filter(card => card.topic === "今日hot" || card.topic === "闲聊唠嗑"|| card.topic === "心动速配");
