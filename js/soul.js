@@ -9,7 +9,6 @@ const infos = "/user/ext/info";
 const bubble = "/bubbling/queryMyBubbling";
 const match = "/user/isMatch";
 const metric = "/homepage/metrics";
-const chatCard = "/users/chatUserInfo";
 
 let url = $request.url;
 //console.log("url: " + url);
@@ -78,8 +77,7 @@ if (url.indexOf(path) != -1) {
     obj.data.showMetric = true;
     obj.data.metricSwitchValue = 1;
 } else if (url.indexOf(chatCard) != -1) {
-    obj.data[0].followed = true;
-    obj.data[0].follow = true;
+   
 }
 
 body = JSON.stringify(obj);
