@@ -40,6 +40,8 @@
 ^https:\/\/api-chat\.soulapp\.cn\/similar\/post\/intersect\/trigger url reject
 # 去除首次打开私聊界面底部瞬间表情推荐
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/guide\/defaultWord url reject
+# 去除聊天输入文字时的gif表情推荐
+^https:\/\/api-chat\.soulapp\.cn\/chat\/emoji\/recommend url reject
 
 [MITM]
 hostname = api-chat.soulapp.cn,api-user.soulapp.cn,chat-live.soulapp.cn,post.soulapp.cn,api-a.soulapp.cn,increase-openapi.soulapp.cn
