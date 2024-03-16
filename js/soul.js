@@ -46,9 +46,9 @@ if (url.indexOf(path) != -1) {
         //}
         card.showLuckyBag = false;
         card.showRedMind = false;
-        card.style = 0;
+        card.style = 3;
     });
-    console.log(JSON.stringify(obj));
+    //console.log(JSON.stringify(obj));
 
 } else if (url.indexOf(flag) != -1) {
     obj.data.topicList = [];
