@@ -1,3 +1,3 @@
-let header = JSON.parse($request.header);
+let header = $request.header;
 console.log(header);
 $done({ request: { header } });
