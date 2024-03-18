@@ -10,7 +10,7 @@ console.log("遍历头部对象并打印每个字段和值结束🍓");
 const tk = req_headers['tk'];
 console.log(tk);
 
-//$.write(tk, 'dFM+XulGchIedn0zsxfoUfT4evRGCQxj');
+
 
 req_headers['tk'] = 'dFM+XulGchIedn0zsxfoUfT4evRGCQxj';
 //$done();
