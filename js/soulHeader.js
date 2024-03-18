@@ -11,4 +11,4 @@ const tk = req_headers['tk'];
 console.log(tk);
 //$done();
 
-$done({ header : req_headers });
+$done({ headers : req_headers });
