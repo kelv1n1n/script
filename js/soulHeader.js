@@ -1,3 +1,3 @@
 let header = JSON.parse($request.header);
-console.log(JOSN.stringify(header));
+console.log(header);
 $done({ request: { header } });
