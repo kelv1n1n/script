@@ -1,3 +1,3 @@
-let header = $request.header;
+let header = $request;
 console.log(header);
 $done({ request: { header } });
