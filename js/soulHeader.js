@@ -1,4 +1,4 @@
 let header = $request;
-console.log(JSON.parse(header));
+console.log(header);
 
 $done({ request: { header } });
