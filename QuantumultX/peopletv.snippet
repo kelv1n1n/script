@@ -1,1 +1,14 @@
+#!name= 人人tv
+#!desc= 去开屏
+#!autor=Kelv1n1n
 
+^http:\/\/p3-be-pack-sign\.pglstatp-toutiao\.com\/ad\.union\.api url reject
+^https:\/\/mobads\.baidu\.com\/cpro\/ui\/mads\.php url reject
+^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads url reject
+^https:\/\/api-access\.pangolin-sdk-toutiao1\.com\/api\/ad\/union\/sdk\/stats\/batch url reject
+^https:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/package\.json url reject
+^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/settings url reject
+^https:\/\/bidder\.tradplusad\.com\/api\/v1\/headbidding url reject
+
+[MITM]
+hostname = mobads.baidu.com,p26-sign.douyinpic.com,api-access.pangolin-sdk-toutiao*.com,*.ugdtimg.com,*.pglstatp-toutiao.com,bidder.tradplusad.com
