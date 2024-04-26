@@ -7,12 +7,6 @@ obj.result.clientLevelOneNavV2.forEach(card => {
         if (card.en === "match") {
           card.night = {};
           card.day = {};
-          card.img = "{
-          "imgOffsetX" : 0,
-          "imgHeight" : 0,
-          "imgOffsetY" : 0,
-          "imgWidth" : 0
-        }";
         }
     });
 
