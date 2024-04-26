@@ -16,6 +16,7 @@ if (url.indexOf(init) != -1 {
               }
         });
 }
+
 if (url.indexOf(topics) != -1 {
         obj.data.topicResources = [];
 }
