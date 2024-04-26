@@ -3,6 +3,19 @@ let obj = JSON.parse(body);
 
 obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => item.en === "hotRank" || itme.en === "match");
 
+obj.result.clientLevelOneNavV2.forEach(card => {
+        if (card.en === "match") {
+          card.night = {};
+          card.day = {};
+          card.img = "{
+          "imgOffsetX" : 0,
+          "imgHeight" : 0,
+          "imgOffsetY" : 0,
+          "imgWidth" : 0
+        }";
+        }
+    });
+
 body = JSON.stringify(obj);
-console.log(body.result.clientLevelOneNavV2);
+
 $done({body});
