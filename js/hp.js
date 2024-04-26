@@ -6,7 +6,7 @@ let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
 
-if (url.indexOf(init) != -1 {
+if (url.indexOf(init) != -1) {
         
         obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => item.en === "hotRank" || item.en === "match");
         obj.result.clientLevelOneNavV2.forEach(card => {
@@ -17,7 +17,7 @@ if (url.indexOf(init) != -1 {
         });
 }
 
-if (url.indexOf(topics) != -1 {
+if (url.indexOf(topics) != -1) {
         obj.data.topicResources = [];
 }
 body = JSON.stringify(obj);
