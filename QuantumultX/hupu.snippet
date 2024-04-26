@@ -9,7 +9,7 @@
 ^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther url reject
 ^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} url reject-img
 
-^https:\/\/games\.mobileapi\.hupu\.com\/.+?\/bplapi\/device\/v1\/init
+^https:\/\/games\.mobileapi\.hupu\.com\/.+?\/bplapi\/device\/v1\/init url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
 
 [MITM]
 hostname = games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com
