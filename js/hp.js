@@ -22,7 +22,7 @@ if (url.indexOf(topics) != -1) {
 }
 
 if (url.indexOf(tab) != -1) {
-        obj.data.result.forEach(item => {
+        obj.result.forEach(item => {
               item.color.day = "#000000"
         });
 }
