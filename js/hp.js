@@ -1,5 +1,6 @@
 const init = "/init";
 const topics = "topics";
+const tab = "/basketballapi/news";
 
 let url = $request.url;
 
@@ -20,6 +21,13 @@ if (url.indexOf(init) != -1) {
 if (url.indexOf(topics) != -1) {
         obj.data.topicResources = [];
 }
+
+if (url.indexOf(tab) != -1) {
+        obj.data.result = forEach(item => {
+              item.color.day = "#000000"
+        });
+}
+
 body = JSON.stringify(obj);
 
 $done({body});
