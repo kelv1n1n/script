@@ -8,7 +8,6 @@ let body = $response.body;
 let obj = JSON.parse(body);
 
 if (url.indexOf(init) != -1) {
-        
         obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => item.en === "hotRank" || item.en === "match");
         obj.result.clientLevelOneNavV2.forEach(card => {
               if (card.en === "match") {
