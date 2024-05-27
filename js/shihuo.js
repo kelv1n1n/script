@@ -19,7 +19,7 @@ if (url.indexOf(home) != -1) {
 } else if (url.indexOf(my) != -1) {
     obj.data.activity_dynamic_modules = [];
     obj.data.savings_card = {};
-    const arrayKey = ["xiaoyuanhuodong", "wenjuandiaoyan", "qianggou", "kanjia", "invitenew", "expert_list", "part-time recruitment", "chuangzuozhezhongxin"];
+    const arrayKey = ["vipchaohong", "xiaoyuanhuodong", "wenjuandiaoyan", "qianggou", "kanjia", "invitenew", "expert_list", "part-time recruitment", "chuangzuozhezhongxin"];
     obj.data.list = obj.data.list.filter(obj => obj.key === 'wo_de_shihuo');
     obj.data.list[0].list = obj.data.list[0].list.filter(item => !arrayKey.includes(item.key));
 } else if (url.indexOf(info) != -1) {
