@@ -28,6 +28,7 @@ if (url.indexOf(home) != -1) {
 } else if (url.indexOf(list) != -1) {
     obj.data.lists = obj.data.lists.filter(obj => obj.item_type !== 'EXPRESS_AD');
 }
+
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
 $done({body});
