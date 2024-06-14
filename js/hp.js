@@ -32,7 +32,6 @@ if (url.indexOf(hot) != -1) {
         obj.result.listV2.
 }
 
-
 body = JSON.stringify(obj);
 
 $done({body});
