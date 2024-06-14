@@ -30,8 +30,8 @@ if (url.indexOf(tab) != -1) {
 
 if (url.indexOf(hot) != -1) {
         let nicknamesToExclude = ["虎扑电竞资讯"];  
-        let topicNamesToExclude = ["英雄联盟"];  
-        obj.result.listV2 = obj.result.listV2.filter(item => !nicknamesToExclude.includes(item.nickname) || !topicNamesToExclude.includes(item.topic_name));  
+        let topicNamesToExclude = ["英雄联盟", "王者荣耀"];  
+        obj.result.listV2 = obj.result.listV2.filter(item => !nicknamesToExclude.includes(item.thread.nickname) || !topicNamesToExclude.includes(item.thread.topic_name));  
 }
 
 body = JSON.stringify(obj);
