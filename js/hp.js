@@ -1,6 +1,7 @@
 const init = "/init";
 const topics = "topics";
 const tab = "/basketballapi/news";
+const hot = "/hotRank";
 
 let url = $request.url;
 
@@ -26,6 +27,11 @@ if (url.indexOf(tab) != -1) {
               item.color.day = "#000000"
         });
 }
+
+if (url.indexOf(hot) != -1) {
+        obj.result.listV2.
+}
+
 
 body = JSON.stringify(obj);
 
