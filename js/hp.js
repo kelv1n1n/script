@@ -30,7 +30,7 @@ if (url.indexOf(tab) != -1) {
 
 if (url.indexOf(hot) != -1) {
         let nicknamesToExclude = ["虎扑电竞资讯"];  
-        let topicNamesToExclude = ["英雄联盟", "王者荣耀"];  
+        let topicNamesToExclude = ["英雄联盟", "王者荣耀", "NBA2KOL2", "游戏区", "恋爱区"];
         obj.result.listV2 = obj.result.listV2.filter(item => !nicknamesToExclude.includes(item.thread.nickname));
         obj.result.listV2 = obj.result.listV2.filter(item => !topicNamesToExclude.includes(item.thread.topic_name));
 }
