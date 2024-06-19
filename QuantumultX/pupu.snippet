@@ -9,7 +9,7 @@
 ^http:\/\/101\.42\.130\.147\/^httpdns\/resolve\/ url REJECT
 ^https:\/\/j1\.pupuapi\.com\/client\/account\/discount\/order url REJECT
 ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=100 url REJECT
-//主页实惠卡
+//主页实惠卡，旧版本的
 ^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my url REJECT
 
 ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7 url script-response-body https://github.com/kelv1n1n/script/raw/main/js/pp.js
@@ -19,7 +19,6 @@
 ^https:\/\/j1\.pupuapi\.com\/client\/recommendation\/interests\/products url script-response-body https://github.com/kelv1n1n/script/raw/main/js/pp.js
 //  悬浮、开屏
 ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 url script-response-body https://github.com/kelv1n1n/script/raw/main/js/pp.js
-//^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 url REJECT
 
 [MITM]
 hostname = j1.pupuapi.com
