@@ -1,6 +1,7 @@
 #!name = 朴朴超市
 #!author = kelv1n1n、可莉
 #!desc = 去开屏、首页顶部轮播图和图标广告、首页右下角悬浮动画、我的页面简化、启动小弹图广告、搜索热搜榜、搜索建议词、搜索发现热词、订单页面商品推荐
+#!dns : 140.179.224.63,54.222.159.138,82.157.159.106
 
 ^http:\/\/139\.196\.12\.179:8053\/httpdns\/ url REJECT
 ^http:\/\/106\.55\.220\.18:8053\/httpdns\/ url REJECT
@@ -17,4 +18,4 @@
 ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 url script-response-body https://github.com/kelv1n1n/script/raw/main/js/pp.js
 
 [MITM]
-hostname = j1.pupuapi.com,140.179.224.63,54.222.159.138,82.157.159.106
+hostname = j1.pupuapi.com
