@@ -41,7 +41,7 @@ if (url.indexOf(recommendPro) != -1) {
 }
 
 if (url.indexOf(adv) != -1) {
-  obj.data = obj.data.filter(item => ![50,90,320].includes(item.region_code)); 
+  obj.data = obj.data.filter(item => ![50,90,320,890].includes(item.region_code)); 
   body = JSON.stringify(obj);
   $done({body});
 }
