@@ -6,6 +6,7 @@
 ^http:\/\/139\.196\.12\.179:8053\/httpdns\/ url REJECT
 ^http:\/\/106\.55\.220\.18:8053\/httpdns\/ url REJECT
 ^http:\/\/54\.222\.159\.138:8053\/httpdns\/ url REJECT
+^http:\/\/101\.42\.130\.147\/^httpdns\/resolve\/ url REJECT
 ^https:\/\/j1\.pupuapi\.com\/client\/account\/discount\/order url REJECT
 ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=100 url REJECT
 //主页实惠卡
@@ -20,4 +21,4 @@
 ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 url script-response-body https://github.com/kelv1n1n/script/raw/main/js/pp.js
 
 [MITM]
-hostname = j1.pupuapi.com,140.179.224.63,54.222.159.138,82.157.159.106
+hostname = j1.pupuapi.com
