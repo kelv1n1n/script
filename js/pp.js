@@ -36,6 +36,7 @@ if (url.indexOf(recommend) != -1) {
 if (url.indexOf(recommendPro) != -1) {
   //obj.data = {};
   obj.data.activities = [];
+  obj.data.products = [];
   body = JSON.stringify(obj);
   $done({body});
 }
