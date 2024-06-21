@@ -5,6 +5,12 @@
 hostname = j1.pupuapi.com
 
 [Rule]
-DOMAIN,ssp.soulapp.cn,REJECT
+URL-REGEX,^http:\/\/139\.196\.12\.179:8053\/httpdns\/,REJECT
+URL-REGEX,^http:\/\/106\.55\.220\.18:8053\/httpdns\/,REJECT
+URL-REGEX,^http:\/\/54\.222\.159\.138:8053\/httpdns\/,REJECT
+URL-REGEX,^http:\/\/101\.42\.130\.147\/httpdns\/resolve\/,REJECT
+URL-REGEX,^http:\/\/101\.42\.130\.147\/httpdns\/resolve\/,REJECT
+URL-REGEX,^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my,REJECT
+URL-REGEX,^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=100,REJECT
 
 [Script]
