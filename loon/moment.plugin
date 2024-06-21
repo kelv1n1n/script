@@ -1,5 +1,0 @@
-#!name=Soul
-[MITM]
-hostname = ad-r.soulapp.cn
-[Script]
-http-request ^https:\/\/ad-r\.soulapp\.cn\/api\/v2\/report script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/moment.js,requires-body=false,timeout=10, tag=moment

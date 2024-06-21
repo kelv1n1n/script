@@ -1,5 +1,0 @@
-#!name=Soul
-[MITM]
-hostname = media-service-source.soulapp.cn
-[Script]
-http-response ^https:\/\/media-service-source\.soulapp\.cn\/media script-path=https://raw.githubusercontent.com/ctrl98/script/main/js/media.js,max-size=131072,requires-body=true,timeout=10, tag=media
