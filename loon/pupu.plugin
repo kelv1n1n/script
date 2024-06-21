@@ -14,3 +14,5 @@ URL-REGEX,^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my,REJECT
 URL-REGEX,^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=100,REJECT
 
 [Script]
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 script-path=https://github.com/kelv1n1n/script/raw/main/js/pp.js,max-size=131072,requires-body=true,timeout=10, tag=pupu
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7 script-path=https://github.com/kelv1n1n/script/raw/main/js/pp.js,max-size=131072,requires-body=true,timeout=10, tag=banner
