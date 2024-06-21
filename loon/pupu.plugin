@@ -1,1 +1,10 @@
+#!name=朴朴超市
+#!desc= 去广告、简化
 
+[MITM]
+hostname = j1.pupuapi.com
+
+[Rule]
+DOMAIN,ssp.soulapp.cn,REJECT
+
+[Script]
