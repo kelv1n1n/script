@@ -84,13 +84,12 @@ if (url.indexOf(path) != -1) {
     obj.data.showMetric = true;
     obj.data.metricSwitchValue = 1;
 } else if (url.indexOf(header) != -1) {
-    //obj.data.forEach(card => {
-        //card.unreadFlag = 0;
-        //card.unreadCount = null;
-        //card.selectedFlag = true;
-    //});
+    obj.data.forEach(card => {
+        card.unreadFlag = 0;
+        card.unreadCount = null;
+    });
     // 只保留同城tab
-    obj.data = obj.data.filter(item => item.pageId === "PostSquare_City");
+    //obj.data = obj.data.filter(item => item.pageId === "PostSquare_City");
 }
 
 body = JSON.stringify(obj);
