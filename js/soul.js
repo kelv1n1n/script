@@ -87,7 +87,10 @@ if (url.indexOf(path) != -1) {
     obj.data.forEach(card => {
         card.unreadFlag = 0;
         card.unreadCount = null;
+        card.selectedFlag = true;
     });
+    // 只保留同城tab
+    obj.data = obj.data.filter(item => item.pageId === "PostSquare_City");
 }
 
 body = JSON.stringify(obj);
