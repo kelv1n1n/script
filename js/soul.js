@@ -38,24 +38,26 @@ if (url.indexOf(path) != -1) {
     obj.data.showRedMind = false;
     obj.data.chatRoomInfo.showChatRoom = false;
     obj.data.gameInfo.showGameCard = false;
-    obj.data.coreCards = obj.data.coreCards.filter(
-        card => 
-            card.sortId === 2 || 
-            card.sortId === 3 ||
-            card.sortId === 1 ||
-            card.sortId === 9);
-    obj.data.gameInfo.gameCards = [];
-    obj.data.coreCards.forEach(card => {
+    //obj.data.coreCards = obj.data.coreCards.filter(
+    //    card => 
+    //        card.sortId === 2 || 
+    //        card.sortId === 3 ||
+    //        card.sortId === 1 ||
+    //        card.sortId === 9);
+    //obj.data.gameInfo.gameCards = [];
+    //obj.data.coreCards.forEach(card => {
         //if (card.hasOwnProperty('showLuckyBag') && card.showLuckyBag === true) {
           //card.showLuckyBag = false;
         //}
-        card.showLuckyBag = false;
-        card.showRedMind = false;
-        card.style = 1;
-        delete card.bgImg;
-        delete card.iconUrl;
-    });
+    //    card.showLuckyBag = false;
+    //    card.showRedMind = false;
+    //    card.style = 1;
+    //    delete card.bgImg;
+    //    delete card.iconUrl;
+    //});
     //console.log(JSON.stringify(obj));
+    // 隐藏星球按钮
+    obj.data.coreCards = [];
     obj.data.showLuckyBag = false;
 
 } else if (url.indexOf(flag) != -1) {
