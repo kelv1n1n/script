@@ -71,7 +71,7 @@ if (url.indexOf(path) != -1) {
     obj.data.res = obj.data.res.filter(item => item.id === 0 || item.id === 2 || item.id === 4 || item.id === 5);
 } else if (url.indexOf(roomAd) != -1) {
     //console.log("命中了" + url);
-    obj.data.positionContentRespList = [];
+    //obj.data.positionContentRespList = [];
     //console.log(JSON.stringify(obj.data.positionContentRespList));
 } else if (url.indexOf(bubble) != -1) {
     obj['data'] = {
