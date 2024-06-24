@@ -11,8 +11,6 @@
 ^https:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 广场顶部tab
 ^https:\/\/post\.soulapp\.cn\/v2\/post\/recSquare\/subTabs url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-
-#^https:\/\/api-a\.soulapp\.cn\/chatroom\/chatClassifyRoomList url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 派对顶部榜单
 ^https:\/\/api-a\.soulapp\.cn\/chatroom\/calculateSoulList url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 派对页面tab
@@ -22,7 +20,7 @@
 # 去除聊天界面再遇见
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first url reject
 # 默认关闭星球用户列表（下拉可恢复）
-^https:\/\/api-user\.soulapp\.cn\/planet\/users url reject
+#^https:\/\/api-user\.soulapp\.cn\/planet\/users url reject
 # 新用户设置展示怀旧头像入口（自慰，好像有服务器检验）
 ^https:\/\/api-user\.soulapp\.cn\/user\/ext\/info url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 设置聊天状态为今日自闭，避免收到匹配聊天信息（意淫）
@@ -44,10 +42,8 @@
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/guide\/defaultWord url reject
 # 去除聊天输入文字时的gif表情推荐
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/emoji\/recommend url reject
+# 广场顶部tab
 ^https:\/\/api-a\.soulapp\.cn\/square\/header\/tabs url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-
-#^https:\/\/api-user\.soulapp\.cn\/v3\/update\/user\/info url script-request-header https://raw.githubusercontent.com/kelv1n1n/script/main/js/soulHeader.js
-
 # 去除广告配置
 ^https:\/\/ssp\.soulapp\.cn\/api\/ad\/config url reject
 # 去除私聊瞬间小横幅
