@@ -9,6 +9,7 @@ const infos = "/user/ext/info";
 const bubble = "/bubbling/queryMyBubbling";
 const match = "/user/isMatch";
 const header = "/square/header/tabs";
+const user = "/chat/user/info";
 
 let url = $request.url;
 let body = $response.body;
@@ -80,6 +81,10 @@ if (url.indexOf(path) != -1) {
     });
     // 只保留同城tab
     //obj.data = obj.data.filter(item => item.pageId === "PostSquare_City");
+} else if (url.indexOf(user) != -1) {
+    obj.data.followed = true;
+    obj.data.follow = true;
+    obj.data.userActiveStateModel.online = true;
 }
 
 body = JSON.stringify(obj);
