@@ -1,7 +1,7 @@
 #!name = soul解锁私聊, 星球页简化, 派对页面简化
 #!author = kelv1n1n
-#! dns: ,47.99.42.29,47.97.215.55,116.62.47.28,120.27.235.201,120.55.65.167,120.55.55.115,47.96.20.45,47.98.54.106,47.96.11.46,47.98.137.249,120.55.62.124,116.62.247.96,112.124.17.9
-#! 分流禁用：120.27.235.201 即可
+#! dns: 47.99.42.29,47.97.215.55,116.62.47.28,120.27.235.201,120.55.65.167,120.55.55.115,47.96.20.45,47.98.54.106,47.96.11.46,47.98.137.249,120.55.62.124,116.62.247.96,112.124.17.9
+#! 分流禁用：120.27.235.201
 
 # 去除私聊限制
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
@@ -50,4 +50,4 @@
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/quick\/menu url reject
 
 [MITM]
-hostname = api-chat.soulapp.cn,api-user.soulapp.cn,chat-live.soulapp.cn,post.soulapp.cn,api-a.soulapp.cn,increase-openapi.soulapp.cn
+hostname = *.soulapp.cn
