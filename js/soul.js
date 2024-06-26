@@ -84,7 +84,6 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(user) != -1) {
     obj.data.followed = true;
     obj.data.follow = true;
-    obj.data.userActiveStateModel.online = true;
 }
 
 body = JSON.stringify(obj);
