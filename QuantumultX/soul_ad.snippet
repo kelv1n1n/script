@@ -1,1 +1,18 @@
+#!name = Soul净化
+#!author = 怎么肥事  感谢@可莉对去除开屏广告提供的帮助
+#!update = 2024-06-20 22:49
 
+^https:\/\/api-user\.soulapp\.cn\/homepage\/diamond\/position\/info url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/post\.soulapp\.cn\/hot\/soul\/rank url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/api-user\.soulapp\.cn\/furion\/position\/content url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/api-account\.soulapp\.cn\/teenager\/config url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/ssp\.soulapp\.cn\/api\/q url reject-dict
+^https:\/\/47\.110\.187\.87\/winterfell\/(?:v2\/)?getIpByDomain url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/api-user\.soulapp\.cn\/v6\/planet\/config url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+^https:\/\/api-a\.soulapp\.cn\/official\/scene\/module url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
+
+hostname = *.soulapp.cn,47.110.187.87
