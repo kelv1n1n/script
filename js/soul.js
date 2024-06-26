@@ -11,13 +11,9 @@ const match = "/user/isMatch";
 const header = "/square/header/tabs";
 
 let url = $request.url;
-//console.log("url: " + url);
-//let req = JSON.parse($request.body);
 let body = $response.body;
 let obj = JSON.parse(body);
 if (url.indexOf(path) != -1) {
-    //let obj = JSON.parse(body);
-    //console.log(obj);
     delete obj.data.subMsg;
     delete obj.data.extMsg;
     delete obj.data.abValue;
@@ -26,39 +22,35 @@ if (url.indexOf(path) != -1) {
     delete obj.data.remainFreeCount;
     delete obj.data.type;
     obj.data.limit = false;
-    //body = JSON.stringify(obj);
-    //console.log(body)
 } else if (url.indexOf(infos) !== -1) {
-    //console.log("进来了");
     obj.data.displayOldAvatar = true;
     obj.data.userAvatarStatus = 0;
-    //console.log(JSON.stringify(obj.data.displayOldAvatar));
 } else if (url.indexOf(game) != -1){
     obj.data.showRedMind = false;
     obj.data.chatRoomInfo.showChatRoom = false;
     obj.data.gameInfo.showGameCard = false;
-    //obj.data.coreCards = obj.data.coreCards.filter(
-        //card => 
-            //card.sortId === 2 || 
-            //card.sortId === 3 ||
-            //card.sortId === 1 ||
-            //card.sortId === 9
+    obj.data.coreCards = obj.data.coreCards.filter(
+        card => 
+            card.sortId === 2 || 
+            card.sortId === 3 ||
+            card.sortId === 1 ||
+            card.sortId === 9
             //card.sortId === 3
-        //);
-    //obj.data.gameInfo.gameCards = [];
-    //obj.data.coreCards.forEach(card => {
-        //if (card.hasOwnProperty('showLuckyBag') && card.showLuckyBag === true) {
-          //card.showLuckyBag = false;
-        //}
-        //card.showLuckyBag = false;
-        //card.showRedMind = false;
-        //card.style = 1;
-        //delete card.bgImg;
-        //delete card.iconUrl;
-    //});
+        );
+    obj.data.gameInfo.gameCards = [];
+    obj.data.coreCards.forEach(card => {
+        if (card.hasOwnProperty('showLuckyBag') && card.showLuckyBag === true) {
+          card.showLuckyBag = false;
+        }
+        card.showLuckyBag = false;
+        card.showRedMind = false;
+        card.style = 1;
+        delete card.bgImg;
+        delete card.iconUrl;
+    });
 
     // 隐藏星球按钮
-    obj.data.coreCards = [];
+    //obj.data.coreCards = [];
     obj.data.showLuckyBag = false;
 
 } else if (url.indexOf(flag) != -1) {
@@ -91,5 +83,4 @@ if (url.indexOf(path) != -1) {
 }
 
 body = JSON.stringify(obj);
-//console.log(body);
 $done({body});
