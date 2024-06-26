@@ -8,7 +8,6 @@ const roomAd = "/chatroom/chatClassifyRoomList";
 const infos = "/user/ext/info";
 const bubble = "/bubbling/queryMyBubbling";
 const match = "/user/isMatch";
-const metric = "/homepage/metrics";
 const header = "/square/header/tabs";
 
 let url = $request.url;
@@ -82,9 +81,6 @@ if (url.indexOf(path) != -1) {
     };
 } else if (url.indexOf(match) != -1) {
     obj.data.isMatch = 1;
-} else if (url.indexOf(metric) != -1) {
-    obj.data.showMetric = true;
-    obj.data.metricSwitchValue = 1;
 } else if (url.indexOf(header) != -1) {
     obj.data.forEach(card => {
         card.unreadFlag = 0;
