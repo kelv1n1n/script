@@ -6,7 +6,7 @@ let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
 obj.message = "";
-obj.cypher = null
+obj.cypher = 1
 
 body = JSON.stringify(obj);
 $done({body});
