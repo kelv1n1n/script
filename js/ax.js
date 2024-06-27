@@ -5,7 +5,7 @@ let url = $request.url;
 
 let body = $response.body;
 let obj = JSON.parse(body);
-obj.msg = "";
+obj.message = "";
 
 body = JSON.stringify(obj);
 $done({body});
