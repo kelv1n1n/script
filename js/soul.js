@@ -10,6 +10,7 @@ const bubble = "/bubbling/queryMyBubbling";
 const match = "/user/isMatch";
 const header = "/square/header/tabs";
 const user = "/chat/user/info";
+const homePage = "/homepage/metrics";
 
 let url = $request.url;
 let body = $response.body;
@@ -83,6 +84,14 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(user) != -1) {
     obj.data.followed = true;
     obj.data.follow = true;
+} else if (url.indexOf(homePage) != -1) {
+    obj.data.recentViewNum = 0;
+    obj.data.showTipsCard = false;
+    obj.data.showMetric = false;
+    obj.data.hasHomePageLiked = false;
+    obj.data.homePageLikedMetric.addNum = 0;
+    obj.data.homePageLikedMetric.likedTotalNum = 0;
+    obj.data.homePageLikedMetric.hasShowHistoryDynamic = false;
 }
 
 body = JSON.stringify(obj);
