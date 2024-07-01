@@ -1,7 +1,9 @@
-#!name = 转转
-#!author = ctrl
+#!name = 转转去开屏
+#!author = Kelv1n1n
 
+# 首页右下角悬浮
 ^https:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/zhuanzhuan.js
+# 开品广告
 ^https:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen url reject-dict
 
 [MITM]
