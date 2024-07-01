@@ -31,12 +31,11 @@ if (url.indexOf(path) != -1) {
     obj.data.chatRoomInfo.showChatRoom = false;
     obj.data.gameInfo.showGameCard = false;
     obj.data.coreCards = obj.data.coreCards.filter(
-        card => 
-            card.sortId === 2 || 
-            card.sortId === 3 ||
-            card.sortId === 1 ||
-            card.sortId === 9
-            //card.sortId === 3
+        card => card.sortId === 3 || card.sortId === 1
+            //card.sortId === 2 || 
+            //card.sortId === 3 ||
+            //card.sortId === 1 ||
+            //card.sortId === 9
         );
     obj.data.gameInfo.gameCards = [];
     obj.data.coreCards.forEach(card => {
