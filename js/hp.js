@@ -1,6 +1,8 @@
+//  去除顶部菜单保留热榜、赛事
 const init = "/init";
 const topics = "topics";
 const tab = "/basketballapi/news";
+//  过滤热榜游戏帖子
 const hot = "/hotRank";
 
 let url = $request.url;
@@ -10,12 +12,12 @@ let obj = JSON.parse(body);
 
 if (url.indexOf(init) != -1) {
         obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => item.en === "hotRank" || item.en === "match");
-        obj.result.clientLevelOneNavV2.forEach(card => {
-              if (card.en === "match") {
-               card.night = {};
-               card.day = {};
-              }
-        });
+        //obj.result.clientLevelOneNavV2.forEach(card => {
+              //if (card.en === "match") {
+               //card.night = {};
+               //card.day = {};
+              //}
+        //});
 }
 
 if (url.indexOf(topics) != -1) {
