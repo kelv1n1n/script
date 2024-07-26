@@ -66,11 +66,11 @@ if (url.indexOf(activityResource) != -1) {
         obj.data.resourceList.forEach(card => {
                 if (card.layoutType === "inear-horizontal") {
                         //delete card.data;
-                        card.globalDayBackground = "";
-                        card.globalNightBackground = "";
+                        delete card.globalDayBackground;
+                        delete card.globalNightBackground;
                 }
         });
-        //console.log(obj.data.resourceList);
+        console.log(obj.data.resourceList);
         //console.log(obj.data.resourceOrder);
 }
 
