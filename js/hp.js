@@ -71,7 +71,7 @@ if (url.indexOf(activityResource) != -1) {
                 }
         });
         console.log(JSON.stringify(obj.data.resourceList));
-        //console.log(obj.data.resourceOrder);
+        console.log(JSON.stringify(obj.data.resourceOrder));
 }
 
 body = JSON.stringify(obj);
