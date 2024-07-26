@@ -25,9 +25,10 @@ if (url.indexOf(init) != -1) {
         });
 
         //  活动菜单，奥运会什么的
-        //obj.result.activityNav.forEach(card => {
+        obj.result.activityNav.forEach(card => {
                 //card.imgHeight = "0";
-        //});
+                card.selectImg = card.unSelectImg;
+        });
         //delete obj.result.activityNav;
 }
 
