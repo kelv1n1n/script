@@ -55,11 +55,11 @@ if (url.indexOf(activityMatch) != -1) {
 
 if (url.indexOf(activityResource) != -1) {
         obj.data.contentMargin = 20;
-        obj.data.resourceList = obj.data.resourceList.filter(item => item.rigLable !== 'activity_banner');
+        obj.data.resourceList = obj.data.resourceList.filter(item => item.rigLabel !== 'activity_banner');
         obj.data.resourceOrder = obj.data.resourceOrder.filter(item => item !== 'activity_banner');
 
         obj.data.resourceList.forEach(card => {
-                if (card.rigLable === "activity_feed") {
+                if (card.rigLabel === "activity_feed") {
                         delete card.globalDayBackground;
                         delete card.globalNightBackground;
                 }
