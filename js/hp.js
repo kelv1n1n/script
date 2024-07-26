@@ -70,7 +70,7 @@ if (url.indexOf(activityResource) != -1) {
                         delete card.globalNightBackground;
                 }
         });
-        console.log(obj.data.resourceList);
+        console.log(JSON.stringify(obj.data.resourceList));
         //console.log(obj.data.resourceOrder);
 }
 
