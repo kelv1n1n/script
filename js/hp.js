@@ -17,17 +17,17 @@ let obj = JSON.parse(body);
 
 if (url.indexOf(init) != -1) {
         obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => item.en === "hotRank" || item.en === "match");
-        //obj.result.clientLevelOneNavV2.forEach(card => {
-              //if (card.en === "match") {
-               //card.night = {};
-               //card.day = {};
-              //}
-        //});
+        obj.result.clientLevelOneNavV2.forEach(card => {
+              if (card.en === "match") {
+               card.night = {};
+               card.day = {};
+              }
+        });
 
         //  活动菜单，奥运会什么的
-        obj.result.activityNav.forEach(card => {
-                card.imgHeight = "0";
-        });
+        //obj.result.activityNav.forEach(card => {
+                //card.imgHeight = "0";
+        //});
         //delete obj.result.activityNav;
 }
 
