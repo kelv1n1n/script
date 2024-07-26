@@ -7,6 +7,8 @@ const tab = "/basketballapi/news";
 //  过滤热榜游戏帖子
 const hot = "/hotRank";
 
+const activityMatch = "/getActivityMatchList";
+
 let url = $request.url;
 
 let body = $response.body;
@@ -43,6 +45,10 @@ if (url.indexOf(hot) != -1) {
         let topicNamesToExclude = ["英雄联盟", "王者荣耀", "和平精英"];
         obj.result.listV2 = obj.result.listV2.filter(item => !nicknamesToExclude.includes(item.thread.nickname));
         obj.result.listV2 = obj.result.listV2.filter(item => !topicNamesToExclude.includes(item.thread.topic_name));
+}
+
+if (url.indexOf(activityMatch) != -1) {
+        delete obj.result
 }
 
 body = JSON.stringify(obj);
