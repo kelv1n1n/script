@@ -55,17 +55,11 @@ if (url.indexOf(activityMatch) != -1) {
 
 if (url.indexOf(activityResource) != -1) {
         obj.data.contentMargin = 20;
-        //obj.data.resourceList.forEach(card => {
-                //if (card.layoutType === "activity_banner") {
-                        //delete card.data;
-                //}
-        //});
-        obj.data.resourceList = obj.data.resourceList.filter(item => item !== 'activity_banner');
+        obj.data.resourceList = obj.data.resourceList.filter(item => item.rigLable !== 'activity_banner');
         obj.data.resourceOrder = obj.data.resourceOrder.filter(item => item !== 'activity_banner');
-        
+
         obj.data.resourceList.forEach(card => {
-                if (card.layoutType === "inear-horizontal") {
-                        //delete card.data;
+                if (card.rigLable === "activity_feed") {
                         delete card.globalDayBackground;
                         delete card.globalNightBackground;
                 }
