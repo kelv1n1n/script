@@ -62,8 +62,16 @@ if (url.indexOf(activityResource) != -1) {
         //});
         obj.data.resourceList = obj.data.resourceList.filter(item => item !== 'activity_banner');
         obj.data.resourceOrder = obj.data.resourceOrder.filter(item => item !== 'activity_banner');
-        console.log(obj.data.resourceList);
-        console.log(obj.data.resourceOrder);
+        
+        obj.data.resourceList.forEach(card => {
+                if (card.layoutType === "inear-horizontal") {
+                        //delete card.data;
+                        card.globalDayBackground = "";
+                        card.globalNightBackground = "";
+                }
+        });
+        //console.log(obj.data.resourceList);
+        //console.log(obj.data.resourceOrder);
 }
 
 body = JSON.stringify(obj);
