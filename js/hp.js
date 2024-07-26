@@ -56,7 +56,7 @@ if (url.indexOf(activityResource) != -1) {
         obj.data.contentMargin = 0;
         obj.data.resourceList.forEach(card => {
                 if (card.layoutType === "activity_banner") {
-                        delete card;
+                        delete card.data;
                 }
         });
 }
