@@ -59,6 +59,12 @@ if (url.indexOf(activityResource) != -1) {
                         delete card.data;
                 }
         });
+        obj.data.resourceOrder.forEach(card => {
+                if (card.layoutType === "activity_banner") {
+                        delete card;
+                }
+        });
+        console.log(obj.data.resourceOrder);
 }
 
 body = JSON.stringify(obj);
