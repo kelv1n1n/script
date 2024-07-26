@@ -20,6 +20,12 @@ if (url.indexOf(init) != -1) {
                //card.day = {};
               //}
         //});
+
+        //  活动菜单，奥运会什么的
+        obj.result.activityNav.forEach(card => {
+              card.imgHeight = "15";
+              card.name = 奶思;
+        });
 }
 
 if (url.indexOf(topics) != -1) {
