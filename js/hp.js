@@ -6,9 +6,9 @@ const topics = "topics";
 const tab = "/basketballapi/news";
 //  过滤热榜游戏帖子
 const hot = "/hotRank";
-
+//  活动页赛程列表
 const activityMatch = "/getActivityMatchList";
-
+//  活动也内边距等配置
 const activityResource = "/queryResourceList";
 
 let url = $request.url;
