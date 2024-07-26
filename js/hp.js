@@ -64,8 +64,8 @@ if (url.indexOf(activityResource) != -1) {
                         delete card.globalNightBackground;
                 }
         });
-        console.log(JSON.stringify(obj.data.resourceList));
-        console.log(JSON.stringify(obj.data.resourceOrder));
+        //console.log(JSON.stringify(obj.data.resourceList));
+        //console.log(JSON.stringify(obj.data.resourceOrder));
 }
 
 body = JSON.stringify(obj);
