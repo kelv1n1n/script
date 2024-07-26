@@ -54,7 +54,7 @@ if (url.indexOf(activityMatch) != -1) {
 }
 
 if (url.indexOf(activityResource) != -1) {
-        obj.data.contentMargin = 0;
+        obj.data.contentMargin = -60;
 }
 
 body = JSON.stringify(obj);
