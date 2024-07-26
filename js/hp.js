@@ -54,16 +54,14 @@ if (url.indexOf(activityMatch) != -1) {
 
 if (url.indexOf(activityResource) != -1) {
         obj.data.contentMargin = 0;
-        obj.data.resourceList.forEach(card => {
-                if (card.layoutType === "activity_banner") {
-                        delete card.data;
-                }
-        });
-        obj.data.resourceOrder.forEach(card => {
-                if (card.layoutType === "activity_banner") {
-                        delete card;
-                }
-        });
+        //obj.data.resourceList.forEach(card => {
+                //if (card.layoutType === "activity_banner") {
+                        //delete card.data;
+                //}
+        //});
+        obj.data.resourceList = obj.data.resourceList.filter(item => item !== 'activity_banner');
+        obj.data.resourceOrder = obj.data.resourceOrder.filter(item => item !== 'activity_banner');
+        console.log(obj.data.resourceList);
         console.log(obj.data.resourceOrder);
 }
 
