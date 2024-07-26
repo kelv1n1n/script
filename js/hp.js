@@ -12,7 +12,6 @@ const activityMatch = "/getActivityMatchList";
 const activityResource = "/queryResourceList";
 
 let url = $request.url;
-
 let body = $response.body;
 let obj = JSON.parse(body);
 
@@ -58,5 +57,4 @@ if (url.indexOf(activityResource) != -1) {
 }
 
 body = JSON.stringify(obj);
-
 $done({body});
