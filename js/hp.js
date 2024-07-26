@@ -9,6 +9,8 @@ const hot = "/hotRank";
 
 const activityMatch = "/getActivityMatchList";
 
+const activityResource = "/queryResourceList";
+
 let url = $request.url;
 
 let body = $response.body;
@@ -49,6 +51,10 @@ if (url.indexOf(hot) != -1) {
 
 if (url.indexOf(activityMatch) != -1) {
         delete obj.result
+}
+
+if (url.indexOf(activityResource) != -1) {
+        obj.data.contentMargin = "0";
 }
 
 body = JSON.stringify(obj);
