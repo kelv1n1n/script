@@ -1,6 +1,8 @@
 //  去除顶部菜单保留热榜、赛事
 const init = "/init";
+//  去除专区帖子列表顶部横幅推广
 const topics = "topics";
+//  修改篮球nba赛事菜单文字颜色
 const tab = "/basketballapi/news";
 //  过滤热榜游戏帖子
 const hot = "/hotRank";
