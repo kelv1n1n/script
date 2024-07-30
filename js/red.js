@@ -19,7 +19,7 @@ if (url.indexOf(vip) != -1) {
         card.limit.ptid = "0";
         card.private = 0;
         delete card.emceelevel;
-        console.log("修改了);
+        console.log("修改了");
     });
     
 }
