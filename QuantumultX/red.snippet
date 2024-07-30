@@ -1,6 +1,8 @@
 #! name = 小红帽 精简
 #! author = Kelv1n1n 20240730
 
+^https:\/\/api\.moonscap\.com\/OpenAPI\/v1\/private\/getPrivateLimit url reject-200
+
 ^https:\/\/api\.moonscap\.com\/OpenAPI\/v1\/anchor\/all url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/red.js
 ^https:\/\/api\.moonscap\.com\/OpenAPI\/v1\/anchor\/vip url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/red.js
 
