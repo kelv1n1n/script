@@ -18,10 +18,10 @@ if (url.indexOf(user) != -1) {
         let tools = sec.item.tool.exContent.tools;
 
         // 删除第一个数组中 toolId 为 14 的元素
-        tools[0] = tools[0].filter(tool => tool.toolId !== 14);
+        tools[0] = tools[0].filter(tool => tool.exContent.toolId !== 14);
 
         // 删除第二个数组中 toolId 为 2 的元素
-        tools[1] = tools[1].filter(tool => tool.toolId !== 2);
+        tools[1] = tools[1].filter(tool => tool.exContent.toolId !== 2);
     }
   });
 
