@@ -25,7 +25,8 @@ if (url.indexOf(user) != -1) {
 
         // 删除第二个数组中 toolId 为 2 的元素
         tools[1] = tools[1].filter(tool => tool.exContent.toolId !== 2);
-
+        
+        // 两个合并成一个显示
         sec.item.tool.exContent.tools = tools[0].concat(tools[1]);
     }
   });
