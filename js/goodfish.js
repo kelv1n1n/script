@@ -27,7 +27,7 @@ if (url.indexOf(user) != -1) {
         tools[1] = tools[1].filter(tool => tool.exContent.toolId !== 2);
         
         // 两个合并成一个显示
-        //sec.item.tool.exContent.tools = tools[0].concat(tools[1]);
+        sec.item.tool.exContent.tools = [tools[0].concat(tools[1])];
     }
   });
 
