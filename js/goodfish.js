@@ -5,14 +5,17 @@ let body = $response.body;
 let obj = JSON.parse(body);
 
 if (url.indexOf(user) != -1) {
+  //  底部社区小程序列表
   obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "6");
 
+  //  个人等级
   obj.data.container.sections.forEach(section => {
     if (section.index === "1") {
         delete section.item.level;
     }
   });
 
+  //  处理简历菜单
   obj.data.container.sections.forEach(sec => {
     if (sec.index === "5") {
         let tools = sec.item.tool.exContent.tools;
