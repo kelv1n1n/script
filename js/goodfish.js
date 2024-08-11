@@ -8,6 +8,8 @@ let obj = JSON.parse(body);
 if (url.indexOf(user) != -1) {
   //  底部社区小程序列表
   obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "6");
+  //  个人主页横幅
+  obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "3");
 
   //  个人等级
   obj.data.container.sections.forEach(section => {
