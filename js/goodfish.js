@@ -110,5 +110,10 @@ if (url.includes("/mtop.taobao.idle.local.nearby.itemdetail.enter/1.0")) {
    obj.data.poiName = "";
 }
 
+if (url.includes("/gw/mtop.taobao.idlemessage.session.sync/3.0")) {
+    obj.data.sessions = obj.data.sessions.filter(session => session.session.userInfo.nick !== "闲鱼精选");
+}
+
+  
 body = JSON.stringify(obj);
 $done({body});
