@@ -52,5 +52,12 @@ if (url.indexOf(circle) != -1) {
     }
 }
 
+if (url.indexOf("/mtop.taobao.idlemtopsearch.search") != -1) {
+  obj.data.resultList = obj.data.resultList.filter(item => {  
+    // 过滤掉表示为广告的项
+    return item.data.item.main.exContent.isAliMaMaAD !== "true";  
+  });
+}
+
 body = JSON.stringify(obj);
 $done({body});
