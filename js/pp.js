@@ -46,8 +46,8 @@ if (url.indexOf(adv) != -1) {
 
   obj.data = obj.data.map(item => {  
   if (item.region_code === 2) {  
-    // 过滤掉positions数组中component_code等于890和60的元素  
-    item.positions = item.positions.filter(position => ![890, 60].includes(position.component_code));  
+    // 过滤掉positions数组中component_code, 首页的顶部轮播图广告
+    item.positions = item.positions.filter(position => ![890, 60, 2].includes(position.component_code));  
   }  
     // 返回最终的元素
     return item;  
