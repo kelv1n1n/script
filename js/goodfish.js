@@ -92,6 +92,7 @@ if (url.includes("/mtop.taobao.idle.group.myself.banner")) {
 if (url.includes("/mtop.taobao.idle.playboy.recommend")) {
     obj.data.recommends = [];
     obj.data.items = [];
+    obj.ret = ["fail::"];
 }
 
 body = JSON.stringify(obj);
