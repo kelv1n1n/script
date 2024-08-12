@@ -101,5 +101,14 @@ if (url.includes("/mtop.taobao.idle.item.recommend.list")) {
     obj.data.cardList = [];
 }
 
+if (url.includes("/mtop.taobao.idle.local.nearby.itemdetail.enter/1.0")) {
+   obj.data.targetUrl = "";
+   obj.data.trackParams.itemIds = "";
+   obj.data.nearbyItemInfoList = [];
+   obj.data.name = "";
+   obj.data.desc = "";
+   obj.data.poiName = "";
+}
+
 body = JSON.stringify(obj);
 $done({body});
