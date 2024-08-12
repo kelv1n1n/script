@@ -95,5 +95,11 @@ if (url.includes("/mtop.taobao.idle.playboy.recommend")) {
     obj.ret = ["fail::"];
 }
 
+
+if (url.includes("/mtop.taobao.idle.item.recommend.list")) {
+    obj.data.windCard.itemList = "";
+    obj.data.cardList = [];
+}
+
 body = JSON.stringify(obj);
 $done({body});
