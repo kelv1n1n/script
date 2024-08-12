@@ -61,22 +61,56 @@ if (url.indexOf(circle) != -1) {
 
 // 过滤掉搜索结果表示为广告的项
 if (url.includes("/gw/mtop.taobao.idlemtopsearch.search")) {
-    if (obj.data && Array.isArray(obj.data.resultList)) {  
+    //if (obj.data && Array.isArray(obj.data.resultList)) {  
       // 使用filter方法遍历resultList数组，并过滤掉不符合条件的元素  
-      obj.data.resultList = obj.data.resultList.filter(element => {  
+      //obj.data.resultList = obj.data.resultList.filter(element => {  
           // 检查当前元素是否包含所需的嵌套属性  
-          if (element.data && element.data.item && element.data.item.main && element.data.item.main.exContent) {  
+          //if (element.data && element.data.item && element.data.item.main && element.data.item.main.exContent) {  
               // 检查isAliMaMaAD的值  
-              const isAliMaMaAD = element.data.item.main.exContent.isAliMaMaAD;  
+              //const isAliMaMaAD = element.data.item.main.exContent.isAliMaMaAD;  
               // 如果isAliMaMaAD是true或"true"，则返回false以过滤掉这个元素  
-              return !(isAliMaMaAD === true || isAliMaMaAD === "true");  
-          }  
+              //return !(isAliMaMaAD === true || isAliMaMaAD === "true");  
+          //}  
           // 如果没有所需的嵌套属性，也可以返回true来保留这个元素（如果你希望的话）  
           // 或者你可以选择返回false来过滤掉没有这些属性的元素  
           // 这里我们假设没有这些属性的元素应该被保留  
-          return true;  
-      });  
-    } 
+          //return true;  
+      //});  
+    //}
+
+  if (obj.data && Array.isArray(obj.data.resultList)) {  
+      // 定义一个函数来过滤基于isAliMaMaAD条件的元素  
+      function filterByAliMaMaAD(resultList) {  
+          return resultList.filter(element => {  
+              if (  
+                  element.data &&  
+                  element.data.item &&  
+                  element.data.item.main &&  
+                  element.data.item.main.exContent  
+              ) {  
+                  return !(element.data.item.main.exContent.isAliMaMaAD === true || element.data.item.main.exContent.isAliMaMaAD === "true");  
+              }  
+              return true; // 如果没有必要的属性，则保留元素  
+          });  
+      }  
+  
+      // 定义一个函数来过滤基于template.name条件的元素  
+      function filterByTemplateName(resultList) {  
+          return resultList.filter(element => {  
+              if (  
+                  element.data &&  
+                  element.data.template  
+              ) {  
+                  return element.data.template.name !== "idlefish_search_card_category_select";  
+              }  
+              return true; // 如果没有template属性，则保留元素  
+          });  
+      }  
+  
+      // 先过滤isAliMaMaAD，然后过滤template.name  
+      // 但注意：这里我们实际上是在链式调用filter，而不是真正遍历两次数组  
+      obj.data.resultList = filterByAliMaMaAD(obj.data.resultList).filter(filterByTemplateName);   
+  }  
 }
 
 body = JSON.stringify(obj);
