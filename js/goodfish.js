@@ -88,5 +88,10 @@ if (url.includes("/mtop.taobao.idle.group.myself.banner")) {
     obj.data.bannerList = [];
 }
 
+
+if (url.includes("/mtop.taobao.idle.playboy.recommend")) {
+    obj.data.recommends = [];
+}
+
 body = JSON.stringify(obj);
 $done({body});
