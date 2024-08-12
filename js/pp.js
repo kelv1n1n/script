@@ -42,7 +42,7 @@ if (url.indexOf(recommendPro) != -1) {
 }
 
 if (url.indexOf(adv) != -1) {
-  obj.data = obj.data.filter(item => ![30,50,90,320,100,770].includes(item.region_code)); 
+  obj.data = obj.data.filter(item => ![30,50,90,320,100,770,1].includes(item.region_code)); 
 
   obj.data = obj.data.map(item => {  
   if (item.region_code === 2) {  
