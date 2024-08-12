@@ -52,11 +52,23 @@ if (url.indexOf(circle) != -1) {
     }
 }
 
-if (url.indexOf("/mtop.taobao.idlemtopsearch.search") != -1) {
-  obj.data.resultList = obj.data.resultList.filter(item => {  
+//if (url.indexOf("/mtop.taobao.idlemtopsearch.search") != -1) {
+  //obj.data.resultList = obj.data.resultList.filter(item => {  
     // 过滤掉表示为广告的项
-    return item.data.item.main.exContent.isAliMaMaAD !== "true";  
-  });
+    //return item.data.item.main.exContent.isAliMaMaAD !== "true";  
+  //});
+//}
+
+// 过滤掉搜索结果表示为广告的项
+if (url.includes("/gw/mtop.taobao.idlemtopsearch.search")) {
+    if (obj.data && obj.data.resultList && obj.data.resultList.data) {
+        obj.data.resultList.data = obj.data.resultList.data.filter(item => {
+            if (item.main && item.main.exContent && item.main.exContent.isAliMaMaAD === "true") {
+                return false;
+            }
+            return true;
+        });
+    }
 }
 
 body = JSON.stringify(obj);
