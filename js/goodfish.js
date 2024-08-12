@@ -61,13 +61,11 @@ if (url.indexOf(circle) != -1) {
 
 // 过滤掉搜索结果表示为广告的项
 if (url.includes("/gw/mtop.taobao.idlemtopsearch.search")) {
-    if (obj.data && obj.data.resultList && obj.data.resultList.data) {
-        obj.data.resultList.data = obj.data.resultList.data.filter(item => {
-            if (item.main && item.main.exContent && item.main.exContent.isAliMaMaAD === "true") {
-                return false;
-            }
-            return true;
-        });
+        if (obj.data && obj.data.resultList && obj.data.resultList.data && obj.data.resultList.data.item && obj.data.resultList.data.item.main && obj.data.resultList.data.item.main.exContent) {
+        const isAliMaMaAD = obj.data.resultList.data.item.main.exContent.isAliMaMaAD;
+        if (isAliMaMaAD === "true" || isAliMaMaAD === true) {
+            delete obj.data;
+        }
     }
 }
 
