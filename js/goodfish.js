@@ -61,12 +61,22 @@ if (url.indexOf(circle) != -1) {
 
 // 过滤掉搜索结果表示为广告的项
 if (url.includes("/gw/mtop.taobao.idlemtopsearch.search")) {
-        if (obj.data && obj.data.resultList && obj.data.resultList.data && obj.data.resultList.data.item && obj.data.resultList.data.item.main && obj.data.resultList.data.item.main.exContent) {
-        const isAliMaMaAD = obj.data.resultList.data.item.main.exContent.isAliMaMaAD;
-        if (isAliMaMaAD === "true" || isAliMaMaAD === true) {
-            delete obj.data;
-        }
-    }
+    if (obj.data && Array.isArray(obj.data.resultList)) {  
+      // 使用filter方法遍历resultList数组，并过滤掉不符合条件的元素  
+      obj.data.resultList = obj.data.resultList.filter(element => {  
+          // 检查当前元素是否包含所需的嵌套属性  
+          if (element.data && element.data.item && element.data.item.main && element.data.item.main.exContent) {  
+              // 检查isAliMaMaAD的值  
+              const isAliMaMaAD = element.data.item.main.exContent.isAliMaMaAD;  
+              // 如果isAliMaMaAD是true或"true"，则返回false以过滤掉这个元素  
+              return !(isAliMaMaAD === true || isAliMaMaAD === "true");  
+          }  
+          // 如果没有所需的嵌套属性，也可以返回true来保留这个元素（如果你希望的话）  
+          // 或者你可以选择返回false来过滤掉没有这些属性的元素  
+          // 这里我们假设没有这些属性的元素应该被保留  
+          return true;  
+      });  
+    } 
 }
 
 body = JSON.stringify(obj);
