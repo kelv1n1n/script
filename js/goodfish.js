@@ -83,5 +83,10 @@ if (url.includes("/gw/mtop.taobao.idlemtopsearch.search")) {
   }  
 }
 
+
+if (url.includes("/mtop.taobao.idle.group.myself.banner")) {
+    obj.data.bannerList = [];
+}
+
 body = JSON.stringify(obj);
 $done({body});
