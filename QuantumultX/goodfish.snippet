@@ -15,6 +15,8 @@
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js
 # 定位地区页面的信息流广告
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js
+# 闲鱼精选
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemessage\.region\.sync\/ url response-body "increments":\[.+\] response-body "increments":[]
 
 # 个人主页
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js
