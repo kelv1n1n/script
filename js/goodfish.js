@@ -10,10 +10,14 @@ if (url.indexOf(user) != -1) {
   //obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "6");
   obj.data.container.sections.forEach(sec => {
     if (sec.index === "6") {
-        delete sec.item.bottom;
-        delete sec.item.right;
-        delete sec.item.middle;
-        delete sec.item.corner;
+        //delete sec.item.bottom;
+        //delete sec.item.right;
+        //delete sec.item.middle;
+        //delete sec.item.corner;
+        sec.item.bottom = {};
+        sec.item.right = {};
+        sec.item.middle = {};
+        sec.item.corner = {};
     }
   });
   //  个人主页横幅
