@@ -6,8 +6,6 @@ const topics = "topics";
 const tab = "/basketballapi/news";
 //  过滤热榜游戏帖子
 const hot = "/hotRank";
-//  活动页赛程列表
-const activityMatch = "/getActivityMatchList";
 //  活动也内边距等配置
 const activityResource = "/queryResourceList";
 
@@ -47,10 +45,6 @@ if (url.indexOf(hot) != -1) {
         let topicNamesToExclude = ["英雄联盟", "王者荣耀", "和平精英"];
         obj.result.listV2 = obj.result.listV2.filter(item => !nicknamesToExclude.includes(item.thread.nickname));
         obj.result.listV2 = obj.result.listV2.filter(item => !topicNamesToExclude.includes(item.thread.topic_name));
-}
-
-if (url.indexOf(activityMatch) != -1) {
-        delete obj.result
 }
 
 if (url.indexOf(activityResource) != -1) {
