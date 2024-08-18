@@ -1,0 +1,18 @@
+host, titan.pinduoduo.com, reject
+host, apm.pinduoduo.com, reject
+host, m.pinduoduo.net, reject
+host, ta-a.pinduoduo.com, reject
+host, ta.pinduoduo.com, reject
+host, th-a.pinduoduo.com, reject
+host, th-b.pinduoduo.com, reject
+host, th.pinduoduo.com, reject
+
+ip-cidr, 81.69.208.12/32, reject
+ip-cidr, 175.24.144.100/32, reject
+ip-cidr, 114.110.99.5/32, reject
+ip-cidr, 117.185.244.212/32, reject
+ip-cidr, 114.110.97.18/24, reject
+ip-cidr, 111.29.42.213/32, reject
+ip-cidr, 180.97.42.54/32, reject
+ip-cidr, 180.97.42.43/32, reject
+ip-cidr, 180.97.42.55/32, reject
