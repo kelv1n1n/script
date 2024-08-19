@@ -26,3 +26,5 @@ ip-cidr, 36.152.46.3/32, reject
 
 # wifi
 ip-cidr, 180.163.214.155/32, reject
+ip-cidr, 101.226.152.31/32, reject
+ip-cidr, 101.226.147.13/32, reject
