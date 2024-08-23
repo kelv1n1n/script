@@ -19,15 +19,15 @@ if (url.includes("/homepage/v1/core")) {
 const user = "/mtop.idle.user.page.my.adapter";
 if (url.indexOf(user) != -1) {
   //  底部社区小程序列表
-  //obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "6");
-  obj.data.container.sections.forEach(sec => {
-    if (sec.index === "6") {
-        delete sec.item.bottom;
-        delete sec.item.right;
-        delete sec.item.middle;
-        delete sec.item.corner;
-    }
-  });
+  obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "6");
+  //obj.data.container.sections.forEach(sec => {
+    //if (sec.index === "6") {
+        //delete sec.item.bottom;
+        //delete sec.item.right;
+        //delete sec.item.middle;
+        //delete sec.item.corner;
+    //}
+  //});
   //  个人主页横幅
   obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "3");
 
