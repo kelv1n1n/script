@@ -37,6 +37,7 @@ const circle = "/mtop.taobao.idlehome.home.circle.list";
 if (url.indexOf(circle) != -1) {
   // 过滤 circleList 数组，只保留 circleId 为 1 和 2 的元素
   obj.data.circleList = obj.data.circleList.filter(circle => circle.circleId === "2" || circle.circleId === "3");
+  console.log(JSON.stringify(obj.data.circleList));
 }
 
 $done({ body: JSON.stringify(obj) });
