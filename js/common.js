@@ -16,6 +16,7 @@ if (url.includes("/homepage/v1/core")) {
   }
 }
 
+const user = "/mtop.idle.user.page.my.adapter";
 if (url.indexOf(user) != -1) {
   //  底部社区小程序列表
   //obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "6");
