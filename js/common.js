@@ -46,17 +46,17 @@ if (url.indexOf(user) != -1) {
 const circle = "/mtop.taobao.idlehome.home.circle.list";
 if (url.indexOf(circle) != -1) {
   // 过滤 circleList 数组，只保留 circleId 为 1 和 2 的元素
-  //obj.data.circleList = obj.data.circleList.filter(circle => circle.circleId === "1" || circle.circleId === "2");
-  if (obj.data && obj.data.circleList) {
-        obj.data.circleList.forEach(circle => {
-            if (circle.showType) {
-                circle.showType = "text";
-            }
-            if (circle.showInfo && circle.showInfo.titleImage) {
-                delete circle.showInfo.titleImage;
-            }
-        });
-    }
+  obj.data.circleList = obj.data.circleList.filter(circle => circle.circleId === "2" || circle.circleId === "3");
+  //if (obj.data && obj.data.circleList) {
+        //obj.data.circleList.forEach(circle => {
+            //if (circle.showType) {
+               // circle.showType = "text";
+           // }
+           // if (circle.showInfo && circle.showInfo.titleImage) {
+           //     delete circle.showInfo.titleImage;
+            //}
+        //});
+    //}
 }
 
 $done({ body: JSON.stringify(obj) });
