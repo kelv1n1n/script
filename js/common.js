@@ -40,4 +40,9 @@ if (url.indexOf(circle) != -1) {
   //console.log(JSON.stringify(obj.data.circleList));
 }
 
+if (url.includes("/api/social/mall/follow/homepage")) {
+  obj.unexposed_timeline.list = [];
+  delete obj.update_status_tips;
+}
+
 $done({ body: JSON.stringify(obj) });
