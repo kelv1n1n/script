@@ -40,6 +40,8 @@ if (url.indexOf(circle) != -1) {
   //console.log(JSON.stringify(obj.data.circleList));
 }
 
+try {
+  
 if (url.includes("/api/social/mall/follow/homepage")) {
   if (obj && obj.unexposed_timeline.list) {
     obj.unexposed_timeline.list = [];
@@ -67,6 +69,9 @@ if (url.includes("/alexa/homepage/hub")) {
     validTitles.includes(item.title)
   );
 
+}
+  
+} catch (error) {
 }
 
 $done({ body: JSON.stringify(obj) });
