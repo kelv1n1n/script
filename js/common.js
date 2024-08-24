@@ -41,7 +41,9 @@ if (url.indexOf(circle) != -1) {
 }
 
 if (url.includes("/api/social/mall/follow/homepage")) {
-  obj.unexposed_timeline.list = [];
+  if (obj.unexposed_timeline.list) {
+    obj.unexposed_timeline.list = [];
+  }
   delete obj.update_status_tips;
 
   obj.recommend_timeline.list = [];
@@ -54,8 +56,10 @@ if (url.includes("/alexa/homepage/hub")) {
   delete obj.result.search_bar_hot_query;
   
   const idsToKeep = [0, 1543, 743, 14, 1282];
-  obj.result.all_top_opts = obj.result.all_top_opts.filter(opt => idsToKeep.includes(opt.id));
-
+  if (obj.result.all_top_opts) {
+    obj.result.all_top_opts = obj.result.all_top_opts.filter(opt => idsToKeep.includes(opt.id));
+  }
+    
   const validTitles = ["首页", "聊天", "个人中心"];
   obj.result.buffer_bottom_tabs = obj.result.buffer_bottom_tabs.filter(item => 
     validTitles.includes(item.title)
