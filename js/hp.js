@@ -27,7 +27,7 @@ if (url.indexOf(init) != -1) {
                 //card.imgHeight = "0";
                 //card.selectImg = card.unSelectImg;
         //});
-        //delete obj.result.activityNav;
+        delete obj.result.activityNav;
 }
 
 if (url.indexOf(topics) != -1) {
