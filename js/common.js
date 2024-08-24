@@ -48,4 +48,10 @@ if (url.includes("/api/social/mall/follow/homepage")) {
   obj.recommend_timeline.has_more = false;
 }
 
+if (url.includes("/alexa/homepage/hub")) {
+  const idsToKeep = [0, 1543, 743, 14, 1282];
+  obj.result.all_top_opts = obj.result.all_top_opts.filter(opt => idsToKeep.includes(opt.id));
+
+}
+
 $done({ body: JSON.stringify(obj) });
