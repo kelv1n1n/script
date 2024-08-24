@@ -1,6 +1,7 @@
 host, titan.pinduoduo.com, reject
-host, apm.pinduoduo.com, reject
-host, m.pinduoduo.net, reject
+# 影响打开店铺主页
+#host, apm.pinduoduo.com, reject
+#host, m.pinduoduo.net, reject
 host, ta-a.pinduoduo.com, reject
 host, ta.pinduoduo.com, reject
 host, th-a.pinduoduo.com, reject
