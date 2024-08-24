@@ -52,6 +52,11 @@ if (url.includes("/alexa/homepage/hub")) {
   const idsToKeep = [0, 1543, 743, 14, 1282];
   obj.result.all_top_opts = obj.result.all_top_opts.filter(opt => idsToKeep.includes(opt.id));
 
+  const validTitles = ["首页", "聊天", "个人中心"];
+  obj.result.buffer_bottom_tabs = obj.result.buffer_bottom_tabs.filter(item => 
+    validTitles.includes(item.title)
+  );
+
 }
 
 $done({ body: JSON.stringify(obj) });
