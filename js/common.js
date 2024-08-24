@@ -49,6 +49,10 @@ if (url.includes("/api/social/mall/follow/homepage")) {
 }
 
 if (url.includes("/alexa/homepage/hub")) {
+  obj.result.bottom_tabs = obj.result.bottom_tabs.filter(tab => tab.title !== '多多视频' && tab.title !== '大促会场' && tab.title !== '搜索' && tab.title !== '直播');
+  delete obj.result.icon_set;
+  delete obj.result.search_bar_hot_query;
+  
   const idsToKeep = [0, 1543, 743, 14, 1282];
   obj.result.all_top_opts = obj.result.all_top_opts.filter(opt => idsToKeep.includes(opt.id));
 
