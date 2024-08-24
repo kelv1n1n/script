@@ -43,6 +43,9 @@ if (url.indexOf(circle) != -1) {
 if (url.includes("/api/social/mall/follow/homepage")) {
   obj.unexposed_timeline.list = [];
   delete obj.update_status_tips;
+
+  obj.recommend_timeline.list = [];
+  obj.recommend_timeline.has_more = false;
 }
 
 $done({ body: JSON.stringify(obj) });
