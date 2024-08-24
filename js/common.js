@@ -41,7 +41,7 @@ if (url.indexOf(circle) != -1) {
 }
 
 if (url.includes("/api/social/mall/follow/homepage")) {
-  if (obj.unexposed_timeline.list) {
+  if (obj && obj.unexposed_timeline.list) {
     obj.unexposed_timeline.list = [];
   }
   delete obj.update_status_tips;
@@ -56,7 +56,7 @@ if (url.includes("/alexa/homepage/hub")) {
   delete obj.result.search_bar_hot_query;
   
   const idsToKeep = [0, 1543, 743, 14, 1282];
-  if (obj.result.all_top_opts) {
+  if (obj && obj.result.all_top_opts) {
     obj.result.all_top_opts = obj.result.all_top_opts.filter(opt => idsToKeep.includes(opt.id));
   }
     
