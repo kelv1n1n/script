@@ -74,4 +74,9 @@ if (url.includes("/alexa/homepage/hub")) {
 } catch (error) {
 }
 
+const orderBanner = "/query_order_list_tabs_element";
+if (url.indexOf(orderBanner) != -1) {
+  delete obj.banner_picture;
+}
+
 $done({ body: JSON.stringify(obj) });
