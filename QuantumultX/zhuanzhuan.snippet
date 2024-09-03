@@ -3,20 +3,17 @@
 
 # 首页右下角悬浮
 #^https:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/zhuanzhuan.js
-# 开品广告
+# 开屏广告
 #^https:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen url reject-dict
 
 
-# hostname = app.zhuanzhuan.com
-^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo url reject-dict
-^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? url reject-dict
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen url reject-dict
+#^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo url reject-dict
+#^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? url reject-dict
 # 转转右下角悬浮广告
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-dict
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? url response-body userRed response-body fmz200
+#^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-dict
 # “我的”页面去除冗余的模块
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body fmz200
+#^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js
+#^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body fmz200
 
 [MITM]
 hostname = app.zhuanzhuan.com
