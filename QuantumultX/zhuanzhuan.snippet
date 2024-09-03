@@ -13,7 +13,8 @@
 #^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-dict
 # “我的”页面去除冗余的模块
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js
-#^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body fmz200
+# 我的页面商品推荐
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body fmz200
 
 [MITM]
 hostname = app.zhuanzhuan.com
