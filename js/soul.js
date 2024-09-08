@@ -89,7 +89,9 @@ if (url.indexOf(path) != -1) {
     obj.data.showTipsCard = false;
     obj.data.showMetric = false;
     obj.data.hasHomePageLiked = false;
-    obj.data.homePageLikedMetric.addNum = 0;
+    if (obj && obj.data && obj.data.homePageLikedMetric){
+      obj.data.homePageLikedMetric.addNum = 0;
+    }
     obj.data.homePageLikedMetric.likedTotalNum = 0;
     obj.data.homePageLikedMetric.hasShowHistoryDynamic = false;
 }
