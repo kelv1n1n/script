@@ -91,9 +91,11 @@ if (url.indexOf(path) != -1) {
     obj.data.hasHomePageLiked = false;
     if (obj && obj.data && obj.data.homePageLikedMetric){
       obj.data.homePageLikedMetric.addNum = 0;
+      obj.data.homePageLikedMetric.likedTotalNum = 0;
+      obj.data.homePageLikedMetric.hasShowHistoryDynamic = false;
     }
-    obj.data.homePageLikedMetric.likedTotalNum = 0;
-    obj.data.homePageLikedMetric.hasShowHistoryDynamic = false;
+    //obj.data.homePageLikedMetric.likedTotalNum = 0;
+    //obj.data.homePageLikedMetric.hasShowHistoryDynamic = false;
 }
 
 body = JSON.stringify(obj);
