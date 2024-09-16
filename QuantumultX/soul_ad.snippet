@@ -64,5 +64,7 @@
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/quick\/menu url reject
 # 个人主页数量提示
 ^https:\/\/api-user\.soulapp\.cn\/user\/homepage\/metrics url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 私聊用户匹配推荐
+^https:\/\/api-chat\.soulapp\.cn\/chat\/session\/quickButtonCheck url reject-dict
 
 hostname = *.soulapp.cn,47.110.187.87
