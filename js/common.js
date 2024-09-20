@@ -69,6 +69,8 @@ if (url.includes("/alexa/homepage/hub")) {
     validTitles.includes(item.title)
   );
 
+  delete obj.result.dy_module.new_user_zone_dy
+
 }
   
 } catch (error) {
