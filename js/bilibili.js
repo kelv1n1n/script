@@ -5,10 +5,12 @@ let obj = JSON.parse(body);
 const index = "/feed/index?";
 if (url.includes(index) {
   // 首页推荐信息流
+  console.log("信息流");
   if (obj?.data?.items?.length > 0) {
     // 白名单
     obj.data.items = obj.data.items.filter((i) => i?.card_goto === "av");
   }
+  console.log(JSON.stringify(obj.data.items));
 }
 const index_story = "/feed/index/story";
 if (url.indexOf(index_story) != -1) {
