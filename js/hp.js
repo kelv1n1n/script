@@ -2,53 +2,28 @@
 const init = "/init";
 //  去除专区帖子列表顶部横幅推广
 const topics = "topics";
-//  修改篮球nba赛事菜单文字颜色
-const tab = "/basketballapi/news";
 //  过滤热榜游戏帖子
 const hot = "/hotRank";
-//  活动也内边距等配置
-const activityResource = "/queryResourceList";
 
 let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
 
 if (url.indexOf(init) != -1) {
-        obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => item.en === "hotRank" || item.en === "match");
-        //  活动栏
-        delete obj.result.activityNav;
+ obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => item.en === "hotRank" || item.en === "match");
+ //  活动栏
+ delete obj.result.activityNav;
 }
 
 if (url.indexOf(topics) != -1) {
-        obj.data.topicResources = [];
-}
-
-if (url.indexOf(tab) != -1) {
-        obj.result.forEach(item => {
-              item.color.day = "#000000"
-        });
+ obj.data.topicResources = [];
 }
 
 if (url.indexOf(hot) != -1) {
-        let nicknamesToExclude = ["虎扑电竞资讯"];  
-        let topicNamesToExclude = ["英雄联盟", "王者荣耀", "和平精英"];
-        obj.result.listV2 = obj.result.listV2.filter(item => !nicknamesToExclude.includes(item.thread.nickname));
-        obj.result.listV2 = obj.result.listV2.filter(item => !topicNamesToExclude.includes(item.thread.topic_name));
-}
-
-if (url.indexOf(activityResource) != -1) {
-        obj.data.contentMargin = 20;
-        obj.data.resourceList = obj.data.resourceList.filter(item => item.rigLabel !== 'activity_banner');
-        obj.data.resourceOrder = obj.data.resourceOrder.filter(item => item !== 'activity_banner');
-
-        obj.data.resourceList.forEach(card => {
-                if (card.rigLabel === "activity_feed") {
-                        delete card.globalDayBackground;
-                        delete card.globalNightBackground;
-                }
-        });
-        //console.log(JSON.stringify(obj.data.resourceList));
-        //console.log(JSON.stringify(obj.data.resourceOrder));
+ let nicknamesToExclude = ["虎扑电竞资讯"];  
+ let topicNamesToExclude = ["英雄联盟", "王者荣耀", "和平精英"];
+ obj.result.listV2 = obj.result.listV2.filter(item => !nicknamesToExclude.includes(item.thread.nickname));
+ obj.result.listV2 = obj.result.listV2.filter(item => !topicNamesToExclude.includes(item.thread.topic_name));
 }
 
 body = JSON.stringify(obj);
