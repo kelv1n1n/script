@@ -3,7 +3,7 @@ let body = $response.body;
 let obj = JSON.parse(body);
 
 const index = "/feed/index?";
-if (url.includes(index) {
+if (url.includes(index)) {
   // 首页推荐信息流
   console.log("信息流");
   if (obj?.data?.items?.length > 0) {
