@@ -28,6 +28,7 @@ if (url.indexOf(index_story) != -1) {
       }
     }
     obj.data.items = newItems;
+    console.log(JSON.stringify(obj.data.items));
 }
 
   
