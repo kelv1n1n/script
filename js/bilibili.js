@@ -9,6 +9,8 @@ if (url.includes(index)) {
     // 白名单
     obj.data.items = obj.data.items.filter((i) => i?.card_goto === "av");
   }
+  obj.data.config.auto_refresh_by_behavior = 0;
+  obj.data.config.history_cache_size = 0;
   console.log(JSON.stringify(obj.data.items));
 }
 const index_story = "/feed/index/story";
