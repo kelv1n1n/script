@@ -4,11 +4,7 @@ let obj = JSON.parse(body);
 
 const index = "/feed/index";
 if (url.indexOf(index) != -1) {
-  obj.data.items.forEach(index => {
-    if (index.ad_info) {
-        delete index;
-    }
-  });
+  obj.data.items = obj.data.items.filter((i) => i?.card_goto === "av");
 }
 
   
