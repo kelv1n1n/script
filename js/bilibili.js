@@ -9,7 +9,7 @@ if (url.indexOf(index) != -1) {
     for (let item of obj.data.items) {
       if (item?.hasOwnProperty("ad_info")) {
         continue;
-      } else if (["vertical_ad_av", "vertical_live", "vertical_pgc"]?.includes(item?.card_goto)) {
+      } else if (["vertical_ad_av", "vertical_live", "vertical_pgc", "banner"]?.includes(item?.card_goto)) {
         continue;
       } else {
         if (item?.story_cart_icon) {
