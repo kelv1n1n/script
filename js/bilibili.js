@@ -9,6 +9,7 @@ if (url.includes(index)) {
     // 白名单
     obj.data.items = obj.data.items.filter((i) => i?.card_goto === "av");
   }
+  console.log(JSON.stringify(obj));
 }
 const index_story = "/feed/index/story";
 if (url.indexOf(index_story) != -1) {
