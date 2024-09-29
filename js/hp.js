@@ -15,18 +15,7 @@ let obj = JSON.parse(body);
 
 if (url.indexOf(init) != -1) {
         obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => item.en === "hotRank" || item.en === "match");
-        obj.result.clientLevelOneNavV2.forEach(card => {
-              if (card.en === "match") {
-               card.night = {};
-               card.day = {};
-              }
-        });
-
-        //  活动菜单，奥运会什么的
-        //obj.result.activityNav.forEach(card => {
-                //card.imgHeight = "0";
-                //card.selectImg = card.unSelectImg;
-        //});
+        //  活动栏
         delete obj.result.activityNav;
 }
 
