@@ -2,7 +2,6 @@
 #!desc = APP：拼多多
 #!author = KELV1N1N
 #!tag = 去广告
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 
 [Rewrite]
 # 拼多多关注店铺商品动态推荐、店铺推荐
