@@ -2,6 +2,7 @@
 #!desc = APP：拼多多
 #!author = KELV1N1N
 #!tag = 去广告
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/giffgaff.png
 
 [Rewrite]
 # 拼多多关注店铺商品动态推荐、店铺推荐
