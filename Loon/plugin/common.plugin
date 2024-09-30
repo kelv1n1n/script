@@ -1,0 +1,24 @@
+#!name = 精简小合集
+#!desc = APP：拼多多
+#!author = KELV1N1N
+#!tag = 去广告
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
+
+[Rewrite]
+# 拼多多关注店铺商品动态推荐、店铺推荐
+#^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/homepage url script-response-body https://github.com/kelv1n1n/script/raw/main/js/common.js
+^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/feed url reject-dict
+# 拼多多首页顶部标签
+#^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub url script-response-body https://github.com/kelv1n1n/script/raw/main/js/common.js
+# 拼多多历史浏览更多推荐
+^https:\/\/api\.pinduoduo\.com\/api\/hub\/zb_promotions_scene\/weak\/list\/get url reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/footprint url reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/epiktetos\/footprint\/head_entrance url reject-dict
+# 拼多多订单列表顶部横幅
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element url reject
+
+[Script]
+# 拼多多关注店铺商品动态推荐、店铺推荐
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/homepage script-path = script-response-body https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多关注店铺推荐
+# 拼多多首页顶部标签
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = script-response-body https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多首页顶部标签
