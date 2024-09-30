@@ -9,17 +9,17 @@ HOST, maplocatesdksnapshot.d.meituan.net, REJECT
 HOST, metrics-picture.d.meituan.net, REJECT
 IP-CIDR, 103.37.155.60/32, REJECT
 
-host, flowplus.meituan.net, reject
-host-suffix, analytics.meituan.net, reject
-host-suffix, meituan.xn, reject
-host-suffix, meituan.yoga, reject
-host-suffix, meituangov.cn, reject
-host-suffix, report.meituan.com, reject
-host-suffix, wmlog.meituan.com, reject
-host-suffix, ad.e.waimai.sankuai.com, reject
-host-suffix, mads.meituan.com, reject
-host-suffix, dreport.meituan.net, reject
-host-suffix, d.meituan.net, reject
+HOST, flowplus.meituan.net, reject
+DOMAIN-SUFFIX, analytics.meituan.net, reject
+DOMAIN-SUFFIX, meituan.xn, reject
+DOMAIN-SUFFIX, meituan.yoga, reject
+DOMAIN-SUFFIX, meituangov.cn, reject
+DOMAIN-SUFFIX, report.meituan.com, reject
+DOMAIN-SUFFIX, wmlog.meituan.com, reject
+DOMAIN-SUFFIX, ad.e.waimai.sankuai.com, reject
+DOMAIN-SUFFIX, mads.meituan.com, reject
+DOMAIN-SUFFIX, dreport.meituan.net, reject
+DOMAIN-SUFFIX, d.meituan.net, reject
 
 [Rewrite]
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(?:loadInfo|openscreen|startpicture) reject-dict
