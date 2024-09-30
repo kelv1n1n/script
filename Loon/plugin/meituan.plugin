@@ -1,0 +1,15 @@
+#!name = 美团去开屏
+#!desc = 移除开屏广告
+#!author = RuCu6[https://github.com/RuCu6/Loon/blob/main/Plugins/myblockads.plugin]
+#!tag = 去广告
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/MeiTuanItakeaway.png
+
+[Rewrite]
+^http:\/\/wmapi\.meituan\.com\/api\/v7\/(?:loadInfo|openscreen|startpicture) reject-dict
+^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg reject-dict
+^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
+^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_\d+\.json reject-dict
+^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(?:brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
+
+[MitM]
+hostname = flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
