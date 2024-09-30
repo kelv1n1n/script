@@ -21,3 +21,8 @@
 http-response ^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/homepage script-path = https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多关注店铺推荐
 # 拼多多首页顶部标签
 http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多首页顶部标签
+
+# 虎扑
+http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/device\/v\d\/init script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js, requires-body = true, tag = 首页顶部菜单保留热榜，赛事
+http-response ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/topics\/\d script-path = https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 专区顶部横幅
+http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/hotRank script-path = https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 热搜榜过滤游戏帖子
