@@ -18,6 +18,6 @@
 
 [Script]
 # 拼多多关注店铺商品动态推荐、店铺推荐
-http-response ^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/homepage script-path = script-response-body https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多关注店铺推荐
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/homepage script-path = https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多关注店铺推荐
 # 拼多多首页顶部标签
-http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = script-response-body https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多首页顶部标签
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多首页顶部标签
