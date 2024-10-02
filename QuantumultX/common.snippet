@@ -22,7 +22,10 @@
 #^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element url script-response-body https://github.com/kelv1n1n/script/raw/main/js/common.js
 ^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element url reject
 
-# 哔哩哔哩
-#^http:\/\/\d{1,3}(?:\.\d{1,3}){3}\/\d{6}\/resolve url reject-dict
-#^http:\/\/\d{1,3}(?:\.\d{1,3}){3}\/\d{4}\/resolve url reject-dict
-#^http:\/\/(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/resolve url reject
+# 虎扑
+# 首页顶部菜单保留热榜，赛事
+^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/device\/v\d\/init url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
+# 专区顶部横幅
+^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/topics\/\d url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
+# 热搜榜过滤游戏帖子
+^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/hotRank url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
