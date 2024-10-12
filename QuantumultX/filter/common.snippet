@@ -18,10 +18,13 @@ HOST,ad.cyapi.cn,REJECT
 # keep开屏
 host,hc-ssp.sm.cn,reject
 
-# dns
+# bilibili
 host-keyword,httpdns-,reject
 host-keyword,httpdns.,reject
+HOST-SUFFIX, iadsdk.apple.com, REJECT
+IP-CIDR, 203.107.1.1/24, REJECT
 
+# gitlab仓库
 host,gitlab.com,proxy
 
 # 虎扑
