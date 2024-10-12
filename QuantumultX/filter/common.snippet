@@ -15,14 +15,10 @@ IP-CIDR,117.51.169.11/32,REJECT
 HOST,abyss.cyapi.cn,REJECT
 HOST,ad.cyapi.cn,REJECT
 
-
 # keep开屏
 host,hc-ssp.sm.cn,reject
 
-# bilibili
-host-keyword,httpdns-,reject
-host-keyword,httpdns.,reject
-HOST-SUFFIX, iadsdk.apple.com, REJECT
+# 阿里云盘
 IP-CIDR, 203.107.1.1/24, REJECT
 
 # gitlab仓库
@@ -32,3 +28,83 @@ host,gitlab.com,proxy
 host,adx.hupu.com,reject
 host,adx-api.hupu.com,reject
 host,goblin.hupu.com,reject
+
+# Apple
+HOST, advertising.apple.com, REJECT
+HOST, api-adservices.apple.com, REJECT
+HOST, apple.comscoreresearch.com, REJECT
+HOST, banners.itunes.apple.com, REJECT
+HOST, iad.apple.com, REJECT
+HOST, iadcontent.apple.com, REJECT
+HOST, iadctest.qwapi.com, REJECT
+HOST, iadmoo.apple.com, REJECT
+HOST, iadworkbench.apple.com, REJECT
+HOST, launch.apple.com, REJECT
+HOST, qwapi.apple.com, REJECT
+HOST-SUFFIX, advp.apple.com, REJECT
+HOST-SUFFIX, iad-apple.com, REJECT
+HOST-SUFFIX, iadsdk.apple.com, REJECT
+
+# 广告联盟
+HOST, ad.zijieapi.com, REJECT
+HOST, adapi.izuiyou.com, REJECT
+HOST, adtracker.adfunlink.com, REJECT
+HOST, dig.bdurl.net, REJECT
+HOST, dsp-x.jd.com, REJECT
+HOST, et.tanx.com, REJECT
+HOST, gdfp.gifshow.com, REJECT
+HOST, init.supersonicads.com, REJECT
+HOST, is.snssdk.com, REJECT
+HOST, janapi.jd.com, REJECT
+HOST, mercury-gateway.ixiaochuan.cn, REJECT
+HOST, open.e.kuaishou.com, REJECT
+HOST, open.kuaishou.com, REJECT
+HOST, pagead2.googlesyndication-cn.com, REJECT
+HOST, pagead2.googlesyndication.com, REJECT
+HOST, sdk.e.qq.com, REJECT
+HOST, tangram.e.qq.com, REJECT
+HOST, ws.tapjoyads.com, REJECT
+HOST, www.googleadservices.com, REJECT
+HOST-SUFFIX, ads.linkedin.com, REJECT
+HOST-SUFFIX, ads.vungle.com, REJECT
+HOST-SUFFIX, adservice.google.com, REJECT
+HOST-SUFFIX, adukwai.com, REJECT
+HOST-SUFFIX, applovin.com, REJECT
+HOST-SUFFIX, applvn.com, REJECT
+HOST-SUFFIX, appsflyer.com, REJECT
+HOST-SUFFIX, appsflyersdk.com, REJECT
+HOST-SUFFIX, kuaishouzt.com, REJECT
+HOST-SUFFIX, miaozhen.com, REJECT
+HOST-SUFFIX, ubixioe.com, REJECT
+HOST-SUFFIX, unityads.unity3d.com, REJECT
+HOST-SUFFIX, v.smtcdns.com, REJECT
+HOST-SUFFIX, zijieapi.com, REJECT
+HOST-KEYWORD, -ad-sign.byteimg.com, REJECT
+HOST-KEYWORD, ads.g.doubleclick, REJECT
+HOST-KEYWORD, asiad.byteactivity, REJECT
+HOST-KEYWORD, pangolin-sdk-toutiao, REJECT
+HOST-KEYWORD, pangolin.snssdk.com, REJECT
+HOST-KEYWORD, pglstatp-toutiao, REJECT
+HOST-KEYWORD, video-cn.snssdk.com, REJECT
+
+# httpdns
+HOST, hdns.ksyun.com, REJECT
+HOST-KEYWORD, httpdns., REJECT
+HOST-KEYWORD, httpdns-, REJECT
+
+# 腾讯
+HOST, adsmind.gdtimg.com, REJECT
+HOST, info4.video.qq.com, REJECT
+HOST, info6.video.qq.com, REJECT
+HOST, ios.video.mpush.qq.com, REJECT
+HOST, otheve.beacon.qq.com, REJECT
+HOST, pgdt.gtimg.cn, REJECT
+HOST, tmead.y.qq.com, REJECT
+HOST, tmeadbak.y.qq.com, REJECT
+HOST, tmeadcomm.y.qq.com, REJECT
+HOST, tpns.qq.com, REJECT
+HOST-SUFFIX, gdt.qq.com, REJECT
+HOST-SUFFIX, l.qq.com, REJECT
+HOST-KEYWORD, trace.qq.com, REJECT
+HOST-KEYWORD, trace.video.qq.com, REJECT
+IP-CIDR, 47.110.187.87/32, REJECT
