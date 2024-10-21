@@ -208,7 +208,8 @@ if (url.includes("/x/resource/show/tab/v2")) {
 } else if (url.includes("/resource/top/activity")) {
    console.log("活动：" + url);
    console.log(JSON.stringify(obj));
-   obj = '"{ "code": -404, "message": "啥都木有", "ttl": 1, "data": null }"';
+   var jsonString = '{ "code": -404, "message": "啥都木有", "ttl": 1, "data": null }';
+   obj = JSON.parse(jsonString);
    console.log(JSON.stringify(obj));
 }
 
