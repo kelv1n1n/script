@@ -21,7 +21,7 @@ if (url.includes("/x/resource/show/tab/v2")) {
   }
   // 右上角按钮
   if (obj?.data?.top?.length > 0) {
-    console.log(url);
+    console.log("url: " + url);
     console.log(JSON.stringify(obj.data.top));
     obj.data.top = obj.data.top.filter((i) => i?.name === "消息");
     if (obj?.data?.top?.[0]?.pos) {
