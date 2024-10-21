@@ -206,11 +206,8 @@ if (url.includes("/x/resource/show/tab/v2")) {
     obj.data.new_tab_info.outer_list = obj.data.new_tab_info.outer_list.filter((i) => i?.biz_id !== 33);
   }
 } else if (url.includes("/resource/top/activity")) {
-   console.log("活动：" + url);
-   console.log(JSON.stringify(obj));
    var jsonString = '{ "code": -404, "message": "啥都木有", "ttl": 1, "data": null }';
    obj = JSON.parse(jsonString);
-   console.log(JSON.stringify(obj));
 }
 
 $done({ body: JSON.stringify(obj) });
