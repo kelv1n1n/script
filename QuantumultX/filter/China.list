@@ -2,74 +2,74 @@
 # 2022-11-11
 
 # China Area Network
-host-suffix, flyert.com
-host-suffix, gandi.net
-host-suffix, snapdrop.net
-host, download.jetbrains.com
-host, origin-a.akamaihd.net
+host-suffix, flyert.com, direct
+host-suffix, gandi.net, direct
+host-suffix, snapdrop.net, direct
+host, download.jetbrains.com, direct
+host, origin-a.akamaihd.net, direct
 # ---(Microsoft)---
 # > Outlook
-host, outlook.office365.com
-host, smtp-mail.outlook.com
-host, smtp.office365.com
+host, outlook.office365.com, direct
+host, smtp-mail.outlook.com, direct
+host, smtp.office365.com, direct
 # > Windows Server Update Services
-host-suffix, dl.delivery.mp.microsoft.com
-host-suffix, update.microsoft.com
-host-suffix, windowsupdate.com
-host-suffix, windowsupdate.microsoft.com
-host, download.microsoft.com
-host, wustat.windows.com
-host, ntservicepack.microsoft.com
+host-suffix, dl.delivery.mp.microsoft.com, direct
+host-suffix, update.microsoft.com, direct
+host-suffix, windowsupdate.com, direct
+host-suffix, windowsupdate.microsoft.com, direct
+host, download.microsoft.com, direct
+host, wustat.windows.com, direct
+host, ntservicepack.microsoft.com, direct
 # ------
 # > PayPal
-host-suffix, paypal.com
-host-suffix, paypal.me
-host-suffix, paypal-mktg.com
-host-suffix, paypalobjects.com
+host-suffix, paypal.com, direct
+host-suffix, paypal.me, direct
+host-suffix, paypal-mktg.com, direct
+host-suffix, paypalobjects.com, direct
 # > Steam
-host-suffix, cm.steampowered.com
-host-suffix, steamserver.net
+host-suffix, cm.steampowered.com, direct
+host-suffix, steamserver.net, direct
 # > Tencent
 IP-CIDR, 182.254.116.0/24, no-resolve
 IP-CIDR, 203.205.238.0/23, no-resolve
 IP-CIDR, 203.205.254.0/23, no-resolve
 # > IP Query
-host, ip.istatmenus.app
-host, sms.imagetasks.com
+host, ip.istatmenus.app, direct
+host, sms.imagetasks.com, direct
 # > Speed Test
-host-suffix, netspeedtestmaster.com
-host, speedtest.macpaw.com
+host-suffix, netspeedtestmaster.com, direct
+host, speedtest.macpaw.com, direct
 # > Private Tracker
-host-suffix, acg.rip
-host-suffix, animebytes.tv
-host-suffix, awesome-hd.me
-host-suffix, broadcasthe.net
-host-suffix, chdbits.co
-host-suffix, classix-unlimited.co.uk
-host-suffix, comicat.org
-host-suffix, empornium.me
-host-suffix, gazellegames.net
-host-suffix, hdbits.org
-host-suffix, hdchina.org
-host-suffix, hddolby.com
-host-suffix, hdhome.org
-host-suffix, hdsky.me
-host-suffix, icetorrent.org
-host-suffix, jpopsuki.eu
-host-suffix, keepfrds.com
-host-suffix, madsrevolution.net
-host-suffix, morethan.tv
-host-suffix, m-team.cc
-host-suffix, myanonamouse.net
-host-suffix, nanyangpt.com
-host-suffix, ncore.cc
-host-suffix, open.cd
-host-suffix, ourbits.club
-host-suffix, passthepopcorn.me
-host-suffix, privatehd.to
-host-suffix, pterclub.com
-host-suffix, redacted.ch
-host-suffix, springsunday.net
-host-suffix, tjupt.org
-host-suffix, totheglory.im
+host-suffix, acg.rip, direct
+host-suffix, animebytes.tv, direct
+host-suffix, awesome-hd.me, direct
+host-suffix, broadcasthe.net, direct
+host-suffix, chdbits.co, direct
+host-suffix, classix-unlimited.co.uk, direct
+host-suffix, comicat.org, direct
+host-suffix, empornium.me, direct
+host-suffix, gazellegames.net, direct
+host-suffix, hdbits.org, direct
+host-suffix, hdchina.org, direct
+host-suffix, hddolby.com, direct
+host-suffix, hdhome.org, direct
+host-suffix, hdsky.me, direct
+host-suffix, icetorrent.org, direct
+host-suffix, jpopsuki.eu, direct
+host-suffix, keepfrds.com, direct
+host-suffix, madsrevolution.net, direct
+host-suffix, morethan.tv, direct
+host-suffix, m-team.cc, direct
+host-suffix, myanonamouse.net, direct
+host-suffix, nanyangpt.com, direct
+host-suffix, ncore.cc, direct
+host-suffix, open.cd, direct
+host-suffix, ourbits.club, direct
+host-suffix, passthepopcorn.me, direct
+host-suffix, privatehd.to, direct
+host-suffix, pterclub.com, direct
+host-suffix, redacted.ch, direct
+host-suffix, springsunday.net, direct
+host-suffix, tjupt.org, direct
+host-suffix, totheglory.im, direct
 GEOIP, cn
