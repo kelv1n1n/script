@@ -208,8 +208,8 @@ if (url.includes("/x/resource/show/tab/v2")) {
 } else if (url.includes("/resource/top/activity")) {
    console.log("活动：" + url);
    console.log(JSON.stringify(obj));
-   obj.data = {};
-  console.log(JSON.stringify(obj));
+   obj.data = "{"code": -404, "message": "啥都木有", "ttl": 1, "data": null }";
+   console.log(JSON.stringify(obj));
 }
 
 $done({ body: JSON.stringify(obj) });
