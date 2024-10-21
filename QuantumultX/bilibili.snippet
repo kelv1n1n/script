@@ -37,6 +37,7 @@
 ^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp url reject-dict
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip url reject-dict
 
+# 首页右上角活动小图标
 ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? url script-response-body https://github.com/kelv1n1n/script/raw/refs/heads/main/js/json.js
 
 hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
