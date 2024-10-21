@@ -27,6 +27,7 @@ if (url.includes("/x/resource/show/tab/v2")) {
     if (obj?.data?.top?.[0]?.pos) {
       obj.data.top[0].pos = 1;
     }
+    console.log(JSON.stringify(obj.data.top));
   }
 } else if (url.includes("/x/v2/account/mine?")) {
   // 我的页面
