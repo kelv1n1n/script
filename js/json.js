@@ -207,6 +207,9 @@ if (url.includes("/x/resource/show/tab/v2")) {
   if (obj?.data?.new_tab_info?.outer_list?.length > 0) {
     obj.data.new_tab_info.outer_list = obj.data.new_tab_info.outer_list.filter((i) => i?.biz_id !== 33);
   }
+} else if (url.includes("/resource/top/activity")) {
+   console.log(url);
+   console.log(JSON.stringify(obj.data));
 }
 
 $done({ body: JSON.stringify(obj) });
