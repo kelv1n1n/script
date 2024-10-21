@@ -21,13 +21,10 @@ if (url.includes("/x/resource/show/tab/v2")) {
   }
   // 右上角按钮
   if (obj?.data?.top?.length > 0) {
-    console.log("url: " + url);
-    console.log(JSON.stringify(obj.data.top));
     obj.data.top = obj.data.top.filter((i) => i?.name === "消息");
     if (obj?.data?.top?.[0]?.pos) {
       obj.data.top[0].pos = 1;
     }
-    console.log(JSON.stringify(obj.data.top));
   }
 } else if (url.includes("/x/v2/account/mine?")) {
   // 我的页面
@@ -210,9 +207,9 @@ if (url.includes("/x/resource/show/tab/v2")) {
   }
 } else if (url.includes("/resource/top/activity")) {
    console.log("活动：" + url);
-   console.log(JSON.stringify(obj.data));
+   console.log(JSON.stringify(obj));
    obj.data = {};
-  console.log(JSON.stringify(obj.data));
+  console.log(JSON.stringify(obj));
 }
 
 $done({ body: JSON.stringify(obj) });
