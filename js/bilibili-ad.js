@@ -8,6 +8,10 @@ if (url.includes("x/v2/splash")) {
     } else {
       delete obj.data.show;
     }
+} else if (url.includes("/x/v2/search/square")) {
+  if (obj?.data) {
+    obj.data = { type: "history", title: "搜索历史", search_hotword_revision: 2 };
+  }
 }
 
 body = JSON.stringify(obj);
