@@ -12,6 +12,9 @@ if (url.includes("x/v2/splash")) {
   if (obj?.data) {
     obj.data = { type: "history", title: "搜索历史", search_hotword_revision: 2 };
   }
+} else if (url.includes("/resource/top/activity")) {
+   var jsonString = '{ "code": -404, "message": "啥都木有", "ttl": 1, "data": null }';
+   obj = JSON.parse(jsonString);
 }
 
 body = JSON.stringify(obj);
