@@ -15,6 +15,15 @@ if (url.includes("x/v2/splash")) {
 } else if (url.includes("/resource/top/activity")) {
    var jsonString = '{ "code": -404, "message": "啥都木有", "ttl": 1, "data": null }';
    obj = JSON.parse(jsonString);
+} else if (url.includes("/x/v2/feed/index?")) {
+  // 首页推荐信息流
+  if (obj?.data?.items?.length > 0) {
+    // 白名单，并且过滤竖频
+    obj.data.items = obj.data.items.filter((i) => i?.card_goto === "av" && i?.goto !== "vertical_av");
+  }
+  if (obj?.data?.config?.toast?.has_toast) {
+    obj.data.config.toast.has_toast = false;
+  }
 }
 
 body = JSON.stringify(obj);
