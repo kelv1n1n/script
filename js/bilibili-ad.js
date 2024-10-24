@@ -24,6 +24,28 @@ if (url.includes("x/v2/splash")) {
   if (obj?.data?.config?.toast?.has_toast) {
     obj.data.config.toast.has_toast = false;
   }
+} else if (url.includes("/x/resource/show/tab/v2")) {
+  // 底部选项卡
+  if (obj?.data?.bottom?.length > 0) {
+    const sortLists = ["首页", "动态", "我的"];
+    obj.data.bottom = obj.data.bottom
+      .filter((i) => sortLists?.includes(i?.name))
+      .sort((a, b) => sortLists.indexOf(a?.name) - sortLists.indexOf(b?.name));
+  }
+  // 首页导航栏
+  if (obj?.data?.tab?.length > 0) {
+    const sortLists = ["推荐", "热门"];
+    obj.data.tab = obj.data.tab
+      .filter((i) => sortLists?.includes(i?.name))
+      .sort((a, b) => sortLists.indexOf(a?.name) - sortLists.indexOf(b?.name));
+  }
+  // 右上角按钮
+  if (obj?.data?.top?.length > 0) {
+    obj.data.top = obj.data.top.filter((i) => i?.name === "消息");
+    if (obj?.data?.top?.[0]?.pos) {
+      obj.data.top[0].pos = 1;
+    }
+  }
 }
 
 body = JSON.stringify(obj);
