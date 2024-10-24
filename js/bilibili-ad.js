@@ -91,6 +91,7 @@ if (url.includes("x/v2/splash")) {
     }
     obj.data.sections_v2 = newSects;
   }
+}
 
 body = JSON.stringify(obj);
 $done({body});
