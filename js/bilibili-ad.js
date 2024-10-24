@@ -41,10 +41,11 @@ if (url.includes("x/v2/splash")) {
   }
   // 右上角按钮
   if (obj?.data?.top?.length > 0) {
-    obj.data.top = obj.data.top.filter((i) => i?.name === "消息");
-    if (obj?.data?.top?.[0]?.pos) {
-      obj.data.top[0].pos = 1;
-    }
+    //obj.data.top = obj.data.top.filter((i) => i?.name === "消息");
+    //if (obj?.data?.top?.[0]?.pos) {
+      //obj.data.top[0].pos = 1;
+    //}
+    obj.data.top = [];
   }
 } else if (url.includes("/x/v2/account/mine?")) {
   // 我的页面
