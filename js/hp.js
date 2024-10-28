@@ -4,6 +4,8 @@ const init = "/init";
 const topics = "topics";
 //  过滤热榜游戏帖子
 const hot = "/hotRank";
+//  赛事直播详情页
+const liveTabList = "/matchallapi/liveTabList";
 
 let url = $request.url;
 let body = $response.body;
@@ -24,6 +26,11 @@ if (url.indexOf(hot) != -1) {
  let topicNamesToExclude = ["英雄联盟", "王者荣耀", "和平精英"];
  obj.result.listV2 = obj.result.listV2.filter(item => !nicknamesToExclude.includes(item.thread.nickname));
  obj.result.listV2 = obj.result.listV2.filter(item => !topicNamesToExclude.includes(item.thread.topic_name));
+}
+
+if (url.indexOf(liveTabList) != -1) {
+ let tabList = ["live_lottery", "live_game"];
+ obj.result.categoryList = obj.result.categoryList.filter(item => !tabList.includes(item.categoryId));
 }
 
 body = JSON.stringify(obj);
