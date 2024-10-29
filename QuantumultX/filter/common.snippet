@@ -2,34 +2,34 @@
 #! author = Kelv1n1n
 
 # 滴滴
-host-suffix,gwp.xiaojukeji.com,reject
-ip-cidr,123.207.209.60/32,reject
-ip-cidr,123.207.209.39/32,reject
-ip-cidr,139.199.240.12/32,reject
-ip-cidr,139.199.240.15/32,reject
-IP-CIDR,117.51.168.10/32,REJECT
-IP-CIDR,117.51.169.4/32,REJECT
-IP-CIDR,117.51.169.11/32,REJECT
+HOST-SUFFIX, gwp.xiaojukeji.com, REJECT
+IP-CIDR, 123.207.209.60/32, REJECT
+IP-CIDR, 123.207.209.39/32, REJECT
+IP-CIDR, 139.199.240.12/32, REJECT
+IP-CIDR, 139.199.240.15/32, REJECT
+IP-CIDR, 117.51.168.10/32, REJECT
+IP-CIDR, 117.51.169.4/32, REJECT
+IP-CIDR, 117.51.169.11/32, REJECT
 
 # 彩云天气
-HOST,abyss.cyapi.cn,REJECT
-HOST,ad.cyapi.cn,REJECT
+HOST, abyss.cyapi.cn, REJECT
+HOST, ad.cyapi.cn, REJECT
 
 # keep开屏
-host,hc-ssp.sm.cn,reject
+HOST, hc-ssp.sm.cn, REJECT
 
 # 阿里云盘
 IP-CIDR, 203.107.1.1/24, REJECT
 
 # gitlab仓库
-host,gitlab.com,proxy
+HOST, gitlab.com, PROXY
 
-host,grpc.biliapi.net,reject
+HOST, grpc.biliapi.net, REJECT
 
 # 虎扑
-host,adx.hupu.com,reject
-host,adx-api.hupu.com,reject
-host,goblin.hupu.com,reject
+HOST, adx.hupu.com, REJECT
+HOST, adx-api.hupu.com, REJECT
+HOST, goblin.hupu.com, REJECT
 
 # Apple
 HOST, advertising.apple.com, REJECT
@@ -69,3 +69,18 @@ HOST-SUFFIX, l.qq.com, REJECT
 HOST-KEYWORD, trace.qq.com, REJECT
 HOST-KEYWORD, trace.video.qq.com, REJECT
 IP-CIDR, 47.110.187.87/32, REJECT
+
+# 京东
+HOST-SUFFIX, jzt.jd.com, REJECT
+HOST-SUFFIX, img-x.jd.com, REJECT
+HOST-SUFFIX, du.jd.com, REJECT
+HOST-SUFFIX, c-nfa.jd.com, REJECT
+HOST-SUFFIX, cm.jd.com, REJECT
+HOST-keyword, policy.jd.com, REJECT
+HOST-keyword, kepler.jd.com, REJECT
+HOST-keyword, bdsp.x.jd.com, REJECT
+HOST-keyword, keplerapi.jd.com, REJECT
+HOST-keyword, mapi.m.jd.com, REJECT
+HOST, dns.jd.com, REJECT
+IP-CIDR, 101.124.19.122/32, REJECT
+IP6-CIDR, 2402:db40:5100:1011::5/128, REJECT
