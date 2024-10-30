@@ -40,4 +40,7 @@
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|welcomeHome) url script-response-body https://github.com/kelv1n1n/script/raw/main/js/jingdong.js
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(stationPullService|uniformRecommend[06]) url reject-dict
 
+###### Spotify应用内会员广告
+^https:\/\/spclient\.wg\.spotify\.com\/ads\/v3\/ads url reject-dict
+
 hostname = match-api.hupu.com, fairy.mobileapi.hupu.com, api.m.jd.com
