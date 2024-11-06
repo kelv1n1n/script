@@ -425,7 +425,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     }
   }
   // 搜索结果地图左下角小横幅
-  if (obj?.data?.modules?.transportation?.poiDetailNewBeltV2?) {
+  if (obj?.data?.modules?.transportation?.poiDetailNewBeltV2) {
     obj.data.modules.transportation.poiDetailNewBeltV2 = {};
   }
 } else if (url.includes("/shield/search_bff/hotword")) {
