@@ -44,6 +44,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     // 公交列表 推广打车出行
     obj.data.mixed_plans.data.taxiPlans = [];
   }
+  if (obj?.data?.mixed_plans?.data?.hkfRecommendPlans?.length > 0) {
+    // 公交列表 推广打车出行
+    obj.data.mixed_plans.data.hkfRecommendPlans = [];
+  }
 } else if (url.includes("/c3frontend/af-hotel/page/main")) {
   // 酒店/民宿 景区门票 火车/飞机
   if (obj?.data?.modules) {
