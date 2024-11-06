@@ -424,6 +424,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
       delete obj.data.modules[i];
     }
   }
+  // 搜索结果地图左下角小横幅
+  if (obj?.data?.modules?.transportation?.poiDetailNewBeltV2?) {
+    obj.data.modules.transportation.poiDetailNewBeltV2 = {};
+  }
 } else if (url.includes("/shield/search_bff/hotword")) {
   // 搜索框 热榜logo
   if (obj?.data?.headerHotWord?.length > 0) {
