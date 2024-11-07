@@ -433,6 +433,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   if (obj?.data?.headerHotWord?.length > 0) {
     obj.data.headerHotWord = [];
   }
+  // 搜索框 菜单列表
+  if (obj?.data?.hotWordWithIcon?.length > 0) {
+    obj.data.hotWordWithIcon = [];
+  }
 } else if (url.includes("/shield/search_poi/search/sp") || url.includes("/shield/search_poi/mps")) {
   if (obj?.data?.list_data) {
     let list = obj.data.list_data.content[0];
