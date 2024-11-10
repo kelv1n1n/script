@@ -70,7 +70,7 @@ if (url.includes("/alexa/homepage/hub")) {
   );
 
   delete obj.result.dy_module.new_user_zone_dy
-
+  delete obj.result.dy_module.irregular_banner_dy
 }
   
 } catch (error) {
