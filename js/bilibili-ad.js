@@ -19,7 +19,7 @@ if (url.includes("x/v2/splash")) {
   // 首页推荐信息流
   if (obj?.data?.items?.length > 0) {
     // 白名单，并且过滤竖频
-    obj.data.items = obj.data.items.filter((i) => i?.card_goto === "av" && i?.goto !== "vertical_av");
+    obj.data.items = obj.data.items.filter((i) => i?.card_goto === "av");
   }
   if (obj?.data?.config?.toast?.has_toast) {
     obj.data.config.toast.has_toast = false;
