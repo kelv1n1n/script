@@ -36,8 +36,9 @@ if (url.indexOf(home) != -1) {
     obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => arrayKey.includes(item.key));
 } else if (url.indexOf("/center/info") != -1) {
     obj.data.background = {};
+    const prop = "tab_extends";
     obj.data.tabs.forEach(card => {
-        if (card.tab_extends?) {
+        if (prop in card) {
             delete card.tab_extends;
         }
     });
