@@ -36,7 +36,11 @@ if (url.indexOf(home) != -1) {
     obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => arrayKey.includes(item.key));
 } else if (url.indexOf("/center/info") != -1) {
     obj.data.background = {};
-    obj.data.tabs.foreach
+    obj.data.tabs.forEach(card => {
+        if (card.?tab_extends) {
+            delete card.tab_extends;
+        }
+    });
 }
 
 
