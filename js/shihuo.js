@@ -31,6 +31,9 @@ if (url.indexOf(home) != -1) {
     const arrayKey = [2,3,1,8];
     obj.data.tool_list = obj.data.tool_list.filter(item => arrayKey.includes(item.id));
     obj.data.navigation_list = [];
+} else if (url.indexOf("/app3/tab_info") != -1) {
+    const arrayKey = ["tab1","tab4","tab5"];
+    obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => arrayKey.includes(item.key));
 }
 
 
