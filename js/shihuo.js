@@ -34,6 +34,9 @@ if (url.indexOf(home) != -1) {
 } else if (url.indexOf("/app3/tab_info") != -1) {
     const arrayKey = ["tab1","tab4","tab5"];
     obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => arrayKey.includes(item.key));
+} else if (url.indexOf("/center/info") != -1) {
+    obj.data.background = {};
+    obj.data.tabs.foreach
 }
 
 
