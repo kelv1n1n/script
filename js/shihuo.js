@@ -27,7 +27,12 @@ if (url.indexOf(home) != -1) {
     obj.data.background_imgs = "";
 } else if (url.indexOf(list) != -1) {
     obj.data.lists = obj.data.lists.filter(obj => obj.item_type !== 'EXPRESS_AD');
+} else if (url.indexOf("/center/config") != -1) {
+    const arrayKey = [2,3,1,8];
+    obj.data.tool_list = obj.data.tool_list.filter(item => arrayKey.includes(item.id));
+    obj.data.navigation_list = [];
 }
+
 
 //console.log(JSON.stringify(obj));
 body = JSON.stringify(obj);
