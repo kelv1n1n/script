@@ -37,7 +37,7 @@ if (url.indexOf(home) != -1) {
 } else if (url.indexOf("/center/info") != -1) {
     obj.data.background = {};
     obj.data.tabs.forEach(card => {
-        if (card.?tab_extends) {
+        if (card.tab_extends?) {
             delete card.tab_extends;
         }
     });
