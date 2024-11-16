@@ -14,8 +14,8 @@ if (url.indexOf(home) != -1) {
     obj.data.hotspot = {};
     obj.data.activity_dynamic_modules = [];
 } else if (url.indexOf(tab) != -1) {
-    obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => item.key !== "tab2");
-    //console.log(JSON.stringify(obj.data.tab_icon_go));
+    const arrayKey = ["tab1","tab4","tab5"];
+    obj.data.tab_icon_go = obj.data.tab_icon_go.filter(item => arrayKey.includes(item.key));
 } else if (url.indexOf(my) != -1) {
     obj.data.activity_dynamic_modules = [];
     obj.data.savings_card = {};
