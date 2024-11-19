@@ -34,7 +34,7 @@ if (url.includes("x/v2/splash")) {
   }
   // 首页导航栏
   if (obj?.data?.tab?.length > 0) {
-    const sortLists = ["推荐", "热门", "直播"];
+    const sortLists = ["直播","推荐","热门"];
     obj.data.tab = obj.data.tab
       .filter((i) => sortLists?.includes(i?.name))
       .sort((a, b) => sortLists.indexOf(a?.name) - sortLists.indexOf(b?.name));
