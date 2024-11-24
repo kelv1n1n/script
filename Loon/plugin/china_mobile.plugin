@@ -2,7 +2,7 @@
 #!desc = 去除开屏广告
 #!author = RuCu6[https://github.com/RuCu6/Loon/blob/main/Plugins/myblockads.plugin]
 #!tag = 去广告
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/ChinaMobile.png
+#!icon = 
 
 [Rewrite]
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
