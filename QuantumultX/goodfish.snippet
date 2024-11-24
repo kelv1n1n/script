@@ -20,7 +20,7 @@
 #^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemessage\.region\.sync\/ url response-body "increments":\[.+\] response-body "increments":[]
 
 # 个人主页
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js
+^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js
 # 消息页感兴趣推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.0 url reject
 # 主页关注的人感兴趣推荐
