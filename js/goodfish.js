@@ -100,6 +100,11 @@ if (url.includes("/gw/mtop.taobao.idlemessage.session.sync/3.0")) {
 
 if (url.includes("idle.fun.follow.feed.list")) {
     obj.data.sections = obj.data.sections.filter(session => session.cardType === 9999);
+    obj.data.sections.forEach(section => {
+    if (section.cardData?.subText) {
+        section.cardData.subText = "";
+    }
+  });
 }
 
   
