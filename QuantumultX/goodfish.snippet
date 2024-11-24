@@ -3,7 +3,6 @@
 # hostname = acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com
 
 # 拦截广告下发
-user-agent, %E9%97%B2%E9%B1%BC*, reject
 ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch %E9%97%B2%E9%B1%BC* url-and-header reject
 # 首页顶部标签
 #^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js
