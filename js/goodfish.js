@@ -98,6 +98,10 @@ if (url.includes("/gw/mtop.taobao.idlemessage.session.sync/3.0")) {
     obj.data.sessions = obj.data.sessions.filter(session => session.session.sessionType !== "25");
 }
 
+if (url.includes("idle.fun.follow.feed.list")) {
+    obj.data.sessions = obj.data.sessions.filter(session => session.cardType === 9999);
+}
+
   
 body = JSON.stringify(obj);
 $done({body});
