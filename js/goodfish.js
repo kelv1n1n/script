@@ -111,6 +111,10 @@ if (url.includes("idle.fun.follow.feed.list")) {
 if (url.includes("idle.fun.follow.often.visit")) {
     obj.data.sections = [];
 }
+
+if (url.includes("idle.circle.myself.banner/1.0")) {
+    obj.data.bannerList = [];
+}
   
 body = JSON.stringify(obj);
 $done({body});
