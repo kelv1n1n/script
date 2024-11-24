@@ -2,7 +2,7 @@
 #!desc = 移除开屏广告
 #!author = RuCu6[https://github.com/RuCu6/Loon/blob/main/Plugins/myblockads.plugin]
 #!tag = 去广告
-#!icon = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituan.png
+#!icon = 
 
 [Rule]
 IP-CIDR, 103.37.155.60/32, REJECT
