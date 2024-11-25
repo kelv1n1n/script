@@ -10,6 +10,7 @@ if (url.indexOf(user) != -1) {
   obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "6");
   //  个人主页横幅
   obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "3");
+  obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "4");
   //  个人等级
   obj.data.container.sections.forEach(section => {
     if (section.index === "1") {
