@@ -32,6 +32,9 @@ if (url.indexOf(circle) != -1) {
             if (circle.showInfo && circle.showInfo.titleImage) {
                 delete circle.showInfo.titleImage;
             }
+            if (circle.circleId === "2") {
+              circle.showInfo.atmosphereImageUrl = "";
+            }
         });
     }
 }
