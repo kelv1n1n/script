@@ -1,5 +1,5 @@
 #!name = 去广告合集
-#!desc = APP：拼多多、虎扑
+#!desc = APP：拼多多、虎扑、Spotify
 #!author = KELV1N1N
 #!tag = 去广告
 #!icon = 
@@ -18,6 +18,9 @@
 ^https:\/\/api\.pinduoduo\.com\/api\/epiktetos\/footprint\/head_entrance url reject-dict
 # 拼多多订单列表顶部横幅
 ^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element url reject
+
+# Spotify应用内会员广告
+^https:\/\/spclient\.wg\.spotify\.com\/ads\/v3\/ads url reject-dict
 
 [Script]
 # 拼多多关注店铺商品动态推荐、店铺推荐
