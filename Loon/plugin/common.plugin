@@ -22,6 +22,9 @@
 # Spotify应用内会员广告
 ^https:\/\/spclient\.wg\.spotify\.com\/ads\/v3\/ads url reject-dict
 
+#  虎扑赛事直播页tab、预测信息
+^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/listPreviewFormulaExtendDtos url reject
+
 [Script]
 # 拼多多关注店铺商品动态推荐、店铺推荐
 http-response ^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/homepage script-path = https://github.com/kelv1n1n/script/raw/main/js/common.js, requires-body = true, tag = 拼多多关注店铺推荐
@@ -31,3 +34,4 @@ http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-p
 # 虎扑
 http-response ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/topics\/\d script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js, requires-body = true, tag = 专区顶部横幅
 http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/hotRank script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js, requires-body = true, tag = 热搜榜过滤游戏帖子
+http-response ^https:\/\/match-api\.hupu\.com\/\d\/\d\.\d\.\d+\/matchallapi\/liveTabList script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js, requires-body = true, tag = 赛事直播页tab、预测信息
