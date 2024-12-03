@@ -1,9 +1,5 @@
-# !name = 拼多多分流
-# !author = 怎么肥事，我
-
 #user-agent, *com.xunmeng.pinduoduo*, reject
 host, titan.pinduoduo.com, reject
-# 影响打开店铺主页
 host, apm.pinduoduo.com, reject
 host, m.pinduoduo.net, reject
 host, ta-a.pinduoduo.com, reject
