@@ -3,6 +3,9 @@
 #!author = KELV1N1N, 可莉, 奶思, 怎么肥事
 #!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/GooFish.png
 
+[Rule]
+AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"),(USER-AGENT,"%E9%97%B2%E9%B1%BC*")),REJECT
+
 [Rewrite]
 
 
