@@ -23,6 +23,22 @@ if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
   }
 }
 
+if (url.includes("/gw/mtop.taobao.idle.local.home")) {
+  if (obj.data?.sections) {
+    obj.data.sections = obj.data.sections.filter(section => {
+      return !(section.data && section.data.bizType === "AD");
+    });
+  }
+}
+
+if (url.includes("/gw/mtop.taobao.idle.home.whale.modulet")) {
+  delete obj.data.container.sections;
+}
+
+if (url.includes("/gw/mtop.taobao.idlemtopsearch.search.shade") || url.includes("/gw/mtop.taobao.idle.user.strategy.list")) {
+  delete obj.data;
+}
+
 if (url.includes("/mtop.idle.user.page.my.adapter")) {
   //  底部社区小程序列表
   obj.data.container.sections = obj.data.container.sections.filter(item => item.index !== "6");
