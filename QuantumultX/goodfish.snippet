@@ -1,5 +1,6 @@
-# > 闲鱼
-# > 作者：可莉、Kelv1n1n、奶思、怎么肥事
+#!name = 闲鱼
+#!desc = 去除首页、个人页、搜索页、搜索结果页、关注页、消息页及商品详情页的推广和广告
+#!author = 可莉、Kelv1n1n、奶思、怎么肥事
 # hostname = acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com
 
 # 拦截广告下发
@@ -14,7 +15,6 @@
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js
 # 定位地区页面的信息流广告
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js
-
 
 # 个人主页
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js
