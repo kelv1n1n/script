@@ -2,7 +2,7 @@
 #!desc = 移除广告、解锁会员
 #!author = RuCu6[https://github.com/RuCu6/Loon/blob/main/Plugins/myblockads.plugin]
 #!tag = 去广告
-#!icon = https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/115.png
+#!icon = https://github.com/kelv1n1n/script/edit/main/Loon/icon/bilibili.png
 
 [Rewrite]
 ^https:\/\/biz\.cyapi\.cn\/(p\/v1\/entries|p\/v1\/trial_card\/info|v2\/product) url reject-dict
