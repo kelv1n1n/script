@@ -1,7 +1,4 @@
-const user = "/mtop.idle.user.page.my.adapter";
-const circle = "/mtop.taobao.idlehome.home.circle.list";
 let url = $request.url;
-
 let body = $response.body;
 let obj = JSON.parse(body);
 
@@ -56,7 +53,7 @@ if (url.includes("/mtop.idle.user.page.my.adapter")) {
 
 }
 
-if (url.indexOf(circle) != -1) {
+if (url.includes("/mtop.taobao.idlehome.home.circle.list")) {
   // 过滤 circleList 数组，只保留 circleId 为 1 和 2 的元素
   //obj.data.circleList = obj.data.circleList.filter(circle => circle.circleId === "1" || circle.circleId === "2");
   if (obj.data && obj.data.circleList) {
