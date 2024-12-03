@@ -1,8 +1,7 @@
 #!name = 去广告合集
 #!desc = APP：拼多多、虎扑、Spotify
 #!author = KELV1N1N
-#!tag = 去广告
-#!icon = https://github.com/luestr/IconResource/edit/main/Other_icon/120px/RemoveAds.png
+#!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/RemoveAds.png
 
 [Rule]
 
