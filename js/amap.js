@@ -417,7 +417,8 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     // "video",
     "waistRecEntrance", // 更多人气好去处
     "waterFallFeed", // 附近景点瀑布流
-    "waterFallFeedTitle" // 更多人气好去处
+    "waterFallFeedTitle", // 更多人气好去处
+    "yellowPageAdRecommendModule" //淘宝商品推荐
   ];
   if (obj?.data?.modules) {
     for (let i of items) {
