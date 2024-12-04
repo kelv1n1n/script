@@ -447,8 +447,14 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
       delete hookData.house_info;
     }
     // 详情页 底部 订酒店
-    delete list.map_bottom_bar.hotel;
-    delete list.poi.item_info.tips_bottombar_button.hotel;
+    if (list.map_bottom_bar.hotel) {
+      delete list.map_bottom_bar.hotel;
+    }
+    if (list.poi.item_info && list.poi.item_info.tips_bottombar_button && list.poi.item_info.tips_bottombar_button.hotel) {
+      delete list.poi.item_info.tips_bottombar_button.hotel;
+    }
+    //delete list.map_bottom_bar.hotel;
+    //delete list.poi.item_info.tips_bottombar_button.hotel;
     // 地图优惠推广
     delete list.map.main_point;
     delete list.tips_operation_info;
@@ -478,8 +484,14 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
         delete hookData.house_info;
       }
       // 详情页 底部 订酒店
-      delete list.map_bottom_bar.hotel;
-      delete list.poi.item_info.tips_bottombar_button.hotel;
+      if (list.map_bottom_bar.hotel) {
+        delete list.map_bottom_bar.hotel;
+      }
+      if (list.poi.item_info && list.poi.item_info.tips_bottombar_button && list.poi.item_info.tips_bottombar_button.hotel) {
+        delete list.poi.item_info.tips_bottombar_button.hotel;
+      }
+      //delete list.map_bottom_bar.hotel;
+      //delete list.poi.item_info.tips_bottombar_button.hotel;
       // 地图优惠推广
       delete list.map.main_point;
       // 左上角动图推广
