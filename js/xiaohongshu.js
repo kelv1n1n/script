@@ -3,6 +3,7 @@
 */
 // 2024-11-10 13:10
 
+const $ = new Env('小红书');
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
