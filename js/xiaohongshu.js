@@ -241,8 +241,8 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
       }
     }
   }
-  videoFeedUnlock = { gayhub: "rucu6" };
-  $persistentStore.write(JSON.stringify(videoFeedUnlock), "redBookVideoFeedUnlock");
+  //videoFeedUnlock = { gayhub: "rucu6" };
+  //$persistentStore.write(JSON.stringify(videoFeedUnlock), "redBookVideoFeedUnlock");
 } else if (url.includes("/v10/search/notes")) {
   // 搜索结果
   if (obj?.data?.items?.length > 0) {
