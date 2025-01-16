@@ -1,14 +1,15 @@
 #!name = 小红书
+#!author = Rucu6、fmz200
 
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) reject-dict
 ^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? reject-dict
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/guide\/user_banner|v3\/note\/guide) reject-dict
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) reject-dict
 
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/banner_list$
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/hint
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\?
+#^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/banner_list$
+#^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$
+#^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/hint
+#^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\?
 
 # 移除图片和实况照片水印
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save) url script-response-body https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js
