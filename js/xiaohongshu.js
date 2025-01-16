@@ -253,3 +253,34 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
 }
 
 $done({ body: JSON.stringify(obj) });
+
+// 小红书画质增强：加载2K分辨率的图片
+function imageEnhance(jsonStr) {
+  const imageQuality = $.getdata("fmz200.xiaohongshu.imageQuality");
+  console.log(`Image Quality: ${imageQuality}`);
+  if (imageQuality === "original") { // 原始分辨率，PNG格式的图片，占用空间比较大
+    console.log("画质修改为-原始分辨率");
+    jsonStr = jsonStr.replace(/\?imageView2\/2[^&]*(?:&redImage\/frame\/0)/, "?imageView2/0/format/png&redImage/frame/0");
+  } else { // 高像素输出
+    console.log("画质修改为-高像素输出");
+    const regex1 = /imageView2\/2\/w\/\d+\/format/g;
+    jsonStr = jsonStr.replace(regex1, `imageView2/2/w/2160/format`);
+
+    const regex2 = /imageView2\/2\/h\/\d+\/format/g;
+    jsonStr = jsonStr.replace(regex2, `imageView2/2/h/2160/format`);
+  }
+  console.log('图片画质增强完成✅');
+
+  return JSON.parse(jsonStr);
+}
+
+function replaceUrlContent(collectionA, collectionB) {
+  console.log('替换无水印的URL');
+  collectionA.forEach(itemA => {
+    const matchingItemB = collectionB.find(itemB => itemB.file_id === itemA.file_id);
+    if (matchingItemB) {
+      itemA.url = itemA.url.replace(/(.*)\.mp4/, `${matchingItemB.url.match(/(.*)\.mp4/)[1]}.mp4`);
+      itemA.author = "@fmz200"
+    }
+  });
+}
