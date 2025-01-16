@@ -8,50 +8,33 @@ if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
 if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
-  // 信息流 图片
-  let newDatas = [];
-  if (obj?.data?.[0]?.note_list?.length > 0) {
-    for (let item of obj.data[0].note_list) {
-      if (item?.media_save_config) {
-        // 水印开关
-        item.media_save_config.disable_save = false;
-        item.media_save_config.disable_watermark = true;
-        item.media_save_config.disable_weibo_cover = true;
-      }
-      if (item?.share_info?.function_entries?.length > 0) {
-        // 视频下载限制
-        const additem = { type: "video_download" };
-        // 检查是否存在 video_download 并获取其索引
-        let videoDownloadIndex = item.share_info.function_entries.findIndex((i) => i?.type === "video_download");
-        if (videoDownloadIndex !== -1) {
-          // 如果存在，将其移动到数组的第一个位置
-          let videoDownloadEntry = item.share_info.function_entries.splice(videoDownloadIndex, 1)[0];
-          item.share_info.function_entries.splice(0, 0, videoDownloadEntry);
-        } else {
-          // 如果不存在，在数组开头添加一个新的 video_download 对象
-          item.share_info.function_entries.splice(0, 0, additem);
+// 信息流 图片
+  if (obj?.data?.length > 0) {
+    if (obj.data[0]?.note_list?.length > 0) {
+      for (let item of obj.data[0].note_list) {
+        if (item?.media_save_config) {
+          // 水印开关
+          item.media_save_config.disable_save = false;
+          item.media_save_config.disable_watermark = true;
+          item.media_save_config.disable_weibo_cover = true;
         }
-      }
-      if (item?.images_list?.length > 0) {
-        for (let i of item.images_list) {
-          if (i.hasOwnProperty("live_photo_file_id") && i.hasOwnProperty("live_photo")) {
-            if (
-              i?.live_photo_file_id !== "" &&
-              i?.live_photo?.media?.video_id !== "" &&
-              i?.live_photo?.media?.stream?.h265?.[0]?.master_url !== ""
-            ) {
-              let myData = {
-                file_id: i.live_photo_file_id,
-                video_id: i.live_photo.media.video_id,
-                url: i.live_photo.media.stream.h265[0].master_url
-              };
-              newDatas.push(myData);
-            }
-            // 写入持久化存储
-            $persistentStore.write(JSON.stringify(newDatas), "redBookLivePhoto");
+        if (item?.share_info?.function_entries?.length > 0) {
+          // 下载限制
+          const addItem = {type: "video_download"};
+          let func = item.share_info.function_entries[0];
+          if (func?.type !== "video_download") {
+            // 向数组开头添加对象
+            item.share_info.function_entries.unshift(addItem);
           }
         }
       }
+
+      const images_list = obj.data[0].note_list[0].images_list;
+      // 画质增强
+      obj.data[0].note_list[0].images_list = imageEnhance(JSON.stringify(images_list));
+      // 保存无水印信息
+      $.setdata(JSON.stringify(images_list), "fmz200.xiaohongshu.feed.rsp");
+      console.log('已存储无水印信息♻️');
     }
   }
 } else if (url.includes("/v1/note/live_photo/save")) {
