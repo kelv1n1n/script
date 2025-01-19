@@ -49,7 +49,7 @@ if (url.includes("/system_service/config?")) {
     }
   }
   const tab_buttom = ["首页", "消息", "我"];
-  obj.tabbar.tabs = obj.tabbar.tabs.filter(section => {
+  obj.data.tabbar.tabs = obj.data.tabbar.tabs.filter(section => {
     return tab_buttom.includes(section.title);
   })
 }
