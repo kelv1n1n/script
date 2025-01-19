@@ -278,10 +278,12 @@ if (url.includes("/v6/homefeed")) {
       } else if (item?.note_attributes?.includes("goods")) {
         // 信息流-商品
 
-      } else if (item?.type === "video") {
+      } 
+      //else if (item?.type === "video") {
         // 信息流-视频
 
-      } else {
+      //} 
+      else {
         if (item?.related_ques) {
           delete item.related_ques;
         }
