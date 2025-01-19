@@ -49,9 +49,11 @@ if (url.includes("/system_service/config?")) {
     }
   }
   const tab_buttom = ["首页", "消息", "我"];
+  if (obj.data.tabbar) {
   obj.data.tabbar.tabs = obj.data.tabbar.tabs.filter(section => {
     return tab_buttom.includes(section.title);
   })
+  }
 }
 
 if (url.includes("/system_service/splash_config")) {
