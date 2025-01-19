@@ -48,6 +48,10 @@ if (url.includes("/system_service/config?")) {
       delete obj.data[i];
     }
   }
+  const tab_buttom = ["首页", "消息", "我"];
+  obj.tabbar.tabs = obj.tabbar.tabs.filter(section => {
+    return tab_buttom.includes(section.title);
+  })
 }
 
 if (url.includes("/system_service/splash_config")) {
