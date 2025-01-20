@@ -31,6 +31,11 @@ if (url.includes("/homefeed/categories")) {
 if (url.includes("/user/me")) {
   obj.data.zhong_tong_bar_info = {};
 }
+// 用户推荐
+if (url.includes("/recommend/user/explore")) {
+  obj.data = [];
+}
+
 
 if (url.includes("/search/banner_list")) {
   obj.data = {};
