@@ -23,9 +23,9 @@ if (url.includes("/homefeed/categories")) {
     })
   }
   obj.data.rec_categories = [];
-  obj.data.channel_show_type = 1;
-  obj.data.tab_type = 1;
-  obj.data.style = 1;
+  //obj.data.channel_show_type = 1;
+  //obj.data.tab_type = 1;
+  //obj.data.style = 1;
   obj.data.show_type = 1;
 }
 
