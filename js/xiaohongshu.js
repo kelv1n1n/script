@@ -15,16 +15,17 @@ let obj = JSON.parse(rsp_body);
 
 // 首页顶部频道菜单
 if (url.includes("/homefeed/categories")) {
-  const channel_buttom = ["homefeed.fashion_v3", "homefeed.food_v3"];
-  if (obj.data.categories) {
-    obj.data.categories = obj.data.categories.filter(section => {
-      section.fixed = false;
-      return channel_buttom.includes(section.oid);
-    })
-  }
+  //const channel_buttom = ["homefeed.fashion_v3", "homefeed.food_v3"];
+  //if (obj.data.categories) {
+    //obj.data.categories = obj.data.categories.filter(section => {
+      //section.fixed = false;
+      //return channel_buttom.includes(section.oid);
+    //})
+  //}
+  obj.data.categories = [];
   obj.data.rec_categories = [];
   // 首页顶部频道显示控制
-  //obj.data.show_type = 1;
+  obj.data.show_type = 1;
 }
 // 我的页面
 if (url.includes("/user/me")) {
