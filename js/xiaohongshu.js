@@ -15,7 +15,7 @@ let obj = JSON.parse(rsp_body);
 
 // 首页顶部频道菜单
 if (url.includes("/homefeed/categories")) {
-  const channel_buttom = ["homefeed.live", "homefeed.fashion_v3", "homefeed.food_v3"];
+  const channel_buttom = ["homefeed.fashion_v3", "homefeed.food_v3"];
   if (obj.data.categories) {
     obj.data.categories = obj.data.categories.filter(section => {
       section.fixed = false;
@@ -27,6 +27,7 @@ if (url.includes("/homefeed/categories")) {
   //obj.data.tab_type = 1;
   //obj.data.style = 1;
   obj.data.show_type = 1;
+  obj.data.default_show = false;
 }
 
 if (url.includes("/search/banner_list")) {
