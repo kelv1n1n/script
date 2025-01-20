@@ -21,6 +21,7 @@ if (url.includes("/homefeed/categories")) {
       return channel_buttom.includes(section.oid);
     })
   }
+  obj.data.rec_categories = [];
 }
 
 if (url.includes("/search/banner_list")) {
