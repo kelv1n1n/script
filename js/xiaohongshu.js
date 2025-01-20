@@ -13,6 +13,16 @@ if (!rsp_body) {
 }
 let obj = JSON.parse(rsp_body);
 
+// 首页顶部频道菜单
+if (url.includes("/homefeed/categories")) {
+  const channel_buttom = ["homefeed.live", "homefeed.fashion_v3", "homefeed.food_v3"];
+  if (obj.data.categories) {
+    obj.data.categories = obj.data.categories.filter(section => {
+      return channel_buttom.includes(section.oid);
+    })
+  }
+}
+
 if (url.includes("/search/banner_list")) {
   obj.data = {};
 } 
