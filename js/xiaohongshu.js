@@ -18,12 +18,15 @@ if (url.includes("/homefeed/categories")) {
   const channel_buttom = ["homefeed.live", "homefeed.fashion_v3", "homefeed.food_v3"];
   if (obj.data.categories) {
     obj.data.categories = obj.data.categories.filter(section => {
+      section.fixed = false;
       return channel_buttom.includes(section.oid);
     })
   }
   obj.data.rec_categories = [];
   obj.data.channel_show_type = 1;
   obj.data.tab_type = 1;
+  obj.data.style = 1;
+  obj.data.show_type = 1;
 }
 
 if (url.includes("/search/banner_list")) {
