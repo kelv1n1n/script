@@ -26,6 +26,10 @@ if (url.includes("/homefeed/categories")) {
   // 首页顶部频道显示控制
   //obj.data.show_type = 1;
 }
+// 我的页面
+if (url.includes("/user/me")) {
+  obj.data.zhong_tong_bar_info = {};
+}
 
 if (url.includes("/search/banner_list")) {
   obj.data = {};
