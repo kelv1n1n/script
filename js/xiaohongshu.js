@@ -23,11 +23,8 @@ if (url.includes("/homefeed/categories")) {
     })
   }
   obj.data.rec_categories = [];
-  //obj.data.channel_show_type = 1;
-  //obj.data.tab_type = 1;
-  //obj.data.style = 1;
-  //obj.data.show_type = 1;
-  obj.data.default_show = false;
+  // 首页顶部频道显示控制
+  obj.data.show_type = 2;
 }
 
 if (url.includes("/search/banner_list")) {
