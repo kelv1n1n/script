@@ -24,7 +24,7 @@ if (url.includes("/homefeed/categories")) {
   }
   obj.data.rec_categories = [];
   // 首页顶部频道显示控制
-  obj.data.show_type = 0;
+  obj.data.show_type = 5;
 }
 
 if (url.includes("/search/banner_list")) {
