@@ -53,7 +53,9 @@ if (url.includes("/system_service/config?")) {
   obj.data.tabbar.tabs = obj.data.tabbar.tabs.filter(section => {
     return tab_buttom.includes(section.title);
   })
+    obj.data.name_2tab_config = ""
   }
+  
 }
 
 if (url.includes("/system_service/splash_config")) {
