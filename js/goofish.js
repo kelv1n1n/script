@@ -159,6 +159,7 @@ if (url.includes("idle.circle.visited/1.0")) {
 
 if (url.includes("follow.recommend.feed.list")) {
   obj.data.sections = [];
+  obj.data.nextPage = false;
 }
   
 body = JSON.stringify(obj);
