@@ -18,6 +18,8 @@ if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
       return !excludeNames.includes(section.template.name);  
     });
   }
+  // 首页新的顶部图标菜单
+  obj.data.homeTopList = [];
 }
 
 if (url.includes("/gw/mtop.taobao.idle.local.home")) {
