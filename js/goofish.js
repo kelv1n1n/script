@@ -158,7 +158,11 @@ if (url.includes("idle.circle.visited/1.0")) {
 }
 
 if (url.includes("follow.recommend.feed.list")) {
-  obj.data.sections = [];
+  if (obj.data?.sections) {
+    obj.data.sections = obj.data.sections.filter(section => {
+      return section.cardData.userInfo.attention === true;
+    });
+  }
   obj.data.nextPage = false;
 }
   
