@@ -1,5 +1,7 @@
 #!name = 闲鱼
 #!desc = 移除首页、个人页、搜索页、搜索结果页及商品详情页肉眼可见的广告，一点都不留版
+#!tag = 去广告
+#!openUrl = https://apps.apple.com/cn/app/id510909506
 #!author = KELV1N1N, 可莉, 奶思, 怎么肥事
 #!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/GooFish.png
 
