@@ -160,10 +160,10 @@ if (url.includes("idle.circle.visited/1.0")) {
 if (url.includes("follow.recommend.feed.list")) {
   if (obj.data?.sections) {
     obj.data.sections = obj.data.sections.filter(section => {
-      return section.cardData.userInfo.attention === true;
+      return section.cardData.userInfo.attention = true;
     });
   }
-  obj.data.nextPage = false;
+  //obj.data.nextPage = false;
 }
   
 body = JSON.stringify(obj);
