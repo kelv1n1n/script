@@ -1,5 +1,6 @@
 #!name = 中国移动
 #!desc = 去除开屏广告
+#!tag = 去广告
 #!openUrl = https://apps.apple.com/id583700738
 #!author = RuCu6[https://github.com/RuCu6/Loon/blob/main/Plugins/myblockads.plugin]
 #!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/ChinaMobile.png
