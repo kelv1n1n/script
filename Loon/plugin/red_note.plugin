@@ -18,6 +18,9 @@ AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/hint response-body-json-replace data.hint_words []
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\? response-body-json-replace data.queries [] data.hint_word {}
 
+# 主页顶部拜年提示
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/user\/interact\/info url reject-dict
+
 [Script]
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save) script-path=https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true, tag=移除图片和实况照片水印
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? script-path=https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true, tag=移除开屏广告 config
@@ -29,6 +32,14 @@ http-response ^https:\/\/(?:edith|rec)\.xiaohongshu\.com\/api\/sns\/v6\/homefeed
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\? script-path=https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true, tag=移除搜索页广告
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed) script-path=https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true, tag=移除图片和视频水印
 http-response ^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save) script-path=https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true, tag=移除视频水印
+
+
+# 首页顶部频道菜单
+http-response ^https:\/\/rec\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\/categories script-path= https://github.com/kelv1n1n/script/raw/refs/heads/main/js/xiaohongshu.js, requires-body=true, tag=首页顶部频道菜单
+# 我的页面设置按钮底部订单等列表按钮
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/user\/me script-path= https://github.com/kelv1n1n/script/raw/refs/heads/main/js/xiaohongshu.js, requires-body=true, tag=的页面设置按钮底部订单等列表按钮
+# 用户推荐
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/explore script-path= https://github.com/kelv1n1n/script/raw/refs/heads/main/js/xiaohongshu.js, requires-body=true, tag=用户推荐
 
 [MitM]
 hostname = edith.xiaohongshu.com,rec.xiaohongshu.com,www.xiaohongshu.com
