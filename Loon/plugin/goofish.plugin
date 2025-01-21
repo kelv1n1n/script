@@ -10,50 +10,49 @@ AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"),(USER-AGENT,"%E9%97%B2%E9%
 
 [Rewrite]
 # 消息页感兴趣推荐
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.0 url reject
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.0 reject
 # 搜索页多余推荐列表
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/2\.0 url reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/1\.0 url reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/2\.0 reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/1\.0 reject-dict
 # 这些宝贝超好卖
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/1\.0 url reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/1\.0 reject-dict
 # 用闲鱼币买更便宜
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 url reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 reject-dict
 
-# 消息页感兴趣推荐
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.0 url reject
 
 [Script]
 # 搜索栏填充词
-http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 搜索栏填充词
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 搜索栏填充词
 # 首页闲鱼币入口、底部发布球
-http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 首页闲鱼币入口、底部发布球
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 首页闲鱼币入口、底部发布球
 # 商品信息流广告
-http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 商品信息流广告
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 商品信息流广告
 # 定位地区页面的信息流广告
-http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 定位地区页面的信息流广告
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 定位地区页面的信息流广告
+
 
 # 个人主页
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 个人主页
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 个人主页
 # 主页关注的人感兴趣推荐
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/2\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 主页关注的人感兴趣推荐
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/2\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 主页关注的人感兴趣推荐
 # 首页顶部频道菜单
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 首页顶部频道菜单
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 首页顶部频道菜单
 # 商品详情页底部推荐
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 商品详情页底部推荐
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 商品详情页底部推荐
 # 商品详情页周边推荐
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 商品详情页周边推荐
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 商品详情页周边推荐
 # 0关注情况下首页顶部关注频道的用户推荐
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 0关注情况下首页顶部关注频道的用户推荐
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 0关注情况下首页顶部关注频道的用户推荐
 # 搜索结果信息流广告
-http-response ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 搜索结果信息流广告
+http-response ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 搜索结果信息流广告
 # 关注的人页面圈子横幅
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.group\.myself\.banner\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 关注的人页面圈子横幅
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.group\.myself\.banner\/ script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 关注的人页面圈子横幅
 # 首页关注频道常访问的圈子
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.often\.visit script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 首页关注频道常访问的圈子
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.often\.visit script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 首页关注频道常访问的圈子
 # 主页关注页面圈子新横幅
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.myself\.banner\/1\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 主页关注页面圈子新横幅
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.myself\.banner\/1\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 主页关注页面圈子新横幅
 # 主页关注页面圈子常访问
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.visited\/1\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goodfish.js, requires-body = true, tag = 主页关注页面圈子常访问
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.visited\/1\.0 script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/goofish.js, requires-body = true, tag = 主页关注页面圈子常访问
 
 [MitM]
 hostname = acs.m.goofish.com, g-acs.m.goofish.com
