@@ -163,7 +163,8 @@ if (url.includes("follow.recommend.feed.list")) {
       return section.cardData.userInfo.attention;
     });
   }
-  //obj.data.nextPage = false;
+  obj.data.needDecryptKeys = [];
+  obj.data.nextPage = false;
 }
   
 body = JSON.stringify(obj);
