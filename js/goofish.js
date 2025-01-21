@@ -165,6 +165,7 @@ if (url.includes("follow.recommend.feed.list")) {
   }
   obj.data.needDecryptKeys = [];
   obj.data.nextPage = false;
+  obj.data.fitRecommendAB = true;
 }
   
 body = JSON.stringify(obj);
