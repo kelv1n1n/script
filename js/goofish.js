@@ -156,6 +156,10 @@ if (url.includes("idle.circle.myself.banner/1.0")) {
 if (url.includes("idle.circle.visited/1.0")) {
     obj.data.visitedCircleList = [];
 }
+
+if (url.includes("follow.recommend.feed.list")) {
+  obj.data.sections = [];
+}
   
 body = JSON.stringify(obj);
 $done({body});
