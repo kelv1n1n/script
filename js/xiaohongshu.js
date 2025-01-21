@@ -200,11 +200,14 @@ if (url.includes("/v4/note/videofeed")) {
       // 检查function_entries中的每一个元素的type属性是否等于"video_download"
       console.log("检查是否有下载按钮")
       let found = false;
+      if (item.share_info?.function_entries.length > 0) {
+        console.log("有内容");
       for (let entry of item.share_info.function_entries) {
         if (entry.type === "video_download") {
           found = true;
           break;
         }
+      }
       }
       // 如果没有匹配到，则添加一个新的元素
       if (!found) {
