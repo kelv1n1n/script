@@ -158,11 +158,11 @@ if (url.includes("idle.circle.visited/1.0")) {
 }
 
 if (url.includes("follow.recommend.feed.list")) {
-  if (obj.data?.sections) {
-    obj.data.sections = obj.data.sections.filter(section => {
-      return section.cardData.userInfo.attention;
-    });
-  }
+  //if (obj.data?.sections) {
+    //obj.data.sections = obj.data.sections.filter(section => {
+      //return section.cardData.userInfo.attention;
+    //});
+  //}
   obj.data.needDecryptKeys = [];
   obj.data.nextPage = false;
   obj.data.fitRecommendAB = true;
