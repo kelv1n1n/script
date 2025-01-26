@@ -80,7 +80,7 @@ if (url.includes("/system_service/config?")) {
     obj.data.name_2tab_config = ""
   }
 
-  if (obj.data.configs.ios_home_tab_material_config) {
+  if (obj.data.configs?.ios_home_tab_material_config?.length > 0) {
     delete obj.data.configs.ios_home_tab_material_config
   }
   
