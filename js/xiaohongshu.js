@@ -72,18 +72,6 @@ if (url.includes("/system_service/config?")) {
       delete obj.data[i];
     }
   }
-  const tab_buttom = ["首页", "消息", "我"];
-  if (obj.data.tabbar) {
-  obj.data.tabbar.tabs = obj.data.tabbar.tabs.filter(section => {
-    return tab_buttom.includes(section.title);
-  })
-    obj.data.name_2tab_config = ""
-  }
-
-  if (obj.data.configs?.ios_home_tab_material_config?.length > 0) {
-    delete obj.data.configs.ios_home_tab_material_config
-  }
-  
 }
 
 if (url.includes("/system_service/splash_config")) {
