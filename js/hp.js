@@ -13,7 +13,7 @@ let obj = JSON.parse(body);
 
 if (url.indexOf(init) != -1) {
  const tabArray = ["hotRank","match"];
- obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => !tabArray.includes(item.en));
+ obj.result.clientLevelOneNavV2 = obj.result.clientLevelOneNavV2.filter(item => tabArray.includes(item.en));
  //  活动栏
  delete obj.result.activityNav;
 }
