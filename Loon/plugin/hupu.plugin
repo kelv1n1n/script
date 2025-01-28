@@ -13,6 +13,8 @@
 ^https:\/\/fairy\.mobileapi\.hupu\.com\/gallery\/getmod2 reject-200
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplcommentapi\/bpl\/score_tab\/groups reject-dict
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/banner\/getLocationBanners reject-dict
+# 赛事直播页tab、预测信息
+^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/listPreviewFormulaExtendDtos reject-dict
 
 [Script]
 http-response ^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/preview\/banners script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除横幅
@@ -23,6 +25,8 @@ http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/u
 http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/hotRank script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=热搜榜过滤游戏帖子
 http-response ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/topics\/\d script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=专区顶部横幅
 http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/device\/v\d\/init script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=首页顶部菜单保留热榜，赛事
+http-response ^https:\/\/match-api\.hupu\.com\/\d\/\d\.\d\.\d+\/matchallapi\/liveTabList script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=赛事直播页tab、预测信息
+
 
 [MITM]
-hostname = games.mobileapi.hupu.com,fairy.mobileapi.hupu.com,bbs.mobileapi.hupu.com,goblin.hupu.com
+hostname = games.mobileapi.hupu.com,fairy.mobileapi.hupu.com,bbs.mobileapi.hupu.com,goblin.hupu.com,match-api.hupu.com
