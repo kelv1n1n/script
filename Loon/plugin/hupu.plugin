@@ -15,6 +15,8 @@
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/banner\/getLocationBanners reject-dict
 # 赛事直播页tab、预测信息
 ^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/listPreviewFormulaExtendDtos reject-dict
+# 热榜tab和搜索页评分榜单
+^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bbsrankapi\/bff\/v1\/rating\/list reject-dict
 
 [Script]
 http-response ^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/preview\/banners script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除横幅
