@@ -1,0 +1,21 @@
+#!name = 虎扑
+#!desc = 移除广告、精简各种页面
+#!tag = 树先生
+#!author = 怎么肥事
+#!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/DiDi.png
+
+[Rewrite]
+^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/reddot\/v1\/app\/getReddot reject-dict
+^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/(bbsallapi\/tag\/v1\/heatTag|bbsrankapi\/v1\/rating\/list) reject-dict
+^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/search\/v2\/(hintkeylist|hotkeylist) reject-dict
+^https:\/\/goblin\.hupu\.com\/\d\/\d\.\d\.\d+\/interfaceAd\/getOther\/v\d reject-dict
+^https:\/\/goblin\.hupu\.com\/\d\/\d\.\d\.\d+\/interfaceAd\/getOther\/batch reject-dict
+^https:\/\/fairy\.mobileapi\.hupu\.com\/gallery\/getmod2 reject-200
+^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplcommentapi\/bpl\/score_tab\/groups reject-dict
+^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/banner\/getLocationBanners reject-dict
+
+[Script]
+http-response ^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/preview\/banners script-path=https://kelee.one/Resource/Script/HUPU/HUPU_remove_ads.js, requires-body=true, tag=移除虎扑广告
+http-response ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bbsallapi\/lego\/data script-path=https://kelee.one/Resource/Script/HUPU/HUPU_remove_ads.js, requires-body=true, tag=移除虎扑广告
+http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/buffer\/hotList script-path=https://kelee.one/Resource/Script/HUPU/HUPU_remove_ads.js, requires-body=true, tag=移除虎扑广告
+http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/user\/v1\/more script-path=https://kelee.one/Resource/Script/HUPU/HUPU_remove_ads.js, requires-body=true, tag=移除虎扑广告
