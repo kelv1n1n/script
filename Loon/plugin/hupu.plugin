@@ -1,7 +1,7 @@
 #!name = 虎扑
 #!desc = 移除广告、精简各种页面
 #!tag = 树先生
-#!author = 怎么肥事
+#!author = 怎么肥事、树先生
 #!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/HUPU.png
 
 [Rewrite]
@@ -19,6 +19,10 @@ http-response ^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/preview\/banners scr
 http-response ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bbsallapi\/lego\/data script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除个人主页各种卡片广告
 http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/buffer\/hotList script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除热榜
 http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/user\/v1\/more script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除个人页会员信息
+
+http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/hotRank script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=热搜榜过滤游戏帖子
+http-response ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/topics\/\d script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=专区顶部横幅
+http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/device\/v\d\/init script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=首页顶部菜单保留热榜，赛事
 
 [MITM]
 hostname = games.mobileapi.hupu.com,fairy.mobileapi.hupu.com,bbs.mobileapi.hupu.com,goblin.hupu.com
