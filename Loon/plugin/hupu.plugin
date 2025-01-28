@@ -15,7 +15,10 @@
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/banner\/getLocationBanners reject-dict
 
 [Script]
-http-response ^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/preview\/banners script-path=https://kelee.one/Resource/Script/HUPU/HUPU_remove_ads.js, requires-body=true, tag=移除虎扑广告
-http-response ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bbsallapi\/lego\/data script-path=https://kelee.one/Resource/Script/HUPU/HUPU_remove_ads.js, requires-body=true, tag=移除虎扑广告
-http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/buffer\/hotList script-path=https://kelee.one/Resource/Script/HUPU/HUPU_remove_ads.js, requires-body=true, tag=移除虎扑广告
-http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/user\/v1\/more script-path=https://kelee.one/Resource/Script/HUPU/HUPU_remove_ads.js, requires-body=true, tag=移除虎扑广告
+http-response ^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/preview\/banners script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除横幅
+http-response ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bbsallapi\/lego\/data script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除个人主页各种卡片广告
+http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/buffer\/hotList script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除热榜
+http-response ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/user\/v1\/more script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/hp.js, requires-body=true, tag=移除个人页会员信息
+
+[MITM]
+hostname = games.mobileapi.hupu.com,fairy.mobileapi.hupu.com,bbs.mobileapi.hupu.com,goblin.hupu.com
