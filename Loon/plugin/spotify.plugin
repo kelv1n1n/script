@@ -1,0 +1,16 @@
+#!name = Spotify
+#!desc = 移除推广广告
+#!tag = 树先生
+#!author = app2smile
+#!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/Spotify.png
+
+[Rewrite]
+^https:\/\/spclient\.wg\.spotify\.com\/(?:gabo|pendragon) reject-200
+^https:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize$ header-del if-none-match
+
+[Script]
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=10, tag=spotifyJson
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotifyProto
+
+[MitM]
+hostname = spclient.wg.spotify.com
