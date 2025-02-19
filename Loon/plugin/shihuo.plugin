@@ -9,36 +9,36 @@
 ^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_513x777\.png reject-200
 ^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_750x1624\.png reject-200
 
-[Script]
-http-response ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? script-path = https://github.com/kelv1n1n/script/raw/refs/heads/main/js/caiyun.js, requires-body = true, tag = 移除彩云广告
-
-# 首页相关
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/home\/info\/v1 url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
 # 搜索页图片
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/search\/act url reject-dict
+^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/search\/act reject-dict
 # 搜索页榜单
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/search\/soaringlist url reject-dict
+^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/search\/soaringlist reject-dict
 # 搜索页发现
-^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/sh\/searchSpeed\/hotWordSearch url reject-dict
-# 识货底部tab
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/app3\/saveAppInfo url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
+^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/sh\/searchSpeed\/hotWordSearch reject-dict
 # 我的页面精选
-^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/myPage\/goodsList\/v1 url reject-dict
-# 我的页面菜单
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/my\/config_list url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
-# 我的页面背景
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/my\/info url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
-# 首页商品列表广告
-^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/home\/feed\/v1 url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
+^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/myPage\/goodsList\/v1 reject-dict
 # 商品详情页
-^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/gdetails\/middleList\/v1 url reject
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-goodsapi\/app_swoole_zone\/collections\/simple url reject
+^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/gdetails\/middleList\/v1 reject
+^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-goodsapi\/app_swoole_zone\/collections\/simple reject
+
+
+[Script]
+# 首页相关
+http-response ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/home\/info\/v1 script-path = https://github.com/kelv1n1n/script/raw/main/js/shihuo.js, requires-body = true, tag = 移除彩云广告
+# 识货底部tab
+http-response ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/app3\/saveAppInfo script-path = https://github.com/kelv1n1n/script/raw/main/js/shihuo.js, requires-body = true, tag = 移除彩云广告
+# 我的页面菜单
+http-response ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/my\/config_list script-path = https://github.com/kelv1n1n/script/raw/main/js/shihuo.js, requires-body = true, tag = 移除彩云广告
+# 我的页面背景
+http-response ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/my\/info script-path = https://github.com/kelv1n1n/script/raw/main/js/shihuo.js, requires-body = true, tag = 移除彩云广告
+# 首页商品列表广告
+http-response ^https:\/\/sh-gateway\.shihuo\.cn\/v3\/sh-api\/daga\/home\/feed\/v1 script-path = https://github.com/kelv1n1n/script/raw/main/js/shihuo.js, requires-body = true, tag = 移除彩云广告
 # 新版我的页面热门菜单
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/center\/config\? url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
+http-response ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/center\/config\? script-path = https://github.com/kelv1n1n/script/raw/main/js/shihuo.js, requires-body = true, tag = 移除彩云广告
 # 底部tab按钮
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/app3\/tab_info\? url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
+http-response ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/app3\/tab_info\? script-path = https://github.com/kelv1n1n/script/raw/main/js/shihuo.js, requires-body = true, tag = 移除彩云广告
 # 新版我的页面头像和收藏等菜单
-^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/center\/info\? url script-response-body https://github.com/kelv1n1n/script/raw/main/js/shihuo.js
+http-response ^https:\/\/sh-gateway\.shihuo\.cn\/v4\/services\/sh-appapi\/center\/info\? script-path = https://github.com/kelv1n1n/script/raw/main/js/shihuo.js, requires-body = true, tag = 移除彩云广告
 
 
 [MitM]
