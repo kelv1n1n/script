@@ -3,6 +3,8 @@
 #!tag = 树先生
 #!author = keywos、可莉
 #!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/TikTok.png
+#!select = TikTok解锁地区,日本,韩国,英国,美国,台湾,香港,新加坡,法国,马来西亚,菲律宾,泰国,手动输入
+#!input = 手动输入地区代码[可选]
 
 [Rule]
 AND,((GEOIP,CN),(DOMAIN,pitaya.bytedance.com)),DIRECT
