@@ -2,7 +2,7 @@
 #!desc = 移除开屏广告
 #!tag = 树先生
 #!author = RuCu6[https://github.com/RuCu6/Loon/blob/main/Plugins/myblockads.plugin]
-#!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/ColorfulCloudPro.png
+#!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/Taobao.png
 
 [Rule]
 DOMAIN,adashx.m.taobao.com,REJECT
