@@ -106,8 +106,8 @@ DOMAIN-KEYWORD,ttcdn-tos.,PROXY
 DOMAIN-KEYWORD,ttlivecdn.com.,PROXY
 
 [Rewrite]
-^https:\/\/spclient\.wg\.spotify\.com\/(?:gabo|pendragon) reject-200
-^https:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize$ header-del if-none-match
+^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ reject
+^https:\/\/tnc\d+-platform-\w+\.tiktokv\.com\/get_domains\/ reject
 
 [Script]
 http-request https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+) script-path=https://kelee.one/Resource/Script/TikTok/TikTok_redirect.js, tag=TikTok解锁
