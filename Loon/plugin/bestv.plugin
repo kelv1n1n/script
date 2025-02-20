@@ -1,0 +1,17 @@
+#!name = 看东方
+#!desc = 移除广告
+#!tag = 树先生
+#!author = 树先生
+#!icon = https://raw.githubusercontent.com/kelv1n1n/script/refs/heads/main/Loon/icon/.png
+
+[Rule]
+
+[Rewrite]
+
+
+[Script]
+# 搜索栏填充词
+http-response  script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/bestv.js, requires-body = true, tag = 
+
+[MitM]
+hostname = 
