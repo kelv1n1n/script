@@ -12,7 +12,7 @@
 ^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/free\/open\/advertisingV2 reject-200
 
 [Script]
-http-response ^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/live\/studio\/id\/v4 script-path=bestv2.js, requires-body=true, timeout=60, tag=看东方
+http-response ^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/live\/studio\/id\/v4 script-path=https://github.com/kelv1n1n/script/raw/refs/heads/main/js/bestv.js, requires-body=true, timeout=60, tag=看东方
 
 [MitM]
 hostname = bp-api.bestv.com.cn
