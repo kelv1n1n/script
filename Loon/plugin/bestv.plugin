@@ -7,11 +7,12 @@
 [Rule]
 
 [Rewrite]
-
+^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/advertise\/project\/studioId response-body-json-replace dt []
+^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/advertise\/project\/userCenter response-body-json-replace dt []
+^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/free\/open\/advertisingV2 reject-200
 
 [Script]
-# 搜索栏填充词
-http-response  script-path = https://raw.githubusercontent.com/kelv1n1n/script/main/js/bestv.js, requires-body = true, tag = 
+http-response ^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/live\/studio\/id\/v4 script-path=bestv2.js, requires-body=true, timeout=60, tag=看东方
 
 [MitM]
-hostname = 
+hostname = bp-api.bestv.com.cn
