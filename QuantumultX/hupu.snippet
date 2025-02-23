@@ -1,5 +1,5 @@
-#!name = 虎扑简化
-#!author = Kelv1n1n
+#!name = 虎扑
+#!author = 树先生,怎么肥事
 
 # 首页顶部菜单保留热榜，赛事
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/device\/v\d\/init url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
@@ -18,11 +18,7 @@
 
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/reddot\/v1\/app\/getReddot url reject-dict
 
-^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/preview\/banners url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/HP.js
-
 ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/(bbsallapi\/tag\/v1\/heatTag|bbsrankapi\/v1\/rating\/list) url reject-dict
-
-^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bbsallapi\/lego\/data url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/HP.js
 
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/search\/v2\/(hintkeylist|hotkeylist) url reject-dict
 
@@ -33,6 +29,11 @@
 ^https:\/\/games\.mobileapi\.hupu\.com\/3\/8\.0\.86\/bplcommentapi\/bpl\/score_tab\/groups url reject-dict
 
 ^https:\/\/games\.mobileapi\.hupu\.com\/3\/8\.0\.86\/bplapi\/banner\/getLocationBanners url reject-dict
+
+
+^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/preview\/banners url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/HP.js
+
+^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bbsallapi\/lego\/data url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/HP.js
 
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/buffer\/hotList url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/HP.js
 
