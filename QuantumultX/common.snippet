@@ -28,16 +28,6 @@
 # 广告ip请求
 #^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d" url reject
 
-###### 虎扑 match-api.hupu.com, fairy.mobileapi.hupu.com
-# 首页顶部菜单保留热榜，赛事
-#^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/device\/v\d\/init url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
-# 专区顶部横幅
-^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/topics\/\d url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
-# 热搜榜过滤游戏帖子
-^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/hotRank url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
-# 赛事直播页tab、预测信息
-^https:\/\/match-api\.hupu\.com\/\d\/\d\.\d\.\d+\/matchallapi\/liveTabList url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
-^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/listPreviewFormulaExtendDtos url reject
 
 
 ###### Spotify应用内会员广告
