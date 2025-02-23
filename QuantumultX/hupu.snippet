@@ -7,6 +7,9 @@
 ^https:\/\/bbs\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/topics\/\d url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
 # 热搜榜过滤游戏帖子
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/hotRank url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
+# 赛事直播页tab、预测信息
+^https:\/\/match-api\.hupu\.com\/\d\/\d\.\d\.\d+\/matchallapi\/liveTabList url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/hp.js
+^https:\/\/fairy\.mobileapi\.hupu\.com\/mang\/listPreviewFormulaExtendDtos url reject
 
 
 
@@ -37,4 +40,4 @@
 
 
 [MITM]
-hostname = games.mobileapi.hupu.com,goblin.hupu.com,games.mobileapi.hupu.com,bbs.mobileapi.hupu.com,fairy.mobileapi.hupu.com
+hostname = games.mobileapi.hupu.com,goblin.hupu.com,games.mobileapi.hupu.com,bbs.mobileapi.hupu.com,fairy.mobileapi.hupu.com,match-api.hupu.com
