@@ -1,3 +1,4 @@
+let url = $request.url;
 let data = JSON.parse($response.body);
 if (data.dt && data.dt.liveStudioStreamRelVoList) {
     // 访问liveStudioStreamRelVoList数组
