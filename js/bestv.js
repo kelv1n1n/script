@@ -1,8 +1,11 @@
 let url = $request.url;
-let data = JSON.parse($response.body);
-if (data.dt && data.dt.liveStudioStreamRelVoList) {
+let body = $response.body;
+let obj = JSON.parse(body);
+
+if (url.includes("/live/studio/id/v4")) {
+    if (obj.dt && obj.dt.liveStudioStreamRelVoList) {
     // 访问liveStudioStreamRelVoList数组
-    const streams = data.dt.liveStudioStreamRelVoList;
+    const streams = obj.dt.liveStudioStreamRelVoList;
     
     // 遍历数组中的每个流对象
     streams.forEach(stream => {
@@ -23,16 +26,15 @@ if (data.dt && data.dt.liveStudioStreamRelVoList) {
     });
 }
 
+}
+
 if (url.includes("/project/studioId")) {
-    data.dt = [];
-    data = JSON.stringify(data);
-    $done({data});
+    obj.dt = [];
 }
 
 if (url.includes("/project/userCenter")) {
-    data.dt = [];
-    data = JSON.stringify(data);
-    $done({data});
+    obj.dt = [];
 }
 
-$done({});
+body = JSON.stringify(obj);
+$done({body});
