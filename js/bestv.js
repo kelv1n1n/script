@@ -21,4 +21,17 @@ if (data.dt && data.dt.liveStudioStreamRelVoList) {
     	console.log('');
     });
 }
+
+if (url.includes("/project/studioId")) {
+    data.dt = [];
+    data = JSON.stringify(data);
+    $done({data});
+}
+
+if (url.includes("/project/userCenter")) {
+    data.dt = [];
+    data = JSON.stringify(data);
+    $done({data});
+}
+
 $done({});
