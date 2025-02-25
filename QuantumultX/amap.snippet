@@ -1,7 +1,6 @@
 #!name = 高德地图
 #!desc = 指向RuCu6新的loon仓库，原地址不维护
-#!author = RuCu6 kokoryh
-#!update = 2024-09-12 10:40
+#!author = RuCu6, kokoryh, 树先生
 
 # 此条可以屏蔽首次进入的天气动效图层  但是会导致足迹不显示地图数据
 ;^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? url reject-dict
@@ -49,5 +48,13 @@
 
 # 线路导航火车tab推荐
 ^https:\/\/m5\.amap\.com\/ws\/boss\/transportation\/diversion\/car_train_all_car url reject-200
+# 订单页更多服务提示
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/order\/car\/feedback\/viptips url reject-dict
+# 订单页打车服务评价
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/order\/car\/remark\/satisfactionConf url reject-dict
+# 订单页随机提问服务反馈问题
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/order\/car\/feedback\/get_card_questions url reject-dict
+# 订单页开始支付宝支付提示横幅
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/pay\/web\/paySuccess\/info\/request url reject-dict
 
 hostname = m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
