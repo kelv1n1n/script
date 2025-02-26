@@ -23,8 +23,12 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     // oss营销皮肤
     obj.data.lubanData.skin.dataList = [];
   }
-  if (obj?.data?.lubanData?.popup?.dataList?.length > 0) {
+  if (obj?.data?.matrixData?.DiversionCard?.dataList?.length > 0) {
     // 优惠弹窗列表
+    obj.data.matrixData.DiversionCard.dataList = [];
+  }
+  if (obj?.data?.lubanData?.popup?.dataList?.length > 0) {
+    // 附近景点推荐列表
     obj.data.lubanData.popup.dataList = [];
   }
 } else if (url.includes("/boss/order_web/friendly_information")) {
