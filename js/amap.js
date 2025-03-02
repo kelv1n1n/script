@@ -588,7 +588,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   }
 } else if (url.includes("/af-nearby/nearby")) {
   // 横幅广告
-  if (obj?.data?.meta?.banner.length > 0) {
+  if (obj?.data?.meta?.banner?.length > 0) {
     obj.data.meta.banner = {};
   }
 }
