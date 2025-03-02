@@ -586,6 +586,11 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
       item.creative[0].end_time = 3818419199; // Unix 时间戳 2090-12-31 23:59:59
     }
   }
+} else if (url.includes("/af-nearby/nearby")) {
+  // 横幅广告
+  if (obj?.data?.meta?.banner.length > 0) {
+    obj.data.meta.banner = {};
+  }
 }
 
 $done({ body: JSON.stringify(obj) });
