@@ -2,11 +2,13 @@ const url = $request.url;
 let obj = JSON.parse($response.body);
 
 try {
-    if (url.includes('/api/alexa/homepage/hub') && obj.result && Array.isArray(obj.result.bottom_tabs)) {
-        obj.result.bottom_tabs = obj.result.bottom_tabs.filter(tab => tab.title !== '多多视频' && tab.title !== '大促会场' && tab.title !== '搜索' && tab.title !== '直播');
+    if (url.includes('/api/alexa/homepage/hub') {
+        const buttonArr = ["首页","聊天","个人中心"];
+        obj.result.bottom_tabs = obj.result.bottom_tabs.filter(tab => buttonArr.includes(tab.title));
+        obj.result.buffer_bottom_tabs = obj.result.buffer_bottom_tabs.filter(tab => buttonArr.includes(tab.title));
         delete obj.result.icon_set;
         delete obj.result.search_bar_hot_query;
-        }
+    }
         
     if (url.includes("/search")) {
     delete obj.expansion;
