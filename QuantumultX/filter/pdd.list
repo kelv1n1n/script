@@ -8,10 +8,8 @@ host, th-a.pinduoduo.com, reject
 host, th-b.pinduoduo.com, reject
 host, th.pinduoduo.com, reject
 
-#host-keyword, rdt.cfogc.com, reject
-#host-keyword, jomoxc.com, reject
-host, apm-a.pinduoduo.com, reject
-host, cdn.pinduoduo.com, reject
+#host, apm-a.pinduoduo.com, reject
+#host, cdn.pinduoduo.com, reject
 
 ip-cidr, 175.24.144.100/32, reject
 ip-cidr, 114.110.99.5/32, reject
