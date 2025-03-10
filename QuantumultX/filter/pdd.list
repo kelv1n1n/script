@@ -1,4 +1,4 @@
-user-agent, *com.xunmeng.pinduoduo*, reject
+#user-agent, *com.xunmeng.pinduoduo*, reject
 host, titan.pinduoduo.com, reject
 host, apm.pinduoduo.com, reject
 host, m.pinduoduo.net, reject
