@@ -448,75 +448,75 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     obj.data.hotWordWithIcon = [];
   }
 } else if (url.includes("/shield/search_poi/search/sp") || url.includes("/shield/search_poi/mps")) {
-  if (obj?.data?.list_data) {
-    let list = obj.data.list_data.content[0];
-    // 详情页 底部 房产推广
-    if (list?.hookInfo) {
-      let hookData = list.hookInfo.data;
-      delete hookData.header;
-      delete hookData.house_info;
-    }
-    // 详情页 底部 订酒店
-    if (list && list.map_bottom_bar && list.map_bottom_bar.hotel) {
-      delete list.map_bottom_bar.hotel;
-    }
-    if (list && list.poi.item_info && list.poi.item_info.tips_bottombar_button && list.poi.item_info.tips_bottombar_button.hotel) {
-      delete list.poi.item_info.tips_bottombar_button.hotel;
-    }
-    //delete list.map_bottom_bar.hotel;
-    //delete list.poi.item_info.tips_bottombar_button.hotel;
-    // 地图优惠推广
-    delete list.map.main_point;
-    delete list.tips_operation_info;
-    delete list.bottom.bottombar_button.hotel;
-    // 搜索页 顶部卡片
-    if (list?.card?.card_id === "SearchCardBrand" && list?.item_type === "brandAdCard") {
-      delete list.card;
-    }
-    if (list?.card?.card_id === "NearbyGroupBuy" && list?.item_type === "toplist") {
-      delete list.card;
-    }
-    if (list?.card?.card_id === "ImageBanner" && list?.item_type === "ImageBanner") {
-      delete list.card;
-    }
-  } else if (obj?.data?.district?.poi_list) {
-    // 搜索列表详情页
-    let poi = obj.data.district.poi_list[0];
-    delete poi.transportation; // 订票横幅
-    delete poi.feed_rec_tab; // 景点门票 酒店特惠 特色美食 休闲玩乐
-  } else if (obj?.data?.modules) {
-    if (obj?.data?.modules?.not_parse_result?.data?.list_data) {
-      let list = obj.data.modules.not_parse_result.data.list_data.content[0];
-      // 详情页 底部 房产推广
-      if (list?.hookInfo) {
-        let hookData = list.hookInfo.data;
-        delete hookData.header;
-        delete hookData.house_info;
-      }
-      // 详情页 底部 订酒店
-      if (list && list.map_bottom_bar && list.map_bottom_bar.hotel) {
-        delete list.map_bottom_bar.hotel;
-      }
-      if (list && list.poi.item_info && list.poi.item_info.tips_bottombar_button && list.poi.item_info.tips_bottombar_button.hotel) {
-        delete list.poi.item_info.tips_bottombar_button.hotel;
-      }
-      //delete list.map_bottom_bar.hotel;
-      //delete list.poi.item_info.tips_bottombar_button.hotel;
-      // 地图优惠推广
-      delete list.map.main_point;
-      // 左上角动图推广
-      delete list.tips_operation_info;
-      delete list.bottom.bottombar_button.hotel;
-    }
-    if (obj?.data?.modules?.list_data?.data) {
-      // 搜索列表
-      let list = obj.data.modules.list_data.data;
-      if (list?.content?.length > 0) {
-        // brandAdCard广告卡片 toplist_al人气榜单 高德指南
-        list.content = list.content.filter((i) => !["brandAdCard", "toplist_al"]?.includes(i?.item_type));
-      }
-    }
-  }
+  // if (obj?.data?.list_data) {
+  //   let list = obj.data.list_data.content[0];
+  //   // 详情页 底部 房产推广
+  //   if (list?.hookInfo) {
+  //     let hookData = list.hookInfo.data;
+  //     delete hookData.header;
+  //     delete hookData.house_info;
+  //   }
+  //   // 详情页 底部 订酒店
+  //   if (list && list.map_bottom_bar && list.map_bottom_bar.hotel) {
+  //     delete list.map_bottom_bar.hotel;
+  //   }
+  //   if (list && list.poi.item_info && list.poi.item_info.tips_bottombar_button && list.poi.item_info.tips_bottombar_button.hotel) {
+  //     delete list.poi.item_info.tips_bottombar_button.hotel;
+  //   }
+  //   //delete list.map_bottom_bar.hotel;
+  //   //delete list.poi.item_info.tips_bottombar_button.hotel;
+  //   // 地图优惠推广
+  //   delete list.map.main_point;
+  //   delete list.tips_operation_info;
+  //   delete list.bottom.bottombar_button.hotel;
+  //   // 搜索页 顶部卡片
+  //   if (list?.card?.card_id === "SearchCardBrand" && list?.item_type === "brandAdCard") {
+  //     delete list.card;
+  //   }
+  //   if (list?.card?.card_id === "NearbyGroupBuy" && list?.item_type === "toplist") {
+  //     delete list.card;
+  //   }
+  //   if (list?.card?.card_id === "ImageBanner" && list?.item_type === "ImageBanner") {
+  //     delete list.card;
+  //   }
+  // } else if (obj?.data?.district?.poi_list) {
+  //   // 搜索列表详情页
+  //   let poi = obj.data.district.poi_list[0];
+  //   delete poi.transportation; // 订票横幅
+  //   delete poi.feed_rec_tab; // 景点门票 酒店特惠 特色美食 休闲玩乐
+  // } else if (obj?.data?.modules) {
+  //   if (obj?.data?.modules?.not_parse_result?.data?.list_data) {
+  //     let list = obj.data.modules.not_parse_result.data.list_data.content[0];
+  //     // 详情页 底部 房产推广
+  //     if (list?.hookInfo) {
+  //       let hookData = list.hookInfo.data;
+  //       delete hookData.header;
+  //       delete hookData.house_info;
+  //     }
+  //     // 详情页 底部 订酒店
+  //     if (list && list.map_bottom_bar && list.map_bottom_bar.hotel) {
+  //       delete list.map_bottom_bar.hotel;
+  //     }
+  //     if (list && list.poi.item_info && list.poi.item_info.tips_bottombar_button && list.poi.item_info.tips_bottombar_button.hotel) {
+  //       delete list.poi.item_info.tips_bottombar_button.hotel;
+  //     }
+  //     //delete list.map_bottom_bar.hotel;
+  //     //delete list.poi.item_info.tips_bottombar_button.hotel;
+  //     // 地图优惠推广
+  //     delete list.map.main_point;
+  //     // 左上角动图推广
+  //     delete list.tips_operation_info;
+  //     delete list.bottom.bottombar_button.hotel;
+  //   }
+  //   if (obj?.data?.modules?.list_data?.data) {
+  //     // 搜索列表
+  //     let list = obj.data.modules.list_data.data;
+  //     if (list?.content?.length > 0) {
+  //       // brandAdCard广告卡片 toplist_al人气榜单 高德指南
+  //       list.content = list.content.filter((i) => !["brandAdCard", "toplist_al"]?.includes(i?.item_type));
+  //     }
+  //   }
+  // }
 } else if (url.includes("/shield/search_poi/sug")) {
   if (obj?.tip_list) {
     let newLists = [];
