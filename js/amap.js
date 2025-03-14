@@ -429,6 +429,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "yellowPageAdRecommendModule", //淘宝商品推荐
     "similarShelfRecommend", //附近相似推荐
     "similarShopRecommend", //附近相似店铺推荐
+    "commonAiAgent" //Ai助手
   ];
   if (obj?.data?.modules) {
     for (let i of items) {
