@@ -51,6 +51,8 @@
 ^https:\/\/chat-live\.soulapp\.cn\/live\/config\/rec-feedback url reject-dict
 # 派对猜你喜欢
 ^https:\/\/chat-live\.soulapp\.cn\/square\/relation\/guideUserList url reject-dict
+# 个人页头像下方菜单图标栏目
+^https:\/\/api-user\.soulapp\.cn\/homepage\/diamond\/position\/info url reject-dict
 # 去除私聊限制
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 星球页面按钮
