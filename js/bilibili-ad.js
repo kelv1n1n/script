@@ -92,6 +92,15 @@ if (url.includes("x/v2/splash")) {
     }
     obj.data.sections_v2 = newSects;
   }
+} else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
+  // 直播
+  delete obj.data.activity_banner_info;
+  if (obj?.data?.shopping_info) {
+    obj.data.shopping_info = { is_show: 0 };
+  }
+  if (obj?.data?.new_tab_info?.outer_list?.length > 0) {
+    obj.data.new_tab_info.outer_list = obj.data.new_tab_info.outer_list.filter((i) => i?.biz_id !== 33);
+  }
 }
 
 body = JSON.stringify(obj);
