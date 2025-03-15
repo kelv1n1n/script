@@ -92,6 +92,29 @@ if (url.includes("x/v2/splash")) {
     }
     obj.data.sections_v2 = newSects;
   }
+} else if (url.includes("/pgc/page/bangumi") || url.includes("/pgc/page/cinema/tab")) {
+  // 观影页
+  if (obj.result?.modules?.length > 0) {
+    obj.result.modules.forEach((i) => {
+      if (i?.style?.startsWith("banner")) {
+        if (i?.items?.length > 0) {
+          i.items = i.items.filter((ii) => ii?.link?.includes("play"));
+        }
+      } else if (i?.style?.startsWith("function")) {
+        if (i?.items?.length > 0) {
+          i.items = i.items.filter((ii) => ii?.blink?.startsWith("bilibili"));
+        }
+      } else if ([241, 1283, 1284, 1441]?.includes(i?.module_id)) {
+        if (i?.items?.length > 0) {
+          i.items = [];
+        }
+      } else if (i?.style?.startsWith("tip")) {
+        if (i?.items?.length > 0) {
+          i.items = [];
+        }
+      }
+    });
+  }
 } else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
   // 直播
   delete obj.data.activity_banner_info;
