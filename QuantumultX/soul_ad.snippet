@@ -49,6 +49,8 @@
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/session\/quickButtonCheck url reject-dict
 # 派对体验反馈
 ^https:\/\/chat-live\.soulapp\.cn\/live\/config\/rec-feedback url reject-dict
+# 派对猜你喜欢
+^https:\/\/chat-live\.soulapp\.cn\/square\/relation\/guideUserList url reject-dict
 # 去除私聊限制
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 星球页面按钮
