@@ -2,11 +2,11 @@
 #!author = 怎么肥事, 可莉, 树先生
 #!desc = 去除广告
 
+# 广告下发
 ^https:\/\/ssp\.soulapp\.cn\/api\/q url reject-dict
-^https:\/\/47\.110\.187\.87\/winterfell\/(?:v2\/)?getIpByDomain url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
 ^https:\/\/media-service\.soulapp\.cn\/api\/app\/cdnSource url reject
 ^https:\/\/ad-h5-station-cdn\.soulapp\.cn\/station\/dist\.zip url reject
-
+^https:\/\/47\.110\.187\.87\/winterfell\/(?:v2\/)?getIpByDomain url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
 # 去除热搜榜
 ^https:\/\/post\.soulapp\.cn\/hot\/soul\/rank url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
 # 主页瞬间指导
@@ -23,20 +23,6 @@
 ^https:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js
 
 
-# 去除私聊限制
-^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-# 星球页面按钮
-^https:\/\/api-user\.soulapp\.cn\/v6\/planet\/config url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-# 星球页面派对顶部派对分类tab
-^https:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-# 广场顶部tab
-^https:\/\/post\.soulapp\.cn\/v2\/post\/recSquare\/subTabs url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-# 派对顶部榜单
-^https:\/\/api-a\.soulapp\.cn\/chatroom\/calculateSoulList url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-# 派对页面tab
-^https:\/\/chat-live\.soulapp\.cn\/chatroom\/getRoomTagInfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-# 派对列表中间横幅官方广告
-^https:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 去除聊天界面再遇见
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first url reject
 # 去除通讯录右下角机器人图标
@@ -53,18 +39,33 @@
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/guide\/defaultWord url reject
 # 去除聊天输入文字时的gif表情推荐
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/emoji\/recommend url reject
-# 广场顶部tab
-^https:\/\/api-a\.soulapp\.cn\/square\/header\/tabs url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
-^https:\/\/post\.soulapp\.cn\/v3\/rec\/square\/header\/tabs url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 去除广告配置
 ^https:\/\/ssp\.soulapp\.cn\/api\/ad\/config url reject
 # 去除私聊瞬间小横幅
 ^https:\/\/api-a\.soulapp\.cn\/shara\/app\/url url reject
 # 私聊快捷菜单
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/quick\/menu url reject
-# 个人主页数量提示
-^https:\/\/api-user\.soulapp\.cn\/user\/homepage\/metrics url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
 # 私聊用户匹配推荐
 ^https:\/\/api-chat\.soulapp\.cn\/chat\/session\/quickButtonCheck url reject-dict
+# 去除私聊限制
+^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 星球页面按钮
+^https:\/\/api-user\.soulapp\.cn\/v6\/planet\/config url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 星球页面派对顶部派对分类tab
+^https:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 广场顶部tab
+^https:\/\/post\.soulapp\.cn\/v2\/post\/recSquare\/subTabs url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 派对顶部榜单
+^https:\/\/api-a\.soulapp\.cn\/chatroom\/calculateSoulList url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 派对页面tab
+^https:\/\/chat-live\.soulapp\.cn\/chatroom\/getRoomTagInfo url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 派对列表中间横幅官方广告
+^https:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 广场顶部tab
+^https:\/\/api-a\.soulapp\.cn\/square\/header\/tabs url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+^https:\/\/post\.soulapp\.cn\/v3\/rec\/square\/header\/tabs url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+# 个人主页数量提示
+^https:\/\/api-user\.soulapp\.cn\/user\/homepage\/metrics url script-response-body https://raw.githubusercontent.com/kelv1n1n/script/main/js/soul.js
+
 
 hostname = *.soulapp.cn,47.110.187.87,121.196.203.183,118.31.7.235,47.99.42.29,47.97.215.55,116.62.47.28,120.27.235.201,120.55.65.167,120.55.55.115,47.96.20.45,47.98.54.106,47.96.11.46,47.98.137.249,120.55.62.124,116.62.247.96,112.124.17.9,114.215.255.94,47.96.177.75,118.31.112.221,47.96.7.91
