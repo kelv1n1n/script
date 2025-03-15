@@ -92,6 +92,25 @@ if (url.includes("x/v2/splash")) {
     }
     obj.data.sections_v2 = newSects;
   }
+} else if (url.includes("/x/v2/feed/index/story")) {
+  // 竖屏模式信息流
+  if (obj?.data?.items?.length > 0) {
+    // vertical_live 直播内容
+    // vertical_pgc 大会员专享
+    let newItems = [];
+    for (let item of obj.data.items) {
+      if (item?.hasOwnProperty("ad_info")) {
+        continue;
+      } else if (["vertical_ad_av", "vertical_live", "vertical_pgc"]?.includes(item?.card_goto)) {
+        continue;
+      } else {
+        delete item.creative_entrance; // 推荐话题搜索框
+        delete item.story_cart_icon; // 相关话题图标
+        newItems.push(item);
+      }
+    }
+    obj.data.items = newItems;
+  }
 } else if (url.includes("/x/v2/splash")) {
   // 开屏广告
   if (obj?.data) {
