@@ -92,6 +92,31 @@ if (url.includes("x/v2/splash")) {
     }
     obj.data.sections_v2 = newSects;
   }
+} else if (url.includes("/x/v2/splash")) {
+  // 开屏广告
+  if (obj?.data) {
+    const item = ["account", "event_list", "preload", "show"];
+    item.forEach((i) => {
+      delete obj.data[i];
+    });
+    if (obj?.data?.max_time) {
+      obj.data.max_time = 0;
+    }
+    if (obj?.data?.min_interval) {
+      obj.data.min_interval = 31536000;
+    }
+    if (obj?.data?.pull_interval) {
+      obj.data.pull_interval = 31536000;
+    }
+    if (obj?.data?.list?.length > 0) {
+      for (let i of obj.data.list) {
+        i.duration = 0;
+        i.enable_pre_download = false;
+        i.begin_time = 3818332800; // Unix 时间戳 2090-12-31 00:00:00
+        i.end_time = 3818419199; // Unix 时间戳 2090-12-31 23:59:59
+      }
+    }
+  }
 } else if (url.includes("/pgc/page/bangumi") || url.includes("/pgc/page/cinema/tab")) {
   // 观影页
   if (obj.result?.modules?.length > 0) {
