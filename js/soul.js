@@ -63,7 +63,9 @@ if (url.indexOf(path) != -1) {
 } else if (url.indexOf(cacl) != -1) {
     obj.data.model.show = false;
 } else if (url.indexOf(chatRoomTab) != -1) {
-    obj.data.res = obj.data.res.filter(item => item.id === 0 || item.id === 2 || item.id === 4 || item.id === 5);
+    //obj.data.res = obj.data.res.filter(item => item.id === 0 || item.id === 2 || item.id === 4 || item.id === 5);
+    const tabArr = ["4","5"];
+    obj.data.res = obj.data.res.filter(item => tabArr.includes(item.id));
 } else if (url.indexOf(roomAd) != -1) {
     // 派对中间广告横幅
     obj.data.positionContentRespList = [];
