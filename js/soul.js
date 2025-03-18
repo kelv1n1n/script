@@ -70,6 +70,8 @@ if (url.indexOf(path) != -1) {
     // 派对中间广告横幅
     obj.data.positionContentRespList = [];
     //console.log(JSON.stringify(obj.data.positionContentRespList));
+    // 过滤掉派对人数大于2的
+    obj.data.roomList = obj.data.roomList.filter(i => i.roomerNum < 2);
 } else if (url.indexOf(bubble) != -1) {
     obj['data'] = {
         "mood": "https://china-img.soulapp.cn/admin/2023-02-20/b57cb774-3ef7-4743-be43-9723e4508c38.png",
