@@ -12,6 +12,7 @@ const header = "/square/header/tabs";
 const user = "/chat/user/info";
 const homePage = "/homepage/metrics";
 const guideUserList = "relation/guideUserList";
+const recommended = "/post/recommended";
 
 let url = $request.url;
 let body = $response.body;
@@ -102,6 +103,9 @@ if (url.indexOf(path) != -1) {
     //obj.data.homePageLikedMetric.hasShowHistoryDynamic = false;
 } else if (url.indexOf(guideUserList) != -1) {
     obj.data.userDTOList = [];
+} else if (url.indexOf(recommended) != -1) {
+    obj.data.postList = [];
+    obj.data.updateCount = 0;
 }
 
 body = JSON.stringify(obj);
